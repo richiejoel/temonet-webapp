@@ -1,17 +1,20 @@
-@import "../scss/colors";
+@import "../scss/index.scss";
 
 .home-top {
   background-color: $background-secondary;
   h1 {
     color: $primary-color;
     font-size: 70px;
+    font-family: "dyslexicBold";
   }
   h2 {
     color: $primary-color;
     font-size: 65px;
+    font-family: "dyslexicBold";
   }
   span {
     color: $font-primary;
+    font-family: "dyslexicBold";
   }
 }
 
@@ -19,25 +22,18 @@
   h2 {
     color: $font-primary;
     font-size: 30px;
+    font-family: "dyslexicBold";
   }
   p {
     color: $font-primary;
     font-size: 15px;
+    font-family: "dyslexicBold";
   }
 }
 
 .resume {
   margin-left: 30%;
   margin-right: 30%;
-}
-
-.btn-home {
-  background-color: $primary-color;
-  border-radius: 25px;
-  padding: 18px;
-  width: auto;
-  color: $font-primary;
-  font-weight: bold;
 }
 
 .home-bottom {
@@ -50,21 +46,9 @@
 #plane-one {
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 70px;
   object-fit: fill;
   min-width: 300px;
   min-height: 150px;
-  width: 600px;
-}
-
-.plane-two {
-  position: sticky;
-  width: 120px;
-  left: 30;
-  top: 70;
-}
-.plane-three {
-  position: sticky;
-  right: 50;
-  top: 40;
+  width: 500px;
 }

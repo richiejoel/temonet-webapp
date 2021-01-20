@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "semantic-ui-react";
 
 import Card from "../components/Card";
 import plane from "../assets/paper_plane.svg";
@@ -22,7 +23,7 @@ function Home(): JSX.Element {
           </p>
         </div>
         <div>
-          <button className="btn-home">Iniciar Programa</button>
+          <Button className="btn-home">Iniciar Programa</Button>
         </div>
       </div>
       <div className="subtitle">
@@ -49,8 +50,6 @@ function Home(): JSX.Element {
           description="Comfortable private places, with room for friends or family."
         />
       </div>
-
-      <div>PREUBAS</div>
     </div>
   );
 }
