@@ -11,7 +11,9 @@ function Login(): JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const history = useHistory();
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    history.push("/");
+  };
   const onChange = () => {};
   const handlerShowPassword = (): void => {
     setShowPassword(!showPassword);
@@ -66,7 +68,13 @@ function Login(): JSX.Element {
               >
                 Registrarse
               </Button>
-              <Button type="submit" loading={isLoading}>
+              <Button
+                type="submit"
+                onClick={() => {
+                  onSubmit();
+                }}
+                loading={isLoading}
+              >
                 Iniciar Sesión
               </Button>
             </div>
