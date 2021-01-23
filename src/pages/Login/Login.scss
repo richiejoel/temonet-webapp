@@ -1,0 +1,93 @@
+@import "../../scss/index.scss";
+
+body {
+  background-color: $primary-color !important;
+}
+
+.login {
+  background-color: $primary-color;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 50px;
+  font-family: "dyslexicBold";
+}
+
+.login-card {
+  background-color: $font-light;
+  border: 0px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#image-login {
+  left: 0;
+  top: 70px;
+  object-fit: fill;
+  min-width: 300px;
+  min-height: 150px;
+  width: 500px;
+}
+
+.login-image {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.login-form {
+  width: 100%;
+  padding: 4%;
+
+  h2 {
+    font-family: "dyslexicBold";
+    font-size: 70px;
+  }
+}
+
+.ui.form {
+  padding-top: 2%;
+  h3 {
+    text-align: left;
+  }
+  .field {
+    .input {
+      input {
+        border-radius: 10px;
+        background: $font-light;
+      }
+    }
+  }
+
+  .square-login {
+    display: flex;
+    justify-content: space-evenly;
+    span {
+      margin-top: 30px;
+    }
+    .button {
+      background: $font-light;
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 4%;
+      font-family: "dyslexicBold";
+    }
+  }
+}
+
+.footer-login {
+  margin-top: 18%;
+  h2 {
+    font-weight: bold;
+    font-size: 3vh;
+    font-family: "dyslexicBold";
+  }
+}

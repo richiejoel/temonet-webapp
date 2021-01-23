@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.scss";
 
-function Card(props: any) {
+function Card(props: any): JSX.Element {
   const { src, title, description, price } = props;
   return (
     <div className="card">

@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
 
-import Card from "../components/Card";
-import plane from "../assets/paper_plane.svg";
+import Card from "../../components/Card";
+import plane from "../../assets/paper_plane.svg";
 
 import "./Home.scss";
 
