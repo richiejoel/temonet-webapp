@@ -1,7 +1,7 @@
 @import "../../scss/index.scss";
 
 body {
-  background-color: $primary-color !important;
+  // background-color: $primary-color !important;
 }
 
 .login {
@@ -39,8 +39,14 @@ body {
 
 .login-image {
   width: 100%;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 10%;
+  h2 {
+    font-family: "dyslexicBold";
+    color: $font-primary;
+    padding: 1%;
+    font-size: 80px;
+  }
 }
 
 .login-form {
@@ -63,6 +69,7 @@ body {
       input {
         border-radius: 10px;
         background: $font-light;
+        font-family: "dyslexicBold";
       }
     }
   }
@@ -70,9 +77,8 @@ body {
   .square-login {
     display: flex;
     justify-content: space-evenly;
-    span {
-      margin-top: 30px;
-    }
+    padding-bottom: 6%;
+
     .button {
       background: $font-light;
       padding: 15px;
@@ -83,6 +89,17 @@ body {
   }
 }
 
+.form-data {
+  padding-left: 20%;
+  padding-right: 20%;
+  h3 {
+    font-family: "dyslexicBold";
+  }
+}
+.forget-password {
+  margin-top: 60%;
+}
+
 .footer-login {
   margin-top: 18%;
   h2 {
@@ -90,4 +107,14 @@ body {
     font-size: 3vh;
     font-family: "dyslexicBold";
   }
+}
+
+#plane-login {
+  position: absolute;
+  left: 36%;
+  top: 30%;
+  object-fit: fill;
+  min-width: 300px;
+  min-height: 150px;
+  width: 300px;
 }
