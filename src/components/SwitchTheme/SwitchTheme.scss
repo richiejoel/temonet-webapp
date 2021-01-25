@@ -1,0 +1,56 @@
+@import "../../scss/index.scss";
+
+.switch-theme {
+  position: fixed;
+  right: 0.3%;
+  top: 2%;
+  margin: 10px;
+  border: 0px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  width: 10%;
+  text-align: center;
+  background-color: #19252f;
+
+  h3 {
+    font-family: "dyslexicBold";
+    margin-bottom: 5px;
+    color: $font-light;
+  }
+}
+.content {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+
+.content div:nth-child(1) {
+  background-color: #39aee7;
+}
+.content div:nth-child(2) {
+  background-color: #ffab3f;
+}
+.content div:nth-child(3) {
+  background-color: #ee4660;
+}
+.content div:nth-child(4) {
+  background-color: #785ebf;
+}
+.content div:nth-child(5) {
+  background-color: #51bd69;
+}
+
+.color-circle {
+  /*content: " \25CF";
+  font-size: 40px;*/
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+}

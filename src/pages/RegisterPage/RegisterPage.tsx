@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import registerImage from "../../assets/create-account.svg";
+
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+import SwitchTheme from "../../components/SwitchTheme";
 import plane from "../../assets/paper_plane.svg";
+import registerImage from "../../assets/create-account.svg";
 
 import "./RegisterPage.scss";
 
@@ -18,6 +20,7 @@ export default function RegisterPage(): JSX.Element {
   };
   return (
     <div className="register">
+      <SwitchTheme />
       <div className="register-card">
         <div className="register-image">
           <h2>TEMONET</h2>

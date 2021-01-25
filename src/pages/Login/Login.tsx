@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
-import loginImage from "../../assets/login-image.svg";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+import SwitchTheme from "../../components/SwitchTheme";
 import plane from "../../assets/paper_plane.svg";
+import loginImage from "../../assets/login-image.svg";
 
 import "./Login.scss";
 
@@ -27,6 +28,7 @@ function Login(): JSX.Element {
           <img id="image-login" src={loginImage} alt="login" />
         </div>
         <img id="plane-login" src={plane} alt="plane_one" />
+        <SwitchTheme />
         <div className="login-form">
           <h2>Hola,</h2>
           <h2>Bienvenido</h2>
