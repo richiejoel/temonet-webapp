@@ -1,7 +1,7 @@
 @import "../../scss/index.scss";
 
 .register {
-  background-color: $primary-color;
+  background-color: var(--theme-color);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -111,4 +111,8 @@
   min-width: 300px;
   min-height: 150px;
   width: 300px;
+}
+
+.btnRegister {
+  background-color: var(--theme-color) !important;
 }

@@ -1,11 +1,7 @@
 @import "../../scss/index.scss";
 
-body {
-  // background-color: $primary-color !important;
-}
-
 .login {
-  background-color: $primary-color;
+  background-color: var(--theme-color);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -101,7 +97,7 @@ body {
 }
 
 .footer-login {
-  margin-top: 18%;
+  margin-top: 20%;
   h2 {
     font-weight: bold;
     font-size: 3vh;
@@ -117,4 +113,12 @@ body {
   min-width: 300px;
   min-height: 150px;
   width: 300px;
+}
+
+.btnLogin {
+  background-color: var(--theme-color) !important;
+}
+
+.btnRegister {
+  background-color: var(--theme-color) !important;
 }

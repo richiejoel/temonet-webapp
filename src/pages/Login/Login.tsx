@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+import { connect, useSelector } from "react-redux";
 import SwitchTheme from "../../components/SwitchTheme";
 import plane from "../../assets/paper_plane.svg";
 import loginImage from "../../assets/login-image.svg";
 
 import "./Login.scss";
+import "../../styles/theme.scss";
 
 function Login(): JSX.Element {
+  const theme_global = useSelector((state: any) => state.theme_global);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const history = useHistory();
@@ -20,8 +22,9 @@ function Login(): JSX.Element {
     setShowPassword(!showPassword);
     setIsLoading(false);
   };
+
   return (
-    <div className="login">
+    <div className={`login ${theme_global.theme}`}>
       <div className="login-card">
         <div className="login-image">
           <h2>TEMONET</h2>
@@ -63,6 +66,7 @@ function Login(): JSX.Element {
             </Form.Field>
             <div className="square-login">
               <Button
+                className={`btnRegister ${theme_global.theme}`}
                 onClick={() => {
                   history.push("/signup");
                 }}
@@ -71,6 +75,7 @@ function Login(): JSX.Element {
                 Registrarse
               </Button>
               <Button
+                className={`btnLogin ${theme_global.theme}`}
                 type="submit"
                 onClick={() => {
                   onSubmit();
@@ -91,4 +96,4 @@ function Login(): JSX.Element {
   );
 }
 
-export default withRouter(Login);
+export default connect()(Login);

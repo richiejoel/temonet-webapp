@@ -13,7 +13,7 @@
   cursor: pointer;
   width: 10%;
   text-align: center;
-  background-color: #19252f;
+  background-color: #242526;
 
   h3 {
     font-family: "dyslexicBold";
@@ -31,19 +31,19 @@
 }
 
 .content div:nth-child(1) {
-  background-color: #39aee7;
+  background-color: $theme-yellow;
 }
 .content div:nth-child(2) {
-  background-color: #ffab3f;
+  background-color: $theme-blue;
 }
 .content div:nth-child(3) {
-  background-color: #ee4660;
+  background-color: $theme-red;
 }
 .content div:nth-child(4) {
-  background-color: #785ebf;
+  background-color: $theme-purple;
 }
 .content div:nth-child(5) {
-  background-color: #51bd69;
+  background-color: $theme-green;
 }
 
 .color-circle {

@@ -1,0 +1,31 @@
+@import "../scss/index.scss";
+
+.blue {
+  --theme-color: #{$theme-blue};
+  --theme-page-background: #fff;
+  --theme-page-text: #111;
+}
+
+.yellow {
+  --theme-color: #{$theme-yellow};
+  --theme-page-background: #fff;
+  --theme-page-text: #111;
+}
+
+.red {
+  --theme-color: #{$theme-red};
+  --theme-page-background: #111;
+  --theme-page-text: #fff;
+}
+
+.purple {
+  --theme-color: #{$theme-purple};
+  --theme-page-background: #111;
+  --theme-page-text: #fff;
+}
+
+.green {
+  --theme-color: #{$theme-green};
+  --theme-page-background: #111;
+  --theme-page-text: #fff;
+}

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+import { connect, useSelector } from "react-redux";
 import SwitchTheme from "../../components/SwitchTheme";
+
 import plane from "../../assets/paper_plane.svg";
 import registerImage from "../../assets/create-account.svg";
 
 import "./RegisterPage.scss";
 
-export default function RegisterPage(): JSX.Element {
+function RegisterPage(): JSX.Element {
+  const theme_global = useSelector((state: any) => state.theme_global);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const history = useHistory();
@@ -19,7 +21,7 @@ export default function RegisterPage(): JSX.Element {
     setIsLoading(false);
   };
   return (
-    <div className="register">
+    <div className={`register ${theme_global.theme}`}>
       <SwitchTheme />
       <div className="register-card">
         <div className="register-image">
@@ -88,7 +90,11 @@ export default function RegisterPage(): JSX.Element {
               >
                 ¿Ya tienes una cuenta?
               </span>
-              <Button type="submit" loading={isLoading}>
+              <Button
+                className={`btnRegister ${theme_global.theme}`}
+                type="submit"
+                loading={isLoading}
+              >
                 Registrarse
               </Button>
             </div>
@@ -101,3 +107,5 @@ export default function RegisterPage(): JSX.Element {
     </div>
   );
 }
+
+export default connect()(RegisterPage);
