@@ -32,18 +32,18 @@ function MenuLeft() {
         </Menu.Item>
         <Menu.Item
           as={Link}
-          to="/artists"
-          name="artists"
-          active={activeMenu === "/artists"}
+          to="/activities"
+          name="activities"
+          active={activeMenu === "/activities"}
           onClick={handlerMenu}
         >
           <Icon name="tasks" /> Mis actividades
         </Menu.Item>
         <Menu.Item
           as={Link}
-          to="/albums"
-          name="albums"
-          active={activeMenu === "/albums"}
+          to="/score"
+          name="score"
+          active={activeMenu === "/score"}
           onClick={handlerMenu}
         >
           <Icon name="edit" /> Mis calificaciones
