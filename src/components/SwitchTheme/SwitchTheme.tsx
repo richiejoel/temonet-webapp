@@ -16,7 +16,7 @@ function SwitchTheme(): JSX.Element {
   return (
     <div className="switch-theme">
       <h3>Themes</h3>
-      <div className="content">
+      <div className="content-switch-theme">
         <div
           className="color-circle"
           onClick={() => {

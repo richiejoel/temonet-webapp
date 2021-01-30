@@ -7,7 +7,7 @@ import {
   } from "../constants/ReduxConstants";
 
   const default_theme_global = {
-    theme: "yellow"
+    theme: "purple"
   };
 
   const theme_global = (state=default_theme_global, action:any ) => {

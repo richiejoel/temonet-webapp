@@ -5,14 +5,14 @@
 }
 
 .home-top {
-  background-color: $background-secondary;
+  background-color: var(--theme-color-light);
   h1 {
-    color: $primary-color;
+    color: var(--theme-color);
     font-size: 70px;
     font-family: "dyslexicBold";
   }
   h2 {
-    color: $primary-color;
+    color: var(--theme-color);
     font-size: 65px;
     font-family: "dyslexicBold";
   }
@@ -23,21 +23,26 @@
 }
 
 .subtitle {
+  margin-top: 4%;
   h2 {
-    color: $font-primary;
+    color: var(--theme-color);
     font-size: 30px;
     font-family: "dyslexicBold";
+    font-weight: bold;
   }
   p {
     color: $font-primary;
     font-size: 15px;
-    font-family: "dyslexicBold";
+    font-family: "dyslexicRegular";
   }
 }
 
 .resume {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 25%;
+  margin-right: 25%;
+  p {
+    font-family: "dyslexicRegular";
+  }
 }
 
 .home-bottom {
@@ -54,5 +59,12 @@
   object-fit: fill;
   min-width: 300px;
   min-height: 150px;
-  width: 500px;
+  width: 400px;
+}
+
+.btn-home {
+  background-color: var(--theme-color) !important;
+  color: var(--theme-page-text) !important;
+  font-family: "dyslexicBold" !important;
+  margin-bottom: 25px !important;
 }

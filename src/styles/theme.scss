@@ -2,30 +2,35 @@
 
 .blue {
   --theme-color: #{$theme-blue};
+  --theme-color-light: #{$theme-blue-light};
   --theme-page-background: #fff;
   --theme-page-text: #111;
 }
 
 .yellow {
   --theme-color: #{$theme-yellow};
+  --theme-color-light: #{$theme-yellow-light};
   --theme-page-background: #fff;
   --theme-page-text: #111;
 }
 
 .red {
   --theme-color: #{$theme-red};
+  --theme-color-light: #{$theme-red-light};
   --theme-page-background: #111;
   --theme-page-text: #fff;
 }
 
 .purple {
   --theme-color: #{$theme-purple};
+  --theme-color-light: #{$theme-purple-light};
   --theme-page-background: #111;
   --theme-page-text: #fff;
 }
 
 .green {
   --theme-color: #{$theme-green};
+  --theme-color-light: #{$theme-green-light};
   --theme-page-background: #111;
   --theme-page-text: #fff;
 }
