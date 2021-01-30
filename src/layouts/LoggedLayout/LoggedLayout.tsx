@@ -18,6 +18,7 @@ export default function LoggedLayout() {
           </Grid.Column>
           <Grid.Column className="content" width={14}>
             <TopBar />
+            <SwitchTheme />
             <Routes />
           </Grid.Column>
         </Grid.Row>

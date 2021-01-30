@@ -24,6 +24,7 @@
 
 .subtitle {
   margin-top: 4%;
+  margin-bottom: 2%;
   h2 {
     color: var(--theme-color);
     font-size: 30px;
@@ -47,7 +48,8 @@
 
 .home-bottom {
   display: flex;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   justify-content: center;
   text-align: center;
 }
@@ -67,4 +69,11 @@
   color: var(--theme-page-text) !important;
   font-family: "dyslexicBold" !important;
   margin-bottom: 25px !important;
+}
+
+.title-options {
+  margin-left: -42%;
+  font-size: 30px;
+  font-family: "dyslexicBold";
+  color: $font-primary;
 }

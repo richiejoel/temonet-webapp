@@ -6,6 +6,9 @@ import Card from "../../components/Card";
 import MenuLeft from "../../components/MenuLeft";
 import plane from "../../assets/paper_plane.svg";
 
+import ImageActivityText from "../../assets/svg/quiz_multiple_text.svg";
+import ImageActivityGraphics from "../../assets/svg/quiz_multiples-images.svg";
+
 import "./Home.scss";
 import "../../styles/theme.scss";
 
@@ -37,38 +40,38 @@ function Home(): JSX.Element {
           obtener puntos extras.
         </p>
       </div>
-      <h2>Opciones Múltiples</h2>
+      <span className="title-options">Opciones Múltiples</span>
       <div className="home-bottom">
         <Card
-          src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+          src={ImageActivityText}
           title="Online Experiences"
           description="Unique activities we can do together, led by a world of hosts."
         />
         <Card
-          src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
+          src={ImageActivityGraphics}
           title="Unique stays"
           description="Spaces that are more than just a place to sleep."
         />
         <Card
-          src="https://a0.muscache.com/im/pictures/fdb46962-10c1-45fc-a228-d0b055411448.jpg?im_w=720"
+          src={ImageActivityText}
           title="Entire homes"
           description="Comfortable private places, with room for friends or family."
         />
       </div>
-      <h2>Graphics</h2>
+      <span className="title-options">Preguntas abiertas</span>
       <div className="home-bottom">
         <Card
-          src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+          src={ImageActivityGraphics}
           title="Online Experiences"
           description="Unique activities we can do together, led by a world of hosts."
         />
         <Card
-          src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
+          src={ImageActivityText}
           title="Unique stays"
           description="Spaces that are more than just a place to sleep."
         />
         <Card
-          src="https://a0.muscache.com/im/pictures/fdb46962-10c1-45fc-a228-d0b055411448.jpg?im_w=720"
+          src={ImageActivityGraphics}
           title="Entire homes"
           description="Comfortable private places, with room for friends or family."
         />
