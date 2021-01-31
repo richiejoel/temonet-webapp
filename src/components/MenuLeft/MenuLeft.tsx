@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, useHistory } from "react-router-dom";
 import { Sidebar, Icon, Menu } from "semantic-ui-react";
 import { connect, useSelector } from "react-redux";
 
@@ -11,9 +11,13 @@ import "./MenuLeft.scss";
 function MenuLeft() {
   const [activeMenu, setActiveMenu] = useState("/");
   const theme_global = useSelector((state: any) => state.theme_global);
+  const history = useHistory();
   const handlerMenu = (e: any, menu: any) => {
     //console.log(menu);
     setActiveMenu(menu.to);
+  };
+  const pushPage = () => {
+    history.push("/signin");
   };
   return (
     <Menu className={`menu-left  ${theme_global.theme}  `} secondary vertical>
@@ -57,4 +61,4 @@ function MenuLeft() {
   );
 }
 
-export default connect()(withRouter(MenuLeft));
+export default withRouter(connect()(MenuLeft));

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import RegisterPage from "../pages/RegisterPage";
+import MultiplesActivities from "../pages/MultiplesActivities/MultiplesActivities";
 
 export default function Routes() {
   return (
@@ -18,6 +19,9 @@ export default function Routes() {
         </Route>
         <Route path="/signup" exact>
           <RegisterPage />
+        </Route>
+        <Route path="/question" exact>
+          <MultiplesActivities />
         </Route>
       </Switch>
     </Router>
