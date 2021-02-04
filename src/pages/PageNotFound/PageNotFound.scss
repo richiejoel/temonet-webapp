@@ -1,0 +1,26 @@
+@import "../../scss/index.scss";
+
+.page-not-found {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $font-light;
+  margin-top: 3%;
+}
+
+.title-found {
+  font-size: 70px;
+  font-family: "dyslexicBold";
+  color: var(--theme-color) !important;
+}
+
+.resume-found {
+  font-size: 40px;
+  font-family: "dyslexicRegular";
+  color: $font-primary !important;
+}
+
+#image-not-found {
+  width: 500px;
+  height: 500px;
+}
