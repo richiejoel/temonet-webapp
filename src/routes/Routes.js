@@ -14,6 +14,7 @@ import RegisterPage from "../pages/RegisterPage";
 import PageNotFound from "../pages/PageNotFound";
 import MultiplesActivities from "../pages/MultiplesActivities/MultiplesActivities";
 import Lesson from "../pages/Lesson";
+import CreateLessonCard from "../pages/CreateLessonCard";
 import LoggedLayout from "../layouts/LoggedLayout";
 
 export default function Routes() {
@@ -28,6 +29,9 @@ export default function Routes() {
         </PrivateRoute>
         <PrivateRoute path="/lesson" exact>
           <Lesson />
+        </PrivateRoute>
+        <PrivateRoute path="/createLesson" exact>
+          <CreateLessonCard />
         </PrivateRoute>
         <Route path="/signin" exact>
           <Login />
