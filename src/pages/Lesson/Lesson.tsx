@@ -12,11 +12,12 @@ import http from "../../utils/http";
 import * as S from "./styled";
 //import { Logger, ConsoleLogger } from "react-console-logger";
 import Data from "../../data/db.json";
+import "../../styles/theme.scss";
 
-function prueba(): any {
-  const a = JSON.stringify(Data);
-  const b = JSON.parse(a);
-  return b;
+function generateJSON(): any {
+  const data = JSON.stringify(Data);
+  const  dataJSON = JSON.parse(data);
+  return dataJSON;
 }
 
 const Lesson = (props: RouteComponentProps) => {
@@ -25,7 +26,7 @@ const Lesson = (props: RouteComponentProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
   const [disabledCheckButton, setDisabledCheckButton] = React.useState(true);
   const [progress, setProgress] = React.useState(0);
-  const [questions, setQuestions] = React.useState<Word[]>(prueba());
+  const [questions, setQuestions] = React.useState<Word[]>(generateJSON());
   const [visibleAnswerBox, setVisibleAnswerBox] = React.useState(false);
   const isButtonDisabled = () => disabledCheckButton && !answers.length;
   const dispatch = useDispatch();
@@ -222,7 +223,7 @@ const Lesson = (props: RouteComponentProps) => {
 
     return (
       <S.LessonContainer>
-        <S.ProgressBarRow>
+        <S.ProgressBarRow className={`fix`}>
           <ProgressBar progress={progress} />
         </S.ProgressBarRow>
         {question}

@@ -4,8 +4,10 @@ interface IProgressBarProps {
   width: number;
 }
 
-export const ProgressBar = styled.div`
-  background-color: #20a8e9;
+export const ProgressBar = styled.div.attrs(props => ({
+  className: props.className,
+}))`
+  background-color: var(--theme-color);
   background-image: none;
   height: 10px;
   width: ${({width}: IProgressBarProps) => width}%

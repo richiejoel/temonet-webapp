@@ -44,7 +44,9 @@ export const SuccessBox = styled.div`
   transition: bottom .3s ease;
 `;
 
-export const ProgressBarRow = styled.div`
+export const ProgressBarRow = styled.div.attrs(props => ({
+  className: props.className,
+}))`
   display: flex;
   flex-flow: column;
   margin: 20px;
