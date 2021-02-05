@@ -3,7 +3,8 @@ import { connect, useSelector } from "react-redux";
 import Draggable from "react-draggable";
 import { useDropzone } from "react-dropzone";
 
-import NoImage from "../../assets/svg/no-image.svg";
+import CardPreview from "../../components/CardPreview";
+
 
 import "./CreateLessonCard.scss";
 import "../../styles/theme.scss";
@@ -20,7 +21,7 @@ function CreateLessonCard() {
     setAlbumImage(URL.createObjectURL(file));
   }, []);
 
-  const { getRootProps, getInputProps } = useDropzone({
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: "image/jpeg, image/png",
     noKeyboard: true,
     onDrop,
@@ -38,16 +39,9 @@ function CreateLessonCard() {
 
   return (
     <div className={`create-lesson-card ${theme_global.theme}`}>
-      <h2>Hii</h2>
       <Draggable {...dragHandlers}>
-        <div className="box">
-          <div
-            {...getRootProps()}
-            className="avatar"
-            style={{ backgroundImage: `url('${albumImage}')` }}
-          />
-          <input {...getInputProps()} />
-          {!albumImage && <img id="image-drag-svg" src={NoImage} />}
+      <div className="box">
+      <CardPreview/>
         </div>
       </Draggable>
     </div>
