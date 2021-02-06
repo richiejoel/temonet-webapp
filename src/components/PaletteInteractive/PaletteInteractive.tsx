@@ -2,6 +2,7 @@ import React from "react";
 import {connect, useSelector} from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
 import Draggable from "react-draggable";
+import CardPreview from "../../components/CardPreview";
 import "./PaletteInteractive.scss";
 import "../../styles/theme.scss";
 
@@ -80,6 +81,7 @@ function PaletteInteractive(props): JSX.Element {
               <button id="delete" onClick={(e) => deleteNote(item.id)}>
                 X
               </button>
+              <CardPreview/>
             </div>
           </Draggable>
         );
