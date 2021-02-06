@@ -90,11 +90,11 @@ function CreateLessonCard() {
   return (
     <div className={`create-lesson-card ${theme_global.theme}`}>
       <div className="content-lesson">
-        {/*<Draggable {...dragHandlers}>
+        <Draggable {...dragHandlers}>
           <div className="box">
             <CardPreview/>
           </div>
-  </Draggable>*/}
+  </Draggable>
       <Button className="btn-lesson" >
         Guardar Lección
       </Button>

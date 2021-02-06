@@ -36,13 +36,18 @@ const thumbsContainer = {
   };
 
 function CardPreview(props) {
+  var global;
     const [files, setFiles] = useState<any>([]);
+    const [estado, setEstado] = useState("show-img");
   const {getRootProps, getInputProps} = useDropzone({
     accept: 'image/*',
     onDrop: acceptedFiles => {
       setFiles(acceptedFiles.map(file => Object.assign(file, {
         preview: URL.createObjectURL(file)
       })));
+
+      setEstado("hide-img");
+      
     }
   });
   
@@ -66,6 +71,7 @@ function CardPreview(props) {
         <div className="container">
       <div {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
+        <img id={estado} className="img-drop" src={NoImage}/>
         {!thumbs ? 
         <img className="img-drop" src={NoImage}/> :
         <div className={`thumbsContainer`}>
