@@ -46,6 +46,10 @@ function CreateLessonCard() {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("items")!) || []
   );
+  const [itemTitle, setItemTitle] = useState("Title lesson");
+  const [itemsTitle, setItemsTitle] = useState(
+    JSON.parse(localStorage.getItem("itemsTitle")!) || []
+  );
 
   const newitem = () => {
         //if (item.trim() !== "") {
@@ -66,6 +70,15 @@ function CreateLessonCard() {
     }*/
   };
 
+  const newItemTitle = () => {
+    const newItemTitle = {
+      id: uuidv4(),
+      itemTitle: itemTitle,
+      defaultPosTitle: {x:100, y:-60},
+    };
+    setItemsTitle((itemsTitle) => [...itemsTitle, newItemTitle]);
+  };
+
   const keyPress = (event) => {
     var code = event.keyCode || event.which;
     if (code === 13) {
@@ -77,15 +90,31 @@ function CreateLessonCard() {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
 
+  useEffect(() => {
+    localStorage.setItem("itemsTitle", JSON.stringify(itemsTitle));
+  }, [itemsTitle]);
+
   const updatePos = (data, index) => {
     let newArr = [...items];
     newArr[index].defaultPos = { x: data.x, y: data.y };
     setItems(newArr);
   };
 
+  const updatePosTitle = (data, index) => {
+    let newArr = [...itemsTitle];
+    newArr[index].defaultPosTitle = { x: data.x, y: data.y };
+    setItemsTitle(newArr);
+  };
+
   const deleteNote = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
+
+  const deleteNoteTitle = (id) => {
+    setItemsTitle(itemsTitle.filter((itemTitle) => itemTitle.id !== id));
+  };
+
+  //hurry cum yum install
 
   return (
     <div className={`create-lesson-card ${theme_global.theme}`}>
@@ -101,7 +130,10 @@ function CreateLessonCard() {
       </div>
       <div className="palette">
         <PaletteInteractive item={item} items={items} updatePos={updatePos} 
-        deleteNote={deleteNote} newitem={newitem} setItem={setItem} keyPress={keyPress} />
+        deleteNote={deleteNote} newitem={newitem} setItem={setItem} keyPress={keyPress} 
+        itemTitle={itemTitle} itemsTitle={itemsTitle} setItemTitle={setItemTitle} newItemTitle={newItemTitle}
+        deleteNoteTitle={deleteNoteTitle} updatePosTitle={updatePosTitle}
+        />
         {/*<div id="new-item">
         <input
           value={item}
