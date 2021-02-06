@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {connect, useSelector} from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
 import Draggable from "react-draggable";
@@ -12,6 +12,10 @@ function PaletteInteractive(props): JSX.Element {
     setItem, keyPress, itemTitle, itemsTitle, setItemTitle, 
     newItemTitle, deleteNoteTitle, updatePosTitle } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
+  const [content, setContent] = useState("");
+  const [width, setWidth] = useState(0);
+  const span = useRef<HTMLDivElement>(null);
+ 
   const fix = () => {
     setItem(`Lesson`);
     newitem();
@@ -20,6 +24,18 @@ function PaletteInteractive(props): JSX.Element {
     setItemTitle(`Lesson Title`);
     newItemTitle();
   }
+
+  useEffect(() => {
+    if(span != null && span.current != null){
+      setWidth(span.current.offsetWidth + (span.current.offsetWidth *0.5));
+      console.log(`Joel ${span.current.offsetWidth}`);
+    }
+    
+  }, [content]);
+
+  const changeHandler = (evt) => {
+    setContent(evt.target.value);
+  };
   //{`${item.item}`}
   return (
     <div className={`palette-interactive ${theme_global_color.theme}`}>
@@ -104,11 +120,14 @@ function PaletteInteractive(props): JSX.Element {
             }}
           >
             <div className="texto">
-              <input id="input-card" type="text" 
-              onChange={(e) => (e.target.value)}
-              placeholder="Title lesson..." 
+              <>
+              <span id="hide" ref={span}>{content}</span>
+              <input id="input-title-text" type="text" autoFocus style={{ width }}
+              placeholder="Title lesson..."
+              onChange={changeHandler}
                />
-              <button id="delete" onClick={(e) => deleteNoteTitle(itemTitle.id)}>
+               </>
+              <button id="delete-title" onClick={(e) => deleteNoteTitle(itemTitle.id)}>
                 X
               </button>
             </div>

@@ -81,7 +81,21 @@
   border: none;
 }
 
+#delete-title {
+  font-size: 0.6em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  margin-top: -6px !important;
+}
+
 #delete:hover {
+  color: rgb(255, 55, 55);
+}
+
+#delete-title:hover {
   color: rgb(255, 55, 55);
 }
 
@@ -112,4 +126,22 @@
   outline: none !important;
   padding: 0px !important;
   font-family: "dyslexicItalic";
+}
+
+#input-title-text:not(.userListBox) {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0px !important;
+  font-family: "dyslexicItalic";
+  display: flex;
+  min-width: 120px;
+  //max-width: 700px;
+}
+
+#hide {
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+  white-space: pre;
 }
