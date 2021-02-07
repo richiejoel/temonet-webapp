@@ -36,6 +36,10 @@ function PaletteInteractive(props): JSX.Element {
   const changeHandler = (evt) => {
     setContent(evt.target.value);
   };
+
+  const itemIndex = () => {
+    
+  }
   //{`${item.item}`}
   return (
     <div className={`palette-interactive ${theme_global_color.theme}`}>
@@ -110,9 +114,9 @@ function PaletteInteractive(props): JSX.Element {
         );
       })}
 
-{itemsTitle.map((itemTitle, index) => {
-  return(
-<Draggable
+      {itemsTitle.map((itemTitle, index) => {
+        return(
+          <Draggable
             key={itemTitle.id}
             defaultPosition={itemTitle.defaultPosTitle}
             onStop={(e, data) => {
@@ -132,8 +136,10 @@ function PaletteInteractive(props): JSX.Element {
               </button>
             </div>
           </Draggable>
-);
-})}
+        );
+      })
+      
+      }
 
     </div>
       </div>
