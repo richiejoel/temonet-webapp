@@ -5,7 +5,7 @@ import Draggable from "react-draggable";
 import { useDropzone } from "react-dropzone";
 import { v4 as uuidv4 } from "uuid";
 import randomColor from "randomcolor";
-//var randomColor = require("randomcolor");
+import PopupShadow from "../../components/PopupShadow";
 
 import CardPreview from "../../components/CardPreview";
 import PaletteInteractive from "../../components/PaletteInteractive";
@@ -19,6 +19,7 @@ function CreateLessonCard() {
   const [activeDrags, setActiveDrags] = useState(0);
   const [albumImage, setAlbumImage] = useState("");
   const [file, setFile] = useState(null);
+  const [hightWords, setHightWords] = useState<string>("");
 
   const onDrop = useCallback((acceptedFile) => {
     const file = acceptedFile[0];
@@ -114,21 +115,29 @@ function CreateLessonCard() {
     setItemsTitle(itemsTitle.filter((itemTitle) => itemTitle.id !== id));
   };
 
+  const handleMouseUp = () => {
+    console.log(`Selected text: ${window?.getSelection()?.toString()}`);
+    setHightWords(window?.getSelection()?.toString()!);
+}
+
   //hurry cum yum install
 
   return (
-    <div className={`create-lesson-card ${theme_global.theme}`}>
+    <div className={`create-lesson-card ${theme_global.theme}`} onMouseUp={handleMouseUp} onKeyUp={handleMouseUp}>
       <div className="content-lesson">
+        <span>Hola goku</span>
         {/*<Draggable {...dragHandlers}>
           <div className="box">
             <CardPreview/>
           </div>
   </Draggable>*/}
+    <PopupShadow hightWords={hightWords} />
       <Button className="btn-lesson" >
         Guardar Lección
       </Button>
       </div>
       <div className="palette">
+        
         <PaletteInteractive item={item} items={items} updatePos={updatePos} 
         deleteNote={deleteNote} newitem={newitem} setItem={setItem} keyPress={keyPress} 
         itemTitle={itemTitle} itemsTitle={itemsTitle} setItemTitle={setItemTitle} newItemTitle={newItemTitle}
