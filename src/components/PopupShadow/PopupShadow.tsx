@@ -9,8 +9,8 @@ function PopupShadow(props): JSX.Element {
                 <div className="popup-elements">B</div>
                 <div className="popup-elements">K</div>
                 <div className="popup-elements">U</div>
-                <div className="popup-elements">ʌ</div>
-                <div className="popup-elements">v</div>
+                <div className="popup-elements">+</div>
+                <div className="popup-elements">-</div>
             </div>
         </div>
     )

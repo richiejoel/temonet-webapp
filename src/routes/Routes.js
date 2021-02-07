@@ -16,6 +16,7 @@ import MultiplesActivities from "../pages/MultiplesActivities/MultiplesActivitie
 import Lesson from "../pages/Lesson";
 import CreateLessonCard from "../pages/CreateLessonCard";
 import LoggedLayout from "../layouts/LoggedLayout";
+import Example from "../components/Example";
 
 export default function Routes() {
   return (
@@ -38,6 +39,9 @@ export default function Routes() {
         </Route>
         <Route path="/signup" exact>
           <RegisterPage />
+        </Route>
+        <Route path="/example" exact>
+          <Example />
         </Route>
         <Route path="*" exact>
           <PageNotFound />

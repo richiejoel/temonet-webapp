@@ -6,13 +6,12 @@ import { useDropzone } from "react-dropzone";
 import { v4 as uuidv4 } from "uuid";
 import randomColor from "randomcolor";
 import PopupShadow from "../../components/PopupShadow";
-
 import CardPreview from "../../components/CardPreview";
 import PaletteInteractive from "../../components/PaletteInteractive";
 
-
 import "./CreateLessonCard.scss";
 import "../../styles/theme.scss";
+
 
 function CreateLessonCard() {
   const theme_global = useSelector((state: any) => state.theme_global);
@@ -143,6 +142,7 @@ function CreateLessonCard() {
         itemTitle={itemTitle} itemsTitle={itemsTitle} setItemTitle={setItemTitle} newItemTitle={newItemTitle}
         deleteNoteTitle={deleteNoteTitle} updatePosTitle={updatePosTitle}
         />
+        
         {/*<div id="new-item">
         <input
           value={item}
