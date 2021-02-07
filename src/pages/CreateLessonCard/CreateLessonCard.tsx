@@ -124,13 +124,12 @@ function CreateLessonCard() {
   return (
     <div className={`create-lesson-card ${theme_global.theme}`} onMouseUp={handleMouseUp} onKeyUp={handleMouseUp}>
       <div className="content-lesson">
-        <span>Hola goku</span>
         {/*<Draggable {...dragHandlers}>
           <div className="box">
             <CardPreview/>
           </div>
   </Draggable>*/}
-    <PopupShadow hightWords={hightWords} />
+    {/*<PopupShadow hightWords={hightWords} />*/}
       <Button className="btn-lesson" >
         Guardar Lección
       </Button>
