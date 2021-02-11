@@ -19,10 +19,35 @@
   box-sizing: border-box;
 }
 
+.play-video {
+  color: $font-light !important;
+  font-size: 30px !important;
+  position: absolute;
+  left: 320px;
+  top: 550px;
+}
+.pause-video {
+  color: $font-light !important;
+  font-size: 30px !important;
+  position: absolute;
+  left: 320px;
+  top: 550px;
+}
+
+.seek-player {
+  color: $font-light !important;
+  font-size: 30px !important;
+  position: absolute;
+  left: 240px;
+  top: 525px;
+  width: 200px;
+}
+
 .thumbInner-video {
   display: flex;
   min-width: 0;
   overflow: hidden;
+  align-items: center;
 }
 
 .img-video {
@@ -38,6 +63,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  outline: none;
 }
 
 #hide-img {
@@ -46,4 +72,21 @@
 
 #show-img {
   display: inline;
+}
+
+.dropzone {
+  outline: none;
+}
+
+.ui.progress {
+  width: 100%;
+  margin: 0;
+
+  .bar {
+    min-width: 0%;
+
+    .progress {
+      display: none;
+    }
+  }
 }
