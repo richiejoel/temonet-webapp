@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { connect, useSelector } from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
 import Draggable from "react-draggable";
-import CardPreview from "../../components/CardPreview";
-import "./PaletteInteractive.scss";
+import VideoPreview from "../../components/VideoPreview";
+import "./PaletteVideoOptions.scss";
 import "../../styles/theme.scss";
 
-function PaletteInteractive(props): JSX.Element {
+function PaletteVideoOptions(props): JSX.Element {
   const {
     item,
     items,
@@ -21,6 +21,12 @@ function PaletteInteractive(props): JSX.Element {
     newItemTitle,
     deleteNoteTitle,
     updatePosTitle,
+    itemOption,
+    itemsOptions,
+    setItemOption,
+    newItemOption,
+    updatePosOption,
+    deleteNoteOption,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
   const [content, setContent] = useState("");
@@ -34,6 +40,11 @@ function PaletteInteractive(props): JSX.Element {
   const fixTitle = () => {
     setItemTitle(`Lesson Title`);
     newItemTitle();
+  };
+
+  const createOption = () => {
+    setItemOption(`Option`);
+    newItemOption();
   };
 
   useEffect(() => {
@@ -50,9 +61,9 @@ function PaletteInteractive(props): JSX.Element {
   const itemIndex = () => {};
   //{`${item.item}`}
   return (
-    <div className={`palette-interactive ${theme_global_color.theme}`}>
-      <div className="palette-interactive__content">
-        <div className="palette-interactive__left">
+    <div className={`palette-video ${theme_global_color.theme}`}>
+      <div className="palette-video__content">
+        <div className="palette-video__left">
           <div
             className="notes"
             onClick={() => {
@@ -60,7 +71,7 @@ function PaletteInteractive(props): JSX.Element {
             }}
           >
             <img id="img-add" src={AddCard} alt="img-add" />
-            <span>Añadir elemento</span>
+            <span>Añadir vídeo</span>
           </div>
           <div
             className="notes"
@@ -71,16 +82,25 @@ function PaletteInteractive(props): JSX.Element {
             <img id="img-add" src={AddCard} alt="img-add" />
             <span>Añadir texto</span>
           </div>
+          <div
+            className="notes"
+            onClick={() => {
+              createOption();
+            }}
+          >
+            <img id="img-add" src={AddCard} alt="img-add" />
+            <span>Añadir opciones</span>
+          </div>
         </div>
-        <div className="palette-interactive__right">
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right_colors"></div>
-          <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
+        <div className="palette-video__right">
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right_colors"></div>
+          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>
         </div>
 
         <div>
@@ -103,7 +123,10 @@ function PaletteInteractive(props): JSX.Element {
                     updatePos(data, index);
                   }}
                 >
-                  <div style={{ backgroundColor: item.color }} className="box">
+                  <div
+                    style={{ backgroundColor: item.color }}
+                    className="box-video"
+                  >
                     <input
                       id="input-card"
                       type="text"
@@ -113,7 +136,7 @@ function PaletteInteractive(props): JSX.Element {
                     <button id="delete" onClick={(e) => deleteNote(item.id)}>
                       X
                     </button>
-                    <CardPreview />
+                    <VideoPreview />
                   </div>
                 </Draggable>
               </>
@@ -153,10 +176,43 @@ function PaletteInteractive(props): JSX.Element {
               </Draggable>
             );
           })}
+
+          {/* Draggable options */}
+          {itemsOptions.map((itemOption, index) => {
+            return (
+              <>
+                <Draggable
+                  key={itemOption.id}
+                  defaultPosition={itemOption.defaultPosOption}
+                  onStop={(e, data) => {
+                    updatePosOption(data, index);
+                  }}
+                >
+                  <div
+                    style={{ backgroundColor: itemOption.color }}
+                    className="box-option"
+                  >
+                    <input
+                      id="input-card"
+                      type="text"
+                      onChange={(e) => setItemOption(e.target.value)}
+                      placeholder="Option..."
+                    />
+                    <button
+                      id="delete"
+                      onClick={(e) => deleteNoteOption(itemOption.id)}
+                    >
+                      X
+                    </button>
+                  </div>
+                </Draggable>
+              </>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
 
-export default connect()(PaletteInteractive);
+export default connect()(PaletteVideoOptions);

@@ -15,6 +15,7 @@ import PageNotFound from "../pages/PageNotFound";
 import MultiplesActivities from "../pages/MultiplesActivities/MultiplesActivities";
 import Lesson from "../pages/Lesson";
 import CreateLessonCard from "../pages/CreateLessonCard";
+import CreateLessonVideo from "../pages/CreateLessonVideo";
 import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
 
@@ -33,6 +34,9 @@ export default function Routes() {
         </PrivateRoute>
         <PrivateRoute path="/createLesson" exact>
           <CreateLessonCard />
+        </PrivateRoute>
+        <PrivateRoute path="/createLessonVideo" exact>
+          <CreateLessonVideo />
         </PrivateRoute>
         <Route path="/signin" exact>
           <Login />
