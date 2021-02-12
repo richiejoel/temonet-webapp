@@ -1,0 +1,165 @@
+@import "../../scss/index.scss";
+
+.palette-audio {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--theme-color-light);
+
+  //flex-direction: column-reverse;
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+  &__left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    .notes {
+      display: flex;
+      flex-direction: column;
+      margin: 3%;
+      #img-add {
+        height: 70px;
+        width: 80px;
+        object-fit: fill;
+      }
+      span {
+        font-family: "dyslexicRegular";
+      }
+    }
+  }
+
+  &__right {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+
+    &__colors {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+}
+
+.palette-audio__right div:nth-child(1) {
+  background-color: $theme-yellow;
+}
+.palette-audio__right div:nth-child(2) {
+  background-color: $theme-blue;
+}
+.palette-audio__right div:nth-child(3) {
+  background-color: $theme-red;
+}
+.palette-audio__right div:nth-child(4) {
+  background-color: $theme-purple;
+}
+.palette-audio__right div:nth-child(5) {
+  background-color: $theme-green;
+}
+.palette-audio__right div:nth-child(6) {
+  background-color: $theme-green;
+}
+.palette-audio__right div:nth-child(7) {
+  background-color: $theme-green;
+}
+.palette-audio__right div:nth-child(8) {
+  background-color: $theme-green;
+}
+
+#delete {
+  font-size: 0.6em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+#delete-title {
+  font-size: 0.6em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  margin-top: -6px !important;
+}
+
+#delete:hover {
+  color: rgb(255, 55, 55);
+}
+
+#delete-title:hover {
+  color: rgb(255, 55, 55);
+}
+
+#new-item {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-audio {
+  position: absolute;
+  cursor: move;
+  color: black;
+  background-color: white;
+  max-width: 700px;
+  overflow-wrap: break-word;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+  outline: none;
+}
+
+#input-card:not(.userListBox) {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0px !important;
+  font-family: "dyslexicItalic";
+}
+
+#input-title-text:not(.userListBox) {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0px !important;
+  font-family: "dyslexicItalic";
+  display: flex;
+  min-width: 120px;
+  //max-width: 700px;
+}
+
+#hide {
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+  white-space: pre;
+}
+
+.box-option-audio {
+  position: absolute;
+  cursor: move;
+  color: black;
+  background-color: white;
+  max-width: 400px;
+  width: 250px !important;
+  height: 50px !important;
+  overflow-wrap: break-word;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  border: 0px solid black;
+  user-select: none;
+}

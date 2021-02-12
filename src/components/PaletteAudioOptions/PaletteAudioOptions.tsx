@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect, useSelector } from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
-import AddVideo from "../../assets/svg/no-video.svg";
+import AddAudio from "../../assets/svg/no-audio.svg";
 import Draggable from "react-draggable";
-import VideoPreview from "../../components/VideoPreview";
-import "./PaletteVideoOptions.scss";
+import AudioPreview from "../../components/AudioPreview";
+import "./PaletteAudioOptions.scss";
 import "../../styles/theme.scss";
 
-function PaletteVideoOptions(props): JSX.Element {
+function PaletteAudioOptions(props): JSX.Element {
   const {
     item,
     items,
@@ -62,17 +62,17 @@ function PaletteVideoOptions(props): JSX.Element {
   const itemIndex = () => {};
   //{`${item.item}`}
   return (
-    <div className={`palette-video ${theme_global_color.theme}`}>
-      <div className="palette-video__content">
-        <div className="palette-video__left">
+    <div className={`palette-audio ${theme_global_color.theme}`}>
+      <div className="palette-audio__content">
+        <div className="palette-audio__left">
           <div
             className="notes"
             onClick={() => {
               fix();
             }}
           >
-            <img id="img-add" src={AddVideo} alt="img-add" />
-            <span>Añadir vídeo</span>
+            <img id="img-add" src={AddAudio} alt="img-add" />
+            <span>Añadir audio</span>
           </div>
           <div
             className="notes"
@@ -93,15 +93,15 @@ function PaletteVideoOptions(props): JSX.Element {
             <span>Añadir opciones</span>
           </div>
         </div>
-        <div className="palette-video__right">
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right_colors"></div>
-          <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
+        <div className="palette-audio__right">
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right_colors"></div>
+          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>
         </div>
 
         <div>
@@ -126,7 +126,7 @@ function PaletteVideoOptions(props): JSX.Element {
                 >
                   <div
                     style={{ backgroundColor: item.color }}
-                    className="box-video"
+                    className="box-audio"
                   >
                     <input
                       id="input-card"
@@ -137,7 +137,7 @@ function PaletteVideoOptions(props): JSX.Element {
                     <button id="delete" onClick={(e) => deleteNote(item.id)}>
                       X
                     </button>
-                    <VideoPreview />
+                    <AudioPreview />
                   </div>
                 </Draggable>
               </>
@@ -216,4 +216,4 @@ function PaletteVideoOptions(props): JSX.Element {
   );
 }
 
-export default connect()(PaletteVideoOptions);
+export default connect()(PaletteAudioOptions);

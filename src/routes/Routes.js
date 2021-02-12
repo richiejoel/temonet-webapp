@@ -16,6 +16,7 @@ import MultiplesActivities from "../pages/MultiplesActivities/MultiplesActivitie
 import Lesson from "../pages/Lesson";
 import CreateLessonCard from "../pages/CreateLessonCard";
 import CreateLessonVideo from "../pages/CreateLessonVideo";
+import CreateLessonAudio from "../pages/CreateLessonAudio";
 import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
 
@@ -37,6 +38,9 @@ export default function Routes() {
         </PrivateRoute>
         <PrivateRoute path="/createLessonVideo" exact>
           <CreateLessonVideo />
+        </PrivateRoute>
+        <PrivateRoute path="/createLessonAudio" exact>
+          <CreateLessonAudio />
         </PrivateRoute>
         <Route path="/signin" exact>
           <Login />
