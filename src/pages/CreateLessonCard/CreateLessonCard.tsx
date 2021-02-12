@@ -8,6 +8,7 @@ import randomColor from "randomcolor";
 import PopupShadow from "../../components/PopupShadow";
 import CardPreview from "../../components/CardPreview";
 import PaletteInteractive from "../../components/PaletteInteractive";
+import Swal from "sweetalert2";
 
 import "./CreateLessonCard.scss";
 import "../../styles/theme.scss";
@@ -33,6 +34,11 @@ function CreateLessonCard() {
   });
 
   const onWait = () => {
+    Swal.fire(
+      "¡Lección creada exitosamente!",
+      "Gracias por su tiempo",
+      "success"
+    );
     setIsDraggable(true);
   };
 

@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import randomColor from "randomcolor";
 import PopupShadow from "../../components/PopupShadow";
 import PaletteAudioOptions from "../../components/PaletteAudioOptions";
+import Swal from "sweetalert2";
 
 import "./CreateLessonAudio.scss";
 import "../../styles/theme.scss";
@@ -31,6 +32,11 @@ function CreateLessonAudio() {
   });
 
   const onWait = () => {
+    Swal.fire(
+      "¡Lección creada exitosamente!",
+      "Gracias por su tiempo",
+      "success"
+    );
     setIsDraggable(true);
   };
 

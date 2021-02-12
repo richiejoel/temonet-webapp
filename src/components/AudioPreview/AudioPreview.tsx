@@ -115,7 +115,7 @@ function AudioPreview(props) {
   return (
     <div className="container-audio">
       {estado === "show-img" ? (
-        <div {...getRootProps({ className: "dropzone" })}>
+        <div {...getRootProps({ className: "dropzone-audio" })}>
           <input {...getInputProps()} />
           <img id={estado} className="img-drop-audio" src={NoImage} />
           {thumbs && (
@@ -128,7 +128,7 @@ function AudioPreview(props) {
       ) : (
         <div
           {...getRootProps({
-            className: "dropzone",
+            className: "dropzone-audio",
             onClick: (event) => event.stopPropagation(),
           })}
         >

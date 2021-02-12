@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import randomColor from "randomcolor";
 import PopupShadow from "../../components/PopupShadow";
 import PaletteVideoOptions from "../../components/PaletteVideoOptions";
+import Swal from "sweetalert2";
 
 import "./CreateLessonVideo.scss";
 import "../../styles/theme.scss";
@@ -30,6 +31,12 @@ function CreateLessonVideo() {
   });
 
   const onWait = () => {
+    Swal.fire(
+      "¡Lección creada exitosamente!",
+      "Gracias por su tiempo",
+      "success"
+    );
+
     setIsDraggable(true);
   };
 
