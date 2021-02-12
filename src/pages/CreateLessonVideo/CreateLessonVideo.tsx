@@ -16,7 +16,7 @@ function CreateLessonVideo() {
   const [albumImage, setAlbumImage] = useState("");
   const [file, setFile] = useState(null);
   const [hightWords, setHightWords] = useState<string>("");
-
+  const [isDraggable, setIsDraggable] = useState(false);
   const onDrop = useCallback((acceptedFile) => {
     const file = acceptedFile[0];
     setFile(file);
@@ -28,6 +28,10 @@ function CreateLessonVideo() {
     noKeyboard: true,
     onDrop,
   });
+
+  const onWait = () => {
+    setIsDraggable(true);
+  };
 
   const onStart = () => {
     setActiveDrags(activeDrags + 1);
@@ -155,7 +159,9 @@ function CreateLessonVideo() {
     >
       <div className="content-lesson-video">
         {/*<PopupShadow hightWords={hightWords} />*/}
-        <Button className="btn-lesson-video">Guardar Lección</Button>
+        <Button className="btn-lesson-video" onClick={() => onWait()}>
+          Guardar Lección
+        </Button>
       </div>
       <div className="palette">
         <PaletteVideoOptions
@@ -178,6 +184,8 @@ function CreateLessonVideo() {
           newItemOption={newItemOption}
           updatePosOption={updatePosOption}
           deleteNoteOption={deleteNoteOption}
+          isDraggable={isDraggable}
+          setIsDraggable={setIsDraggable}
         />
       </div>
     </div>

@@ -21,6 +21,8 @@ function PaletteInteractive(props): JSX.Element {
     newItemTitle,
     deleteNoteTitle,
     updatePosTitle,
+    isDraggable,
+    setIsDraggable,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
   const [content, setContent] = useState("");
@@ -98,6 +100,7 @@ function PaletteInteractive(props): JSX.Element {
               <>
                 <Draggable
                   key={item.id}
+                  disabled={isDraggable}
                   defaultPosition={item.defaultPos}
                   onStop={(e, data) => {
                     updatePos(data, index);
@@ -124,6 +127,7 @@ function PaletteInteractive(props): JSX.Element {
             return (
               <Draggable
                 key={itemTitle.id}
+                disabled={isDraggable}
                 defaultPosition={itemTitle.defaultPosTitle}
                 onStop={(e, data) => {
                   updatePosTitle(data, index);

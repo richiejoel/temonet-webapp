@@ -16,6 +16,7 @@ function CreateLessonAudio() {
   const [albumImage, setAlbumImage] = useState("");
   const [file, setFile] = useState(null);
   const [hightWords, setHightWords] = useState<string>("");
+  const [isDraggable, setIsDraggable] = useState(false);
 
   const onDrop = useCallback((acceptedFile) => {
     const file = acceptedFile[0];
@@ -28,6 +29,10 @@ function CreateLessonAudio() {
     noKeyboard: true,
     onDrop,
   });
+
+  const onWait = () => {
+    setIsDraggable(true);
+  };
 
   const onStart = () => {
     setActiveDrags(activeDrags + 1);
@@ -155,7 +160,14 @@ function CreateLessonAudio() {
     >
       <div className="content-lesson-audio">
         {/*<PopupShadow hightWords={hightWords} />*/}
-        <Button className="btn-lesson-audio">Guardar Lección</Button>
+        <Button
+          className="btn-lesson-audio"
+          onClick={() => {
+            onWait();
+          }}
+        >
+          Guardar Lección
+        </Button>
       </div>
       <div className="palette">
         <PaletteAudioOptions
@@ -178,6 +190,7 @@ function CreateLessonAudio() {
           newItemOption={newItemOption}
           updatePosOption={updatePosOption}
           deleteNoteOption={deleteNoteOption}
+          isDraggable={isDraggable}
         />
       </div>
     </div>

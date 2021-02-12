@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { connect, useSelector } from "react-redux";
-import { Button} from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 import Draggable from "react-draggable";
 import { useDropzone } from "react-dropzone";
 import { v4 as uuidv4 } from "uuid";
@@ -12,13 +12,13 @@ import PaletteInteractive from "../../components/PaletteInteractive";
 import "./CreateLessonCard.scss";
 import "../../styles/theme.scss";
 
-
 function CreateLessonCard() {
   const theme_global = useSelector((state: any) => state.theme_global);
   const [activeDrags, setActiveDrags] = useState(0);
   const [albumImage, setAlbumImage] = useState("");
   const [file, setFile] = useState(null);
   const [hightWords, setHightWords] = useState<string>("");
+  const [isDraggable, setIsDraggable] = useState(false);
 
   const onDrop = useCallback((acceptedFile) => {
     const file = acceptedFile[0];
@@ -31,6 +31,10 @@ function CreateLessonCard() {
     noKeyboard: true,
     onDrop,
   });
+
+  const onWait = () => {
+    setIsDraggable(true);
+  };
 
   const onStart = () => {
     setActiveDrags(activeDrags + 1);
@@ -52,17 +56,17 @@ function CreateLessonCard() {
   );
 
   const newitem = () => {
-        //if (item.trim() !== "") {
-      const newitem = {
-        id: uuidv4(),
-        item: item,
-        color: randomColor({
-          luminosity: "light",
-        }),
-        defaultPos: { x: 100, y: -60 },
-      };
-      setItems((items) => [...items, newitem]);
-      //setItem("");
+    //if (item.trim() !== "") {
+    const newitem = {
+      id: uuidv4(),
+      item: item,
+      color: randomColor({
+        luminosity: "light",
+      }),
+      defaultPos: { x: 100, y: -60 },
+    };
+    setItems((items) => [...items, newitem]);
+    //setItem("");
     /*} /*
     else {
       alert("Enter a item");
@@ -74,7 +78,7 @@ function CreateLessonCard() {
     const newItemTitle = {
       id: uuidv4(),
       itemTitle: itemTitle,
-      defaultPosTitle: {x:100, y:-60},
+      defaultPosTitle: { x: 100, y: -60 },
     };
     setItemsTitle((itemsTitle) => [...itemsTitle, newItemTitle]);
   };
@@ -117,31 +121,46 @@ function CreateLessonCard() {
   const handleMouseUp = () => {
     console.log(`Selected text: ${window?.getSelection()?.toString()}`);
     setHightWords(window?.getSelection()?.toString()!);
-}
+  };
 
   //hurry cum yum install
 
   return (
-    <div className={`create-lesson-card ${theme_global.theme}`} onMouseUp={handleMouseUp} onKeyUp={handleMouseUp}>
+    <div
+      className={`create-lesson-card ${theme_global.theme}`}
+      onMouseUp={handleMouseUp}
+      onKeyUp={handleMouseUp}
+    >
       <div className="content-lesson">
         {/*<Draggable {...dragHandlers}>
           <div className="box">
             <CardPreview/>
           </div>
   </Draggable>*/}
-    {/*<PopupShadow hightWords={hightWords} />*/}
-      <Button className="btn-lesson" >
-        Guardar Lección
-      </Button>
+        {/*<PopupShadow hightWords={hightWords} />*/}
+        <Button className="btn-lesson" onClick={() => onWait()}>
+          Guardar Lección
+        </Button>
       </div>
       <div className="palette">
-        
-        <PaletteInteractive item={item} items={items} updatePos={updatePos} 
-        deleteNote={deleteNote} newitem={newitem} setItem={setItem} keyPress={keyPress} 
-        itemTitle={itemTitle} itemsTitle={itemsTitle} setItemTitle={setItemTitle} newItemTitle={newItemTitle}
-        deleteNoteTitle={deleteNoteTitle} updatePosTitle={updatePosTitle}
+        <PaletteInteractive
+          item={item}
+          items={items}
+          updatePos={updatePos}
+          deleteNote={deleteNote}
+          newitem={newitem}
+          setItem={setItem}
+          keyPress={keyPress}
+          itemTitle={itemTitle}
+          itemsTitle={itemsTitle}
+          setItemTitle={setItemTitle}
+          newItemTitle={newItemTitle}
+          deleteNoteTitle={deleteNoteTitle}
+          updatePosTitle={updatePosTitle}
+          isDraggable={isDraggable}
+          setIsDraggable={setIsDraggable}
         />
-        
+
         {/*<div id="new-item">
         <input
           value={item}

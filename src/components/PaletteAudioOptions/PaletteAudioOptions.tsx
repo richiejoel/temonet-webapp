@@ -28,6 +28,7 @@ function PaletteAudioOptions(props): JSX.Element {
     newItemOption,
     updatePosOption,
     deleteNoteOption,
+    isDraggable,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
   const [content, setContent] = useState("");
@@ -119,6 +120,7 @@ function PaletteAudioOptions(props): JSX.Element {
               <>
                 <Draggable
                   key={item.id}
+                  disabled={isDraggable}
                   defaultPosition={item.defaultPos}
                   onStop={(e, data) => {
                     updatePos(data, index);
@@ -148,6 +150,7 @@ function PaletteAudioOptions(props): JSX.Element {
             return (
               <Draggable
                 key={itemTitle.id}
+                disabled={isDraggable}
                 defaultPosition={itemTitle.defaultPosTitle}
                 onStop={(e, data) => {
                   updatePosTitle(data, index);
@@ -184,6 +187,7 @@ function PaletteAudioOptions(props): JSX.Element {
               <>
                 <Draggable
                   key={itemOption.id}
+                  disabled={isDraggable}
                   defaultPosition={itemOption.defaultPosOption}
                   onStop={(e, data) => {
                     updatePosOption(data, index);
