@@ -7,9 +7,10 @@ import Routes from "./routes/Routes";
 import LoggedLayout from "./layouts/LoggedLayout";
 import PublicLayout from "./layouts/PublicLayout";
 import { Route, useHistory } from "react-router-dom";
+import Auth from "./components/Auth";
 
 function App() {
-  let isAuth = true;
+  let isAuth = false;
   const history = useHistory();
   // var location = useLocation();
   /*const Log = (isAuth: any): JSX.Element => {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      {!isAuth ? <PublicLayout /> : <LoggedLayout auth={isAuth} />}
+      <Auth />
     </Provider>
   );
 }

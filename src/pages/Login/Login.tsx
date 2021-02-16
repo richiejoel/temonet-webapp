@@ -1,23 +1,66 @@
 import React, { useState } from "react";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
-import { connect, useSelector } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
 import SwitchTheme from "../../components/SwitchTheme";
 import plane from "../../assets/paper_plane.svg";
 import loginImage from "../../assets/login-image.svg";
+import auth from "../../data/auth.json";
+import { validateEmail } from "../../utils/Validations";
+
+import { mVerifyAuthenticate } from "../../redux/actions/IsAuthenticateAction";
+import {
+  mVerifyAuthenticationStudent,
+  mVerifyAuthenticationTeacher,
+  mVerifyAuthenticationAdmin,
+} from "../../redux/actions/AuthenticationAction";
 
 import "./Login.scss";
 import "../../styles/theme.scss";
 
 function Login(): JSX.Element {
   const theme_global = useSelector((state: any) => state.theme_global);
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [formData, setFormData] = useState(defaultValueForm());
   const history = useHistory();
   const onSubmit = () => {
-    history.push("/");
+    if (validateUsers(formData.email, formData.password)) {
+      dispatch(mVerifyAuthenticate(true));
+      history.push("/");
+    } else {
+      dispatch(mVerifyAuthenticate(false));
+      history.push("/signin");
+    }
   };
-  const onChange = () => {};
+  const validateUsers = (email, password): boolean => {
+    var flag = false;
+    auth.forEach((user) => {
+      if (
+        user.email.trim().toString() === email &&
+        user.password.trim().toString() === password
+      ) {
+        if (user.role.trim().toString() === "student") {
+          dispatch(mVerifyAuthenticationStudent(user.role.trim().toString()));
+        } else if (user.role.trim().toString() === "teacher") {
+          dispatch(mVerifyAuthenticationTeacher(user.role.trim().toString()));
+        } else {
+          dispatch(mVerifyAuthenticationAdmin(user.role.trim().toString()));
+        }
+
+        flag = true;
+      }
+    });
+
+    return flag;
+  };
+  const onChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handlerShowPassword = (): void => {
     setShowPassword(!showPassword);
     setIsLoading(false);
@@ -94,6 +137,13 @@ function Login(): JSX.Element {
       </div>
     </div>
   );
+}
+
+function defaultValueForm() {
+  return {
+    email: "",
+    password: "",
+  };
 }
 
 export default connect()(Login);

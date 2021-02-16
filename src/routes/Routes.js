@@ -1,4 +1,5 @@
 import React from "react";
+import { connect, useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +21,7 @@ import CreateLessonAudio from "../pages/CreateLessonAudio";
 import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
 
-export default function Routes() {
+function Routes() {
   return (
     <Router>
       <Switch>
@@ -42,12 +43,12 @@ export default function Routes() {
         <PrivateRoute path="/createLessonAudio" exact>
           <CreateLessonAudio />
         </PrivateRoute>
-        <Route path="/signin" exact>
+        <PublicRoute path="/signin" exact>
           <Login />
-        </Route>
-        <Route path="/signup" exact>
+        </PublicRoute>
+        <PublicRoute path="/signup" exact>
           <RegisterPage />
-        </Route>
+        </PublicRoute>
         <Route path="/example" exact>
           <Example />
         </Route>
@@ -58,6 +59,8 @@ export default function Routes() {
     </Router>
   );
 }
+
+export default connect()(Routes);
 
 const LoginContainer = () => (
   <div className="container">
@@ -80,8 +83,9 @@ const DefaultContainer = () => (
 );
 
 function PrivateRoute({ children, ...rest }) {
+  const authenticate_global = useSelector((state) => state.authenticate_global);
   const location = useLocation();
-  let auth = true;
+  let auth = authenticate_global.authenticate;
   return (
     <Route
       {...rest}
@@ -102,17 +106,14 @@ function PrivateRoute({ children, ...rest }) {
 }
 
 function PublicRoute({ children, ...rest }) {
+  const authenticate_global = useSelector((state) => state.authenticate_global);
   const location = useLocation();
-  let auth = false;
+  let auth = authenticate_global.authenticate;
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        auth &&
-        location.pathname !== "/signin" &&
-        location.pathname !== "/signup" ? (
-          children
-        ) : (
+        auth && (
           <Redirect
             to={{
               pathname: "/",
