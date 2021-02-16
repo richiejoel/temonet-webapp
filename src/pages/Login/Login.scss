@@ -67,6 +67,9 @@
         background: $font-light;
         font-family: "dyslexicBold";
       }
+      i {
+        color: var(--theme-color);
+      }
     }
   }
 
@@ -103,6 +106,11 @@
     font-size: 3vh;
     font-family: "dyslexicBold";
   }
+}
+
+.error-text {
+  color: var(--theme-color);
+  padding-left: 15px;
 }
 
 #plane-login {

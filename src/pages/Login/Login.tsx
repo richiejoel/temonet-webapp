@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import { connect, useSelector, useDispatch } from "react-redux";
 import SwitchTheme from "../../components/SwitchTheme";
 import plane from "../../assets/paper_plane.svg";
@@ -24,14 +25,33 @@ function Login(): JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [formData, setFormData] = useState(defaultValueForm());
+  const [formError, setFormError] = useState({ email: false, password: false });
   const history = useHistory();
   const onSubmit = () => {
-    if (validateUsers(formData.email, formData.password)) {
-      dispatch(mVerifyAuthenticate(true));
-      history.push("/");
-    } else {
-      dispatch(mVerifyAuthenticate(false));
-      history.push("/signin");
+    setFormError({ email: false, password: false }); //Se limpia objeto errores
+    let errors = { email: false, password: false };
+    let formOk = true;
+    if (!validateEmail(formData.email)) {
+      errors.email = true;
+      formOk = false;
+    }
+
+    if (formData.password.length < 6) {
+      errors.password = true;
+      formOk = false;
+    }
+    setFormError(errors);
+    toast.configure();
+    if (formOk) {
+      if (validateUsers(formData.email, formData.password)) {
+        dispatch(mVerifyAuthenticate(true));
+        toast.success("Ha iniciado sesión con éxito! 🚀");
+        history.push("/");
+      } else {
+        dispatch(mVerifyAuthenticate(false));
+        toast.error("El usuario o la contraseña son incorrectos. 😥");
+        history.push("/signin");
+      }
     }
   };
   const validateUsers = (email, password): boolean => {
@@ -86,7 +106,13 @@ function Login(): JSX.Element {
                 name="email"
                 placeholder="Correo Electrónico"
                 icon="mail outline"
+                error={formError.email}
               />
+              {formError.email && (
+                <span className="error-text">
+                  Por favor, introduce un correo electrónico válido.{" "}
+                </span>
+              )}
             </Form.Field>
             <Form.Field>
               <h3>Ingrese su contraseña</h3>
@@ -94,6 +120,7 @@ function Login(): JSX.Element {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Contraseña"
+                error={formError.password}
                 icon={
                   showPassword ? (
                     <Icon
@@ -106,6 +133,11 @@ function Login(): JSX.Element {
                   )
                 }
               />
+              {formError.password && (
+                <span className="error-text">
+                  Por favor, elige una contraseña superior a 5 caracteres.{" "}
+                </span>
+              )}
             </Form.Field>
             <div className="square-login">
               <Button
