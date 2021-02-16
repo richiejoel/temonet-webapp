@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { connect, useSelector } from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
 import AddAudio from "../../assets/svg/no-audio.svg";
 import Draggable from "react-draggable";
 import AudioPreview from "../../components/AudioPreview";
+import useLongPress from "../../hooks/useLongPress";
 import "./PaletteAudioOptions.scss";
 import "../../styles/theme.scss";
 
@@ -35,6 +36,25 @@ function PaletteAudioOptions(props): JSX.Element {
   const [width, setWidth] = useState(0);
   const span = useRef<HTMLDivElement>(null);
 
+  const [size, setSize] = useState({ x: 600, y: 150 });
+  const dragSize = useRef<any>(null);
+
+  const handler = useCallback(() => {
+    console.log(`Gola`);
+    function onMouseMove(e: any) {
+      setSize((currentSize) => ({
+        x: currentSize.x + e.movementX,
+        y: currentSize.y + e.movementY,
+      }));
+    }
+    function onMouseUp() {
+      dragSize?.current?.removeEventListener("mousemove", onMouseMove);
+      dragSize?.current?.removeEventListener("mouseup", onMouseUp);
+    }
+    dragSize?.current?.addEventListener("mousemove", onMouseMove);
+    dragSize?.current?.addEventListener("mouseup", onMouseUp);
+  }, []);
+
   const fix = () => {
     setItem(`Lesson`);
     newitem();
@@ -61,6 +81,21 @@ function PaletteAudioOptions(props): JSX.Element {
   };
 
   const itemIndex = () => {};
+
+  const onLongPress = () => {
+    console.log("longpress is triggered");
+    handler();
+  };
+
+  const onClick = () => {
+    console.log("click is triggered");
+  };
+
+  const defaultOptions = {
+    shouldPreventDefault: true,
+    delay: 50,
+  };
+  const longPressEvent = useLongPress(onLongPress, onClick, defaultOptions);
   //{`${item.item}`}
   return (
     <div className={`palette-audio ${theme_global_color.theme}`}>
@@ -127,19 +162,25 @@ function PaletteAudioOptions(props): JSX.Element {
                   }}
                 >
                   <div
-                    style={{ backgroundColor: item.color }}
+                    style={{
+                      backgroundColor: item.color,
+                      width: size.x,
+                      height: size.y,
+                    }}
                     className="box-audio"
                   >
-                    <input
-                      id="input-card"
-                      type="text"
-                      onChange={(e) => setItem(e.target.value)}
-                      placeholder="Title option..."
-                    />
-                    <button id="delete" onClick={(e) => deleteNote(item.id)}>
-                      X
-                    </button>
-                    <AudioPreview />
+                    <div ref={dragSize} onMouseDown={handler}>
+                      <input
+                        id="input-card"
+                        type="text"
+                        onChange={(e) => setItem(e.target.value)}
+                        placeholder="Title option..."
+                      />
+                      <button id="delete" onClick={(e) => deleteNote(item.id)}>
+                        X
+                      </button>
+                      <AudioPreview />
+                    </div>
                   </div>
                 </Draggable>
               </>
