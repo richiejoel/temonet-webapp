@@ -7,8 +7,18 @@ function Auth() {
   const authenticate_global = useSelector(
     (state: any) => state.authenticate_global
   );
-  let isAuth = authenticate_global.authenticate;
-  return <>{!isAuth ? <PublicLayout /> : <LoggedLayout auth={isAuth} />}</>;
+
+  const isAuthenticate = JSON.parse(sessionStorage.getItem("isAuth")!);
+  console.log(`IsAuth ${authenticate_global.authenticate}`);
+  return (
+    <>
+      {isAuthenticate ? (
+        <LoggedLayout auth={isAuthenticate} />
+      ) : (
+        <PublicLayout />
+      )}
+    </>
+  );
 }
 
 export default connect()(Auth);

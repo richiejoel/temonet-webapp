@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
 import { Sidebar, Icon, Menu } from "semantic-ui-react";
 import { connect, useSelector } from "react-redux";
@@ -8,18 +8,22 @@ import ImageSideBar from "../../assets/svg/girl_sidebar.svg";
 import "../../styles/theme.scss";
 import "./MenuLeft.scss";
 
-function MenuLeft() {
+function MenuLeft(props) {
+  const { location } = props;
   const [activeMenu, setActiveMenu] = useState("/");
   const theme_global = useSelector((state: any) => state.theme_global);
   const auth_global = useSelector((state: any) => state.auth_global);
   const history = useHistory();
   const handlerMenu = (e: any, menu: any) => {
-    //console.log(menu);
+    console.log("Menu -> " + menu.to);
     setActiveMenu(menu.to);
   };
   const pushPage = () => {
     history.push("/signin");
   };
+  useEffect(() => {
+    setActiveMenu(location.pathname);
+  }, [location]);
   return (
     <Menu className={`menu-left  ${theme_global.theme}  `} secondary vertical>
       <div className="header-menu">
@@ -61,17 +65,17 @@ function MenuLeft() {
           <>
             <Menu.Item
               as={Link}
-              to="/activities"
-              name="activities"
+              to="/createLesson"
+              name="createLesson"
               active={activeMenu === "/createLesson"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" /> Crear Actividad Imaǵenes
+              <Icon name="tasks" /> Crear Actividad Imágenes
             </Menu.Item>
             <Menu.Item
               as={Link}
-              to="/score"
-              name="score"
+              to="/createLessonAudio"
+              name="createLessonAudio"
               active={activeMenu === "/createLessonAudio"}
               onClick={handlerMenu}
             >
@@ -79,8 +83,8 @@ function MenuLeft() {
             </Menu.Item>
             <Menu.Item
               as={Link}
-              to="/score"
-              name="score"
+              to="/createLessonVideo"
+              name="createLessonVideo"
               active={activeMenu === "/createLessonVideo"}
               onClick={handlerMenu}
             >
@@ -137,4 +141,4 @@ function MenuLeft() {
   );
 }
 
-export default withRouter(connect()(MenuLeft));
+export default withRouter(MenuLeft);

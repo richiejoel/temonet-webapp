@@ -27,6 +27,7 @@ function Login(): JSX.Element {
   const [formData, setFormData] = useState(defaultValueForm());
   const [formError, setFormError] = useState({ email: false, password: false });
   const history = useHistory();
+  //sessionStorage.setItem("isAuth", "false");
   const onSubmit = () => {
     setFormError({ email: false, password: false }); //Se limpia objeto errores
     let errors = { email: false, password: false };
@@ -45,12 +46,14 @@ function Login(): JSX.Element {
     if (formOk) {
       if (validateUsers(formData.email, formData.password)) {
         dispatch(mVerifyAuthenticate(true));
+        sessionStorage.setItem("isAuth", "true");
         toast.success("Ha iniciado sesión con éxito! 🚀");
         history.push("/");
       } else {
         dispatch(mVerifyAuthenticate(false));
+        sessionStorage.setItem("isAuth", "false");
         toast.error("El usuario o la contraseña son incorrectos. 😥");
-        history.push("/signin");
+        //history.push("/signin");
       }
     }
   };
@@ -152,9 +155,6 @@ function Login(): JSX.Element {
               <Button
                 className={`btnLogin ${theme_global.theme}`}
                 type="submit"
-                onClick={() => {
-                  onSubmit();
-                }}
                 loading={isLoading}
               >
                 Iniciar Sesión
@@ -178,4 +178,4 @@ function defaultValueForm() {
   };
 }
 
-export default connect()(Login);
+export default connect(null)(Login);

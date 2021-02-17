@@ -20,8 +20,10 @@ import CreateLessonVideo from "../pages/CreateLessonVideo";
 import CreateLessonAudio from "../pages/CreateLessonAudio";
 import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
-
+var state_global;
 function Routes() {
+  const authenticate_global = useSelector((state) => state.authenticate_global);
+  state_global = authenticate_global;
   return (
     <Router>
       <Switch>
@@ -43,12 +45,12 @@ function Routes() {
         <PrivateRoute path="/createLessonAudio" exact>
           <CreateLessonAudio />
         </PrivateRoute>
-        <PublicRoute path="/signin" exact>
+        <Route path="/signin" exact>
           <Login />
-        </PublicRoute>
-        <PublicRoute path="/signup" exact>
+        </Route>
+        <Route path="/signup" exact>
           <RegisterPage />
-        </PublicRoute>
+        </Route>
         <Route path="/example" exact>
           <Example />
         </Route>
@@ -82,15 +84,15 @@ const DefaultContainer = () => (
   </div>
 );
 
-function PrivateRoute({ children, ...rest }) {
-  const authenticate_global = useSelector((state) => state.authenticate_global);
+function PrivateRoute({ children, ...rest }, props) {
   const location = useLocation();
-  let auth = authenticate_global.authenticate;
+  console.log(`${state_global.authenticate}`);
+  const isAuth = JSON.parse(sessionStorage.getItem("isAuth"));
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        auth ? (
+        isAuth ? (
           children
         ) : (
           <Redirect
