@@ -110,7 +110,8 @@ function PrivateRoute({ children, ...rest }, props) {
 function PublicRoute({ children, ...rest }) {
   const authenticate_global = useSelector((state) => state.authenticate_global);
   const location = useLocation();
-  let auth = authenticate_global.authenticate;
+  console.log(authenticate_global.authenticate);
+  const auth = JSON.parse(sessionStorage.getItem("isAuth"));
   return (
     <Route
       {...rest}
