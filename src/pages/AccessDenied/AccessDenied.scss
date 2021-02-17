@@ -1,0 +1,26 @@
+@import "../../scss/index.scss";
+
+.access-denied {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $font-light;
+  margin-top: 3%;
+}
+
+.title-denied {
+  font-size: 70px;
+  font-family: "dyslexicBold";
+  color: var(--theme-color) !important;
+}
+
+.resume-denied {
+  font-size: 40px;
+  font-family: "dyslexicRegular";
+  color: $font-primary !important;
+}
+
+#image-access-denied {
+  width: 500px;
+  height: 500px;
+}

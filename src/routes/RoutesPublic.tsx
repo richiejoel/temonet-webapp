@@ -4,12 +4,11 @@ import {
   Switch,
   Route,
   Redirect,
-  useLocation,
 } from "react-router-dom";
 
 import Login from "../pages/Login";
 import RegisterPage from "../pages/RegisterPage";
-import PageNotFound from "../pages/PageNotFound";
+import AccessDenied from "../pages/AccessDenied";
 
 export default function RoutesPublic() {
   return (
@@ -23,7 +22,7 @@ export default function RoutesPublic() {
           <RegisterPage />
         </Route>
         <Route path="*" exact>
-          <PageNotFound />
+          <AccessDenied />
         </Route>
       </Switch>
     </Router>
