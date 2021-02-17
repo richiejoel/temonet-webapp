@@ -72,6 +72,8 @@ function Login(): JSX.Element {
           dispatch(mVerifyAuthenticationAdmin(user.role.trim().toString()));
         }
 
+        sessionStorage.setItem("role", user.role.trim().toString());
+
         flag = true;
       }
     });

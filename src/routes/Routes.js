@@ -45,12 +45,12 @@ function Routes() {
         <PrivateRoute path="/createLessonAudio" exact>
           <CreateLessonAudio />
         </PrivateRoute>
-        <Route path="/signin" exact>
+        <PublicRoute path="/signin" exact>
           <Login />
-        </Route>
-        <Route path="/signup" exact>
+        </PublicRoute>
+        <PublicRoute path="/signup" exact>
           <RegisterPage />
-        </Route>
+        </PublicRoute>
         <Route path="/example" exact>
           <Example />
         </Route>

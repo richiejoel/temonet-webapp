@@ -21,6 +21,7 @@ function MenuLeft(props) {
   const pushPage = () => {
     history.push("/signin");
   };
+  //auth_global.auth
   useEffect(() => {
     setActiveMenu(location.pathname);
   }, [location]);
@@ -39,7 +40,7 @@ function MenuLeft(props) {
         >
           <Icon name="home" /> Inicio
         </Menu.Item>
-        {auth_global.auth === "student" && (
+        {sessionStorage.getItem("role") === "student" && (
           <>
             <Menu.Item
               as={Link}
@@ -61,7 +62,7 @@ function MenuLeft(props) {
             </Menu.Item>
           </>
         )}
-        {auth_global.auth === "teacher" && (
+        {sessionStorage.getItem("role") === "teacher" && (
           <>
             <Menu.Item
               as={Link}
@@ -92,7 +93,7 @@ function MenuLeft(props) {
             </Menu.Item>
           </>
         )}
-        {auth_global.auth === "admin" && (
+        {sessionStorage.getItem("role") === "admin" && (
           <>
             <Menu.Item
               as={Link}
