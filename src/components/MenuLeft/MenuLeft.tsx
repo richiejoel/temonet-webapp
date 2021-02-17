@@ -17,6 +17,7 @@ function MenuLeft(props) {
   const handlerMenu = (e: any, menu: any) => {
     console.log("Menu -> " + menu.to);
     setActiveMenu(menu.to);
+    //history.push("/createLessonAudio");
   };
   const pushPage = () => {
     history.push("/signin");
@@ -33,6 +34,7 @@ function MenuLeft(props) {
       <div className="top">
         <Menu.Item
           as={Link}
+          exact
           to="/"
           name="home"
           active={activeMenu === "/"}
@@ -66,6 +68,7 @@ function MenuLeft(props) {
           <>
             <Menu.Item
               as={Link}
+              exact
               to="/createLesson"
               name="createLesson"
               active={activeMenu === "/createLesson"}
@@ -75,6 +78,7 @@ function MenuLeft(props) {
             </Menu.Item>
             <Menu.Item
               as={Link}
+              exact
               to="/createLessonAudio"
               name="createLessonAudio"
               active={activeMenu === "/createLessonAudio"}
@@ -84,6 +88,7 @@ function MenuLeft(props) {
             </Menu.Item>
             <Menu.Item
               as={Link}
+              exact
               to="/createLessonVideo"
               name="createLessonVideo"
               active={activeMenu === "/createLessonVideo"}
@@ -142,4 +147,4 @@ function MenuLeft(props) {
   );
 }
 
-export default withRouter(MenuLeft);
+export default connect()(withRouter(MenuLeft));

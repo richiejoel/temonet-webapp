@@ -25,40 +25,38 @@ function Routes() {
   const authenticate_global = useSelector((state) => state.authenticate_global);
   state_global = authenticate_global;
   return (
-    <Router>
-      <Switch>
-        <PrivateRoute path="/" exact>
-          <Home />
-        </PrivateRoute>
-        <PrivateRoute path="/question" exact>
-          <MultiplesActivities />
-        </PrivateRoute>
-        <PrivateRoute path="/lesson" exact>
-          <Lesson />
-        </PrivateRoute>
-        <PrivateRoute path="/createLesson" exact>
-          <CreateLessonCard />
-        </PrivateRoute>
-        <PrivateRoute path="/createLessonVideo" exact>
-          <CreateLessonVideo />
-        </PrivateRoute>
-        <PrivateRoute path="/createLessonAudio" exact>
-          <CreateLessonAudio />
-        </PrivateRoute>
-        <PublicRoute path="/signin" exact>
-          <Login />
-        </PublicRoute>
-        <PublicRoute path="/signup" exact>
-          <RegisterPage />
-        </PublicRoute>
-        <Route path="/example" exact>
-          <Example />
-        </Route>
-        <Route path="*" exact>
-          <PageNotFound />
-        </Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <PrivateRoute path="/" exact>
+        <Home />
+      </PrivateRoute>
+      <PrivateRoute path="/question" exact>
+        <MultiplesActivities />
+      </PrivateRoute>
+      <PrivateRoute path="/lesson" exact>
+        <Lesson />
+      </PrivateRoute>
+      <PrivateRoute path="/createLesson" exact>
+        <CreateLessonCard />
+      </PrivateRoute>
+      <PrivateRoute path="/createLessonVideo" exact>
+        <CreateLessonVideo />
+      </PrivateRoute>
+      <PrivateRoute path="/createLessonAudio" exact>
+        <CreateLessonAudio />
+      </PrivateRoute>
+      <PublicRoute path="/signin" exact>
+        <Login />
+      </PublicRoute>
+      <PublicRoute path="/signup" exact>
+        <RegisterPage />
+      </PublicRoute>
+      <Route path="/example" exact>
+        <Example />
+      </Route>
+      <Route path="*" exact>
+        <PageNotFound />
+      </Route>
+    </Switch>
   );
 }
 
