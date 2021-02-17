@@ -21,7 +21,7 @@ function MenuLeft(props) {
   const pushPage = () => {
     history.push("/signin");
   };
-  //auth_global.auth
+  console.log(auth_global.auth);
   useEffect(() => {
     setActiveMenu(location.pathname);
   }, [location]);
