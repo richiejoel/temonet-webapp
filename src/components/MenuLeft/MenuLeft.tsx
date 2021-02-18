@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
-import { Sidebar, Icon, Menu } from "semantic-ui-react";
+import { Icon, Menu } from "semantic-ui-react";
 import { connect, useSelector } from "react-redux";
 
 import ImageSideBar from "../../assets/svg/girl_sidebar.svg";
