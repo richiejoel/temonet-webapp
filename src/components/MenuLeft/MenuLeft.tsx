@@ -102,26 +102,26 @@ function MenuLeft(props) {
           <>
             <Menu.Item
               as={Link}
-              to="/activities"
-              name="activities"
-              active={activeMenu === "/createStudent"}
+              to="/enrollmentStudent"
+              name="enrollmentStudent"
+              active={activeMenu === "/enrollmentStudent"}
               onClick={handlerMenu}
             >
               <Icon name="tasks" /> Crear cuenta estudiante
             </Menu.Item>
             <Menu.Item
               as={Link}
-              to="/score"
-              name="score"
-              active={activeMenu === "/createTeacher"}
+              to="/enrollmentTeacher"
+              name="enrollmentTeacher"
+              active={activeMenu === "/enrollmentTeacher"}
               onClick={handlerMenu}
             >
               <Icon name="edit" /> Crear cuenta Profesor
             </Menu.Item>
             <Menu.Item
               as={Link}
-              to="/score"
-              name="score"
+              to="/getAllStudents"
+              name="getAllStudents"
               active={activeMenu === "/getAllStudents"}
               onClick={handlerMenu}
             >
@@ -129,8 +129,8 @@ function MenuLeft(props) {
             </Menu.Item>
             <Menu.Item
               as={Link}
-              to="/score"
-              name="score"
+              to="/getAllTeachers"
+              name="getAllTeachers"
               active={activeMenu === "/getAllTeachers"}
               onClick={handlerMenu}
             >

@@ -1,15 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { connect, useSelector } from "react-redux";
+import { useDropzone } from "react-dropzone";
 import { validateEmail } from "../../utils/Validations";
+import NoAvatar from "../../assets/svg/female.svg";
+
+import "./EnrollmentStudent.scss";
+import "../../styles/theme.scss";
 
 function EnrollmentStudent(): JSX.Element {
   const theme_global = useSelector((state: any) => state.theme_global);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [formData, setFormData] = useState(defaultValueForm());
+  const [files, setFiles] = useState<any>([]);
+  const [estado, setEstado] = useState("show-img");
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: "image/*",
+    onDrop: (acceptedFiles) => {
+      setFiles(
+        acceptedFiles.map((file) =>
+          Object.assign(file, {
+            preview: URL.createObjectURL(file),
+          })
+        )
+      );
+
+      setEstado("hide-img");
+    },
+  });
   const [formError, setFormError] = useState({
     email: false,
     password: false,
@@ -65,6 +86,23 @@ function EnrollmentStudent(): JSX.Element {
     setShowPassword(!showPassword);
     setIsLoading(false);
   };
+
+  const thumbs: JSX.Element = files.map((file) => (
+    <div className={`thumb-std`} key={file.name}>
+      <div className={`thumbInner-std`}>
+        <img src={file.preview} className={`img-std`} />
+      </div>
+    </div>
+  ));
+
+  useEffect(
+    () => () => {
+      // Make sure to revoke the data uris to avoid memory leaks
+      files.forEach((file) => URL.revokeObjectURL(file.preview));
+    },
+    [files]
+  );
+
   return (
     <div>
       <div className="enrollment-student-form">
@@ -74,6 +112,19 @@ function EnrollmentStudent(): JSX.Element {
           onSubmit={onSubmit}
           onChange={onChange}
         >
+          <Form.Field>
+            <div className="container-std">
+              <div {...getRootProps({ className: "dropzone" })}>
+                <input {...getInputProps()} />
+                <img id={estado} className="img-drop-std" src={NoAvatar} />
+                {!thumbs ? (
+                  <img className="img-drop-std" src={NoAvatar} />
+                ) : (
+                  <div className={`thumbsContainer-std`}>{thumbs}</div>
+                )}
+              </div>
+            </div>
+          </Form.Field>
           <Form.Field>
             <h3>Ingrese el nombre completo</h3>
             <Input
@@ -150,7 +201,6 @@ function EnrollmentStudent(): JSX.Element {
               type="date"
               name="date"
               placeholder="Fecha de nacimiento"
-              icon="mail outline"
               error={formError.date}
             />
             {formError.date && (
@@ -176,11 +226,11 @@ function EnrollmentStudent(): JSX.Element {
           </Form.Field>
           <div className="square-enrollment-student">
             <Button
-              className={`btnLogin ${theme_global.theme}`}
+              className={`btnEnrollmentStudent ${theme_global.theme}`}
               type="submit"
               loading={isLoading}
             >
-              Iniciar Sesión
+              Matricular estudiante
             </Button>
           </div>
         </Form>

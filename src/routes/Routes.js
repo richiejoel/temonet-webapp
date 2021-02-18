@@ -20,6 +20,7 @@ import CreateLessonVideo from "../pages/CreateLessonVideo";
 import CreateLessonAudio from "../pages/CreateLessonAudio";
 import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
+import EnrollmentStudent from "../pages/EnrollmentStudent";
 var state_global;
 function Routes() {
   const authenticate_global = useSelector((state) => state.authenticate_global);
@@ -43,6 +44,9 @@ function Routes() {
       </PrivateRoute>
       <PrivateRoute path="/createLessonAudio" exact>
         <CreateLessonAudio />
+      </PrivateRoute>
+      <PrivateRoute path="/enrollmentStudent" exact>
+        <EnrollmentStudent />
       </PrivateRoute>
       <PublicRoute path="/signin" exact>
         <Login />
