@@ -1,0 +1,191 @@
+@import "../../scss/index.scss";
+
+.login {
+  background-color: var(--theme-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 50px;
+  font-family: "dyslexicBold";
+}
+
+.login-card {
+  background-color: $font-light;
+  border: 0px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#image-login {
+  left: 0;
+  top: 70px;
+  object-fit: fill;
+  min-width: 300px;
+  min-height: 150px;
+  width: 500px;
+}
+
+.login-image {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  h2 {
+    font-family: "dyslexicBold";
+    color: $font-primary;
+    padding: 1%;
+    font-size: 80px;
+  }
+}
+
+.enrollment-teacher-form {
+  width: 100%;
+  padding: 4%;
+
+  h2 {
+    font-family: "dyslexicBold";
+    font-size: 70px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.ui.form {
+  padding-top: 2%;
+  h3 {
+    text-align: left;
+  }
+  .field {
+    .input {
+      input {
+        border-radius: 10px;
+        background: $font-light;
+        font-family: "dyslexicBold";
+      }
+      i {
+        color: var(--theme-color);
+      }
+    }
+  }
+
+  .square-enrollment-teacher {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 6%;
+
+    .button {
+      background: $font-light;
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 4%;
+      font-family: "dyslexicBold";
+    }
+  }
+}
+
+.enrollment-teacher-form-data {
+  padding-left: 20%;
+  padding-right: 20%;
+  h3 {
+    font-family: "dyslexicBold";
+  }
+}
+
+.error-text {
+  color: var(--theme-color);
+  padding-left: 15px;
+}
+
+#plane-login {
+  position: absolute;
+  left: 36%;
+  top: 30%;
+  object-fit: fill;
+  min-width: 300px;
+  min-height: 150px;
+  width: 300px;
+}
+
+.btnEnrollmentTeacher {
+  background-color: var(--theme-color) !important;
+}
+
+.thumbsContainer-teacher {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  width: 25%;
+  height: 25%;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.thumb-teacher {
+  display: inline-flex;
+  border-radius: 2;
+  border: 1px solid #eaeaea;
+  margin-bottom: 8px;
+  margin-right: 8;
+  width: 100%;
+  height: 100%;
+  padding: 4;
+  box-sizing: border-box;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.thumbInner-teacher {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.img-teacher {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+}
+
+.container-teacher {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.img-drop-teacher {
+  object-fit: fill;
+  width: 20%;
+  height: 20%;
+  padding-top: 8%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#hide-img-std {
+  display: none;
+}
+
+#show-img-std {
+  display: inline;
+}
+
+.dropzone {
+  outline: none;
+}

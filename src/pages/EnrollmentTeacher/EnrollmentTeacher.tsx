@@ -1,3 +1,4 @@
+//EnrollmentTeacher
 import React, { useState, useEffect } from "react";
 import { Button, Icon, Form, Input } from "semantic-ui-react";
 import { toast } from "react-toastify";
@@ -6,10 +7,10 @@ import { useDropzone } from "react-dropzone";
 import { validateEmail } from "../../utils/Validations";
 import NoAvatar from "../../assets/svg/female.svg";
 
-import "./EnrollmentStudent.scss";
+import "./EnrollmentTeacher.scss";
 import "../../styles/theme.scss";
 
-function EnrollmentStudent(): JSX.Element {
+function EnrollmentTeacher(): JSX.Element {
   const theme_global = useSelector((state: any) => state.theme_global);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -104,22 +105,22 @@ function EnrollmentStudent(): JSX.Element {
 
   return (
     <div>
-      <div className="enrollment-student-form">
-        <h2>Matricular Estudiantes</h2>
+      <div className="enrollment-teacher-form">
+        <h2>Crear Logopedas</h2>
         <Form
-          className="enrollment-student-form-data"
+          className="enrollment-teacher-form-data"
           onSubmit={onSubmit}
           onChange={onChange}
         >
           <Form.Field>
-            <div className="container-std">
+            <div className="container-teacher">
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
-                <img id={estado} className="img-drop-std" src={NoAvatar} />
+                <img id={estado} className="img-drop-teacher" src={NoAvatar} />
                 {!thumbs ? (
-                  <img className="img-drop-std" src={NoAvatar} />
+                  <img className="img-drop-teacher" src={NoAvatar} />
                 ) : (
-                  <div className={`thumbsContainer-std`}>{thumbs}</div>
+                  <div className={`thumbsContainer-teacher`}>{thumbs}</div>
                 )}
               </div>
             </div>
@@ -209,11 +210,11 @@ function EnrollmentStudent(): JSX.Element {
             )}
           </Form.Field>
           <Form.Field>
-            <h3>Ingrese el semestre actual</h3>
+            <h3>Ingrese el nivel de educación del Logopeda</h3>
             <Input
               type="text"
               name="scote"
-              placeholder="Score"
+              placeholder="Nivel educación"
               icon="mail outline"
               error={formError.score}
             />
@@ -223,13 +224,13 @@ function EnrollmentStudent(): JSX.Element {
               </span>
             )}
           </Form.Field>
-          <div className="square-enrollment-student">
+          <div className="square-enrollment-teacher">
             <Button
-              className={`btnEnrollmentStudent ${theme_global.theme}`}
+              className={`btnEnrollmentTeacher ${theme_global.theme}`}
               type="submit"
               loading={isLoading}
             >
-              Matricular estudiante
+              Inscribir Logopeda
             </Button>
           </div>
         </Form>
@@ -245,4 +246,4 @@ function defaultValueForm() {
   };
 }
 
-export default connect()(EnrollmentStudent);
+export default connect()(EnrollmentTeacher);
