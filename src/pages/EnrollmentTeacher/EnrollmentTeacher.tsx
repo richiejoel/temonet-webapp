@@ -70,7 +70,7 @@ function EnrollmentTeacher(): JSX.Element {
     setFormError(errors);
     toast.configure();
     if (formOk) {
-      toast.success("Ha matriculado al estudiante con éxito! 🚀");
+      toast.success("Ha inscrito al logopeda con éxito! 🚀");
     } else {
       toast.error("Problemas de validación 😥");
     }
