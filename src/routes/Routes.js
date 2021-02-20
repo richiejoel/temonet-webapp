@@ -22,6 +22,9 @@ import LoggedLayout from "../layouts/LoggedLayout";
 import Example from "../components/Example";
 import EnrollmentStudent from "../pages/EnrollmentStudent";
 import EnrollmentTeacher from "../pages/EnrollmentTeacher";
+import ListStudents from "../pages/ListStudents";
+import ListTeachers from "../pages/ListTeachers";
+
 var state_global;
 function Routes() {
   const authenticate_global = useSelector((state) => state.authenticate_global);
@@ -51,6 +54,12 @@ function Routes() {
       </PrivateRoute>
       <PrivateRoute path="/enrollmentTeacher" exact>
         <EnrollmentTeacher />
+      </PrivateRoute>
+      <PrivateRoute path="/getAllStudents" exact>
+        <ListStudents />
+      </PrivateRoute>
+      <PrivateRoute path="/getAllTeachers" exact>
+        <ListTeachers />
       </PrivateRoute>
       <PublicRoute path="/signin" exact>
         <Login />
