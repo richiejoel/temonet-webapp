@@ -1,0 +1,32 @@
+@import "../../scss/index.scss";
+
+.lesson-finished {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $font-light;
+  margin-top: 3%;
+
+  h3 {
+    font-size: 30px;
+    font-family: "dyslexicRegular";
+    color: $font-primary !important;
+  }
+}
+
+.lesson-finished-title {
+  font-size: 70px;
+  font-family: "dyslexicBold";
+  color: var(--theme-color) !important;
+}
+
+.lesson-finished-resume {
+  font-size: 40px;
+  font-family: "dyslexicRegular";
+  color: $font-primary !important;
+}
+
+#image-lesson-finished {
+  width: 500px;
+  height: 500px;
+}

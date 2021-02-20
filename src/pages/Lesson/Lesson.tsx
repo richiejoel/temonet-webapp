@@ -1,7 +1,7 @@
 import React from "react";
 import { AxiosResponse } from "axios";
 import { useDispatch } from "react-redux";
-import { RouteComponentProps } from "react-router";
+import { RouteComponentProps, useHistory } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
 import GuessQuestion from "../../components/GuessQuestion";
 import Loading from "../../components/Loading";
@@ -16,7 +16,7 @@ import "../../styles/theme.scss";
 
 function generateJSON(): any {
   const data = JSON.stringify(Data);
-  const  dataJSON = JSON.parse(data);
+  const dataJSON = JSON.parse(data);
   return dataJSON;
 }
 
@@ -30,6 +30,7 @@ const Lesson = (props: RouteComponentProps) => {
   const [visibleAnswerBox, setVisibleAnswerBox] = React.useState(false);
   const isButtonDisabled = () => disabledCheckButton && !answers.length;
   const dispatch = useDispatch();
+  const history = useHistory();
 
   //setQuestions(prueba());
   //const myLogger = new Logger();
@@ -128,13 +129,17 @@ const Lesson = (props: RouteComponentProps) => {
     } else {
       http.post(`https://duopettaja-api.herokuapp.com/lessons/1`, {});
       /*dispatchReachGoal();*/
-      props.history.push({
-        pathname: "/lesson/finished",
+      history.push({
+        pathname: "/lessonFinished",
+        state: { questions: questions.length },
+      });
+      /*props.history.push({
+        pathname: "/lessonFinished",
         state: {
           lessonId: (props.match.params as any).id,
           questions: questions,
         },
-      });
+      });*/
     }
 
     setAnswers([]);
