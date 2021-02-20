@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
 import { Icon, Menu } from "semantic-ui-react";
 import { connect, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 import ImageSideBar from "../../assets/svg/girl_sidebar.svg";
 
@@ -19,9 +20,7 @@ function MenuLeft(props) {
     console.log("Menu -> " + menu.to);
     setActiveMenu(menu.to);
     if (menu.to === "/signin") {
-      handlerSignOut();
-      history.push("/signin");
-      window.location.reload();
+      alertSession();
     }
   };
 
@@ -31,6 +30,24 @@ function MenuLeft(props) {
   };
   const pushPage = () => {
     history.push("/signin");
+  };
+  const alertSession = () => {
+    Swal.fire({
+      title: "¿Estás seguro de cerrar sesión?",
+      text: "Tu sesión se cerrará, volverás al login.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Confirmar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        handlerSignOut();
+        history.push("/signin");
+        window.location.reload();
+        /*Swal.fire("Deleted!", "Your file has been deleted.", "success");*/
+      }
+    });
   };
   console.log(auth_global.auth);
   useEffect(() => {
