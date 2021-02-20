@@ -1,0 +1,354 @@
+[
+    {
+        "id": 1,
+        "category": "audio",
+        "expression": "Escuche el siguiente audio. ¿Cúantos verbos hay en el audio?",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Cuatro",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Cinco",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Tres",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Ninguno",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "guess",
+        "expression": "Cómo se escribe la palabra ARROZ?",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Arroz",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Aroz",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Arraz",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Arros",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "compound",
+        "expression": "Ordena la siguiente oración.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "Yo",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "perro",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "go",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "amo",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "a mi",
+                "correct": true,
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "an",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "mamá",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "guess",
+        "expression": "Cuál es el único mamífero volador?",
+        "audio": "",
+        "weight": 34,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.476Z",
+        "updated_at": "2018-02-16T15:07:56.476Z",
+        "options": [
+            {
+                "id": 12,
+                "text": "Pato",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.743Z",
+                "updated_at": "2018-02-16T15:07:56.743Z"
+            },
+            {
+                "id": 13,
+                "text": "Lobo",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.761Z",
+                "updated_at": "2018-02-16T15:07:56.761Z"
+            },
+            {
+                "id": 14,
+                "text": "Murciélago",
+                "correct": true,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.804Z",
+                "updated_at": "2018-02-16T15:07:56.804Z"
+            },
+            {
+                "id": 15,
+                "text": "Ballena",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.830Z",
+                "updated_at": "2018-02-16T15:07:56.830Z"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "compound",
+        "expression": "Ordena la siguiente oración.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "Yo",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "perro",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "go",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "amo",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "a mi",
+                "correct": true,
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "an",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "mamá",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "guess",
+        "expression": "Cuál es la materia que estudia las reglas gramaticales?",
+        "audio": "",
+        "weight": 34,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.476Z",
+        "updated_at": "2018-02-16T15:07:56.476Z",
+        "options": [
+            {
+                "id": 12,
+                "text": "Matemáticas",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.743Z",
+                "updated_at": "2018-02-16T15:07:56.743Z"
+            },
+            {
+                "id": 13,
+                "text": "Ortografía",
+                "correct": true,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.761Z",
+                "updated_at": "2018-02-16T15:07:56.761Z"
+            },
+            {
+                "id": 14,
+                "text": "Física",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.804Z",
+                "updated_at": "2018-02-16T15:07:56.804Z"
+            },
+            {
+                "id": 15,
+                "text": "Historia",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.830Z",
+                "updated_at": "2018-02-16T15:07:56.830Z"
+            },
+            {
+                "id": 16,
+                "text": "Geometría",
+                "correct": false,
+                "order": null,
+                "question_id": 3,
+                "created_at": "2018-02-16T15:07:56.830Z",
+                "updated_at": "2018-02-16T15:07:56.830Z"
+            }
+        ]
+    }
+    
+]

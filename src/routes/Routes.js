@@ -25,6 +25,7 @@ import EnrollmentTeacher from "../pages/EnrollmentTeacher";
 import ListStudents from "../pages/ListStudents";
 import ListTeachers from "../pages/ListTeachers";
 import LessonFinished from "../components/LessonFinished";
+import LessonReady from "../pages/LessonReady";
 
 var state_global;
 function Routes() {
@@ -61,6 +62,9 @@ function Routes() {
       </PrivateRoute>
       <PrivateRoute path="/getAllTeachers" exact>
         <ListTeachers />
+      </PrivateRoute>
+      <PrivateRoute path="/lessonReady" exact>
+        <LessonReady />
       </PrivateRoute>
       <PrivateRoute path="/lessonFinished" exact>
         <LessonFinished />
