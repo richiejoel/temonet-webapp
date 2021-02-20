@@ -7,6 +7,7 @@ import ImageSideBar from "../../assets/svg/girl_sidebar.svg";
 
 import "../../styles/theme.scss";
 import "./MenuLeft.scss";
+import { MenuTwoTone } from "@material-ui/icons";
 
 function MenuLeft(props) {
   const { location } = props;
@@ -17,6 +18,15 @@ function MenuLeft(props) {
   const handlerMenu = (e: any, menu: any) => {
     console.log("Menu -> " + menu.to);
     setActiveMenu(menu.to);
+    if (menu.to === "/signin") {
+      handlerSignOut();
+      history.push("/signin");
+      window.location.reload();
+    }
+  };
+
+  const handlerSignOut = () => {
+    sessionStorage.setItem("isAuth", "false");
     //history.push("/createLessonAudio");
   };
   const pushPage = () => {
@@ -138,6 +148,16 @@ function MenuLeft(props) {
             </Menu.Item>
           </>
         )}
+        <Menu.Item
+          as={Link}
+          exact
+          to="/signin"
+          name="signout"
+          active={activeMenu === "/signin"}
+          onClick={handlerMenu}
+        >
+          <Icon name="sign-out" /> Cerrar Sesión
+        </Menu.Item>
       </div>
 
       <div className="footer-menu">
