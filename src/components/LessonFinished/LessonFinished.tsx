@@ -5,7 +5,6 @@ import ImgLessonFinished from "../../assets/svg/lesson-finished.svg";
 
 import "./LessonFinished.scss";
 import "../../styles/theme.scss";
-import { AnyMxRecord } from "dns";
 
 function LessonFinished(): JSX.Element {
   const location: any = useLocation();

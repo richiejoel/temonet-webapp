@@ -6,12 +6,15 @@ interface ICheckButtonProps {
 };
 
 export const LessonContainer = styled.div`
-  // margin: 0 10px;
+  @import "../../scss/index.scss";
+  font-family: "dyslexicRegular";
   height: 100%;
   justify-content: center;
 `;
 
 export const CheckButtonRow = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular";
   height: 50px;
   width: 100%;
   display: flex;
@@ -26,10 +29,13 @@ export const CheckButtonRow = styled.div`
     background-color: ${({isCorrect}: ICheckButtonProps) => isCorrect ? 'green' : 'red'}
     color: white;
     font-weight: bold;
+    font-family: "dyslexicBold";
   }
 `;
 
 export const SuccessBox = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular";
   position: fixed;
   bottom: ${({isVisible}) => isVisible ? '0px' : '-230px'};
   width: 100%;
@@ -42,11 +48,16 @@ export const SuccessBox = styled.div`
   border-top-right-radius: 10px;
   background-color: ${({isCorrect}: ICheckButtonProps) => isCorrect ? 'limegreen' : '#cd3232'};
   transition: bottom .3s ease;
+  h2{
+    font-family: "dyslexicRegular"; 
+  }
 `;
 
 export const ProgressBarRow = styled.div.attrs(props => ({
   className: props.className,
 }))`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular";
   display: flex;
   flex-flow: column;
   margin: 20px;

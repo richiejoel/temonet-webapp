@@ -5,7 +5,9 @@ interface IQuestionOptionProps {
 }
 
 export const QuestionsContainer: StyledComponent<"div", any, {}, never> = styled.div`
-  display: flex;
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular";  
+display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -13,12 +15,16 @@ export const QuestionsContainer: StyledComponent<"div", any, {}, never> = styled
 `;
 
 export const QuestionContainer: StyledComponent<"div", any, {}, never> = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular";
   width: 50%;
   height: 50px;
 `;
 
 export const QuestionOption: StyledComponent<"div", any, IQuestionOptionProps> = styled.div`
   background-color: ${(props: IQuestionOptionProps) => props.selected ? "aqua" : "white"};
+  @import "../../scss/index.scss";
+font-family: "dyslexicRegular";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +37,9 @@ export const QuestionOption: StyledComponent<"div", any, IQuestionOptionProps> =
 
 export const LocalQuestionRow = styled.div`
   margin: 20px;
+  @import "../../scss/index.scss";
+
+h2{
+  font-family: "dyslexicRegular"; 
+}
 `;

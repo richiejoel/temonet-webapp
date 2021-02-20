@@ -5,6 +5,8 @@ interface IWordBoxProps {
 }
 
 export const SelectedWordsContainer: StyledComponent<"div", any, {}> = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular"; 
   display: flex;
   padding: 0 10% 0 10%;
   align-items: center;
@@ -13,6 +15,8 @@ export const SelectedWordsContainer: StyledComponent<"div", any, {}> = styled.di
 `;
 
 export const SelectedWordsBox: StyledComponent<"div", any, {}> = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular"; 
   width: 100%;
   height: 100%;
   border-style: solid;
@@ -23,6 +27,8 @@ export const SelectedWordsBox: StyledComponent<"div", any, {}> = styled.div`
 `;
 
 export const AvailableWordsContainer: StyledComponent<"div", any, {}> = styled.div`
+@import "../../scss/index.scss";
+font-family: "dyslexicRegular"; 
   display: flex;
   margin-top: 10px;
   padding: 0 10% 0 10%;
@@ -34,6 +40,8 @@ export const AvailableWordsContainer: StyledComponent<"div", any, {}> = styled.d
 export const WordBox: StyledComponent<"div", any, IWordBoxProps> = styled.div`
   background-color: ${(p: IWordBoxProps) => p.selected ? "#989898" : "#E8E7E6"};
   display: inline-block;
+  @import "../../scss/index.scss";
+font-family: "dyslexicRegular"; 
   margin: 4px 9px;
   padding: 1px 15px;
   border-radius: 3px;
@@ -46,4 +54,9 @@ export const WordBox: StyledComponent<"div", any, IWordBoxProps> = styled.div`
 
 export const QuestionRow = styled.div`
   margin: 20px;
+  @import "../../scss/index.scss";
+
+h2{
+  font-family: "dyslexicBold"; 
+}
 `;
