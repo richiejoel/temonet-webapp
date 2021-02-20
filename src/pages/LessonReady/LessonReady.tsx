@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { RouteComponentProps, useHistory } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
 import GuessQuestionAudio from "../../components/GuestQuestionAudio";
+import GuessQuestionImages from "../../components/GuestQuestionImages";
 import GuessQuestion from "../../components/GuessQuestion";
 import Loading from "../../components/Loading";
 import ProgressBar from "../../components/ProgressBar";
@@ -88,6 +89,14 @@ const LessonReady = (props: RouteComponentProps) => {
         : -questions[currentQuestionIndex].weight;
       questions[currentQuestionIndex].correct = currentAnswer.correct;
     } else if (currentQuestion.category === "audio") {
+      setCorrect(currentAnswer.correct);
+      setDisabledCheckButton(true);
+      setVisibleAnswerBox(true);
+      currentProgress = currentAnswer.correct
+        ? questions[currentQuestionIndex].weight
+        : -questions[currentQuestionIndex].weight;
+      questions[currentQuestionIndex].correct = currentAnswer.correct;
+    } else if (currentQuestion.category === "images") {
       setCorrect(currentAnswer.correct);
       setDisabledCheckButton(true);
       setVisibleAnswerBox(true);
@@ -212,6 +221,17 @@ const LessonReady = (props: RouteComponentProps) => {
             question={currentQuestion.expression}
             options={currentQuestion.options}
             onChange={getAnswer}
+          />
+        );
+        break;
+
+      case "images":
+        question = (
+          <GuessQuestionImages
+            question={currentQuestion.expression}
+            options={currentQuestion.options}
+            onChange={getAnswer}
+            questionObject={currentQuestion}
           />
         );
         break;
