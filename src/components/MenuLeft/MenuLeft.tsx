@@ -8,7 +8,6 @@ import ImageSideBar from "../../assets/svg/girl_sidebar.svg";
 
 import "../../styles/theme.scss";
 import "./MenuLeft.scss";
-import { MenuTwoTone } from "@material-ui/icons";
 
 function MenuLeft(props) {
   const { location } = props;
@@ -21,6 +20,9 @@ function MenuLeft(props) {
     setActiveMenu(menu.to);
     if (menu.to === "/signin") {
       alertSession();
+    }
+    if (menu.to === "/lesson") {
+      alertTraining();
     }
   };
 
@@ -49,6 +51,24 @@ function MenuLeft(props) {
       }
     });
   };
+  const alertTraining = () => {
+    Swal.fire({
+      title: "Actividad de entrenamiento",
+      text:
+        "Esta actividad no tiene ninguna validez, sólo es de entrenamiento.",
+      icon: "info",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Confirmar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        history.push("/lesson");
+        //window.location.reload();
+        /*Swal.fire("Deleted!", "Your file has been deleted.", "success");*/
+      }
+    });
+  };
   console.log(auth_global.auth);
   useEffect(() => {
     setActiveMenu(location.pathname);
@@ -71,6 +91,15 @@ function MenuLeft(props) {
         </Menu.Item>
         {sessionStorage.getItem("role") === "student" && (
           <>
+            <Menu.Item
+              as={Link}
+              to="/lesson"
+              name="lesson"
+              active={activeMenu === "/lesson"}
+              onClick={handlerMenu}
+            >
+              <Icon name="tasks" /> Actividad Demo
+            </Menu.Item>
             <Menu.Item
               as={Link}
               to="/listLesson"

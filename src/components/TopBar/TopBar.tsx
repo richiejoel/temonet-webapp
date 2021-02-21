@@ -24,7 +24,7 @@ export default function TopBar() {
       </div>
       <div className="top-bar__right">
         <Icon className="bell" name="bell outline" size="big" />
-        <span className="name-user">Stefania Martillo</span>
+        <span className="name-user">{sessionStorage.getItem("username")}</span>
         <Image className="user-profile" src={ImageAvatar} />
       </div>
     </div>

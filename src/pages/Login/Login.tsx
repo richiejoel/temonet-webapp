@@ -73,6 +73,7 @@ function Login(): JSX.Element {
         }
 
         sessionStorage.setItem("role", user.role.trim().toString());
+        sessionStorage.setItem("username", user.username.trim().toString());
 
         flag = true;
       }
