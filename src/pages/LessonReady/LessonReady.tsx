@@ -5,6 +5,7 @@ import { RouteComponentProps, useHistory } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
 import GuessQuestionAudio from "../../components/GuestQuestionAudio";
 import GuessQuestionImages from "../../components/GuestQuestionImages";
+import GuessQuestionVideo from "../../components/GuestQuestionVideo";
 import GuessQuestion from "../../components/GuessQuestion";
 import Loading from "../../components/Loading";
 import ProgressBar from "../../components/ProgressBar";
@@ -97,6 +98,14 @@ const LessonReady = (props: RouteComponentProps) => {
         : -questions[currentQuestionIndex].weight;
       questions[currentQuestionIndex].correct = currentAnswer.correct;
     } else if (currentQuestion.category === "images") {
+      setCorrect(currentAnswer.correct);
+      setDisabledCheckButton(true);
+      setVisibleAnswerBox(true);
+      currentProgress = currentAnswer.correct
+        ? questions[currentQuestionIndex].weight
+        : -questions[currentQuestionIndex].weight;
+      questions[currentQuestionIndex].correct = currentAnswer.correct;
+    } else if (currentQuestion.category === "video") {
       setCorrect(currentAnswer.correct);
       setDisabledCheckButton(true);
       setVisibleAnswerBox(true);
@@ -221,6 +230,7 @@ const LessonReady = (props: RouteComponentProps) => {
             question={currentQuestion.expression}
             options={currentQuestion.options}
             onChange={getAnswer}
+            questionObject={currentQuestion}
           />
         );
         break;
@@ -228,6 +238,17 @@ const LessonReady = (props: RouteComponentProps) => {
       case "images":
         question = (
           <GuessQuestionImages
+            question={currentQuestion.expression}
+            options={currentQuestion.options}
+            onChange={getAnswer}
+            questionObject={currentQuestion}
+          />
+        );
+        break;
+
+      case "video":
+        question = (
+          <GuessQuestionVideo
             question={currentQuestion.expression}
             options={currentQuestion.options}
             onChange={getAnswer}

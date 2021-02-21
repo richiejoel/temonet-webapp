@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import { Icon } from "semantic-ui-react";
 import NoImage from "../../assets/svg/no-audio.svg";
 
-import "./GuestQuestionAudio.scss";
+import "./GuestQuestionVideo.scss";
 
 interface IProps {
   options: Word[];
@@ -14,7 +14,7 @@ interface IProps {
   questionObject: Word;
 }
 
-const GuessQuestionAudio = ({
+const GuessQuestionVideo = ({
   question,
   options,
   onChange,
@@ -77,28 +77,27 @@ const GuessQuestionAudio = ({
     setSeeking(false);
     player?.current?.seekTo(parseFloat(e.target.value))!;
   };
-  //https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3
-
+  //https://www.youtube.com/watch?v=XXYlFuWEuKI
+  //http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
   return (
     <div>
       <S.LocalQuestionRow>
         <h2>{localQuestion}</h2>
       </S.LocalQuestionRow>
-      <div className="content-audio">
-        <div className="audio-lesson">
-          <img className="img-audio-fix" src={NoImage} alt="audio-lesson-fix" />
-          <div className={`player-lesson-audio`}>
+      <div className="content-video">
+        <div className="video-lesson">
+          <div className={`player-lesson-video`}>
             <ReactPlayer
               ref={player}
-              url={questionObject.audio}
-              className="play-audio-div"
+              url={questionObject.video}
+              className="play-video-div"
               playing={playing}
               onSeek={(e) => console.log("onSeek", e)}
               onProgress={(e) => onProgress(e)}
               loop={true}
             />
             <input
-              className="seek-player-audio"
+              className="seek-player-video"
               type="range"
               min={0}
               max={0.999999}
@@ -113,13 +112,13 @@ const GuessQuestionAudio = ({
             {playing ? (
               <Icon
                 onClick={onPause}
-                className="pause-audio"
+                className="pause-video-std"
                 name="pause circle outline"
               />
             ) : (
               <Icon
                 onClick={onStart}
-                className="play-audio"
+                className="play-video-std"
                 name="play circle outline"
               />
             )}
@@ -142,6 +141,6 @@ const GuessQuestionAudio = ({
   );
 };
 
-(GuessQuestionAudio as any).whyDidYouRender = true;
+(GuessQuestionVideo as any).whyDidYouRender = true;
 
-export default GuessQuestionAudio;
+export default GuessQuestionVideo;

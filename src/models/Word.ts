@@ -13,6 +13,8 @@ class Word {
     public name_one!: string;
     public name_two!: string;
     public name_three!: string;
+    public video!: string;
+    public audio!: string;
   }
   
   export default Word;

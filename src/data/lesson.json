@@ -3,7 +3,7 @@
         "id": 1,
         "category": "audio",
         "expression": "Escuche el siguiente audio. ¿Cúantos verbos hay en el audio?",
-        "audio": "",
+        "audio": "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
         "weight": 33,
         "lesson_id": 1,
         "created_at": "2018-02-16T15:07:56.437Z",
@@ -226,6 +226,55 @@
     },
     {
         "id": 5,
+        "category": "video",
+        "expression": "Observe el siguiente Video. ¿De qué color es la camisa del cantante principal?",
+        "audio": "",
+        "video": "https://www.youtube.com/watch?v=XXYlFuWEuKI",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Verde",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Azul",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Roja",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Morada",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 6,
         "category": "images",
         "expression": "¿A qué tipo de animales pertenecen las siguientes imágenes?",
         "audio": "",
@@ -279,7 +328,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "category": "guess",
         "expression": "Cuál es el único mamífero volador?",
         "audio": "",
@@ -327,7 +376,113 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
+        "category": "audio",
+        "expression": "Escuche el siguiente audio. ¿Cúantos verbos hay en el audio?",
+        "audio": "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Cuatro",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Cinco",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Tres",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Ninguno",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "category": "video",
+        "expression": "Observe el siguiente Video. ¿Qué animal es el que se despierta en la cueva?",
+        "audio": "",
+        "video": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Perro",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Oso",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Castor",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Lobo",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            },
+            {
+                "id": 5,
+                "text": "Conejo",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 10,
         "category": "compound",
         "expression": "Ordena la siguiente oración.",
         "audio": "",
@@ -402,9 +557,9 @@
         ]
     },
     {
-        "id": 8,
+        "id": 11,
         "category": "guess",
-        "expression": "Cuál es la materia que estudia las reglas gramaticales?",
+        "expression": "¿Cuál es la materia que estudia las reglas gramaticales?",
         "audio": "",
         "weight": 34,
         "lesson_id": 1,
