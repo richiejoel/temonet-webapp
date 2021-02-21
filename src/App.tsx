@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import Auth from "./components/Auth";
 
 function App() {
+  sessionStorage.setItem("progressBar", "0");
   return (
     <>
       <Provider store={store}>

@@ -1,0 +1,41 @@
+@import "../../scss/index.scss";
+
+.list-lesson {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.list-lesson {
+  span {
+    margin-top: 3% !important;
+    font-family: "dyslexicBold";
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 1% !important;
+  }
+}
+
+.ui.progress {
+  width: 15%;
+  //margin: 0;
+  margin-left: 2% !important;
+  margin-bottom: 77% !important;
+  position: absolute !important;
+
+  .bar {
+    min-width: 0%;
+    background: var(--theme-color) !important;
+
+    .progress {
+      display: none;
+    }
+  }
+}

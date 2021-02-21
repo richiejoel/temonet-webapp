@@ -73,9 +73,9 @@ function MenuLeft(props) {
           <>
             <Menu.Item
               as={Link}
-              to="/activities"
-              name="activities"
-              active={activeMenu === "/activities"}
+              to="/listLesson"
+              name="listLesson"
+              active={activeMenu === "/listLesson"}
               onClick={handlerMenu}
             >
               <Icon name="tasks" /> Mis actividades

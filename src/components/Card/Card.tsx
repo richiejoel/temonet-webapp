@@ -2,9 +2,9 @@ import React from "react";
 import "./Card.scss";
 
 function Card(props: any): JSX.Element {
-  const { src, title, description, price } = props;
+  const { src, title, description, price, onClick } = props;
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
       <img src={src} alt="" />
       <div className="card__info">
         <h2>{title}</h2>
