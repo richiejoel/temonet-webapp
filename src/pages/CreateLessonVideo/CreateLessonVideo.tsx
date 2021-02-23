@@ -96,9 +96,9 @@ function CreateLessonVideo() {
     const newItemOption = {
       id: uuidv4(),
       itemOption: itemOption,
-      color: randomColor({
+      /*color: randomColor({
         luminosity: "light",
-      }),
+      }),*/
       defaultPosOption: { x: 100, y: -60 },
     };
     setItemsOptions((itemsOptions) => [...itemsOptions, newItemOption]);

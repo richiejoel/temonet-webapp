@@ -612,6 +612,55 @@
                 "updated_at": "2018-02-16T15:07:56.830Z"
             }
         ]
+    },
+    {
+        "id": 12,
+        "category": "video",
+        "expression": "Observe el siguiente Video. ¿De qué color es la camisa del cantante principal?",
+        "audio": "",
+        "video": "https://www.youtube.com/watch?v=XXYlFuWEuKI",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Verde",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Azul",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Roja",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Morada",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
     }
     
 ]
