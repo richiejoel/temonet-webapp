@@ -16,7 +16,7 @@ function ListLesson(): JSX.Element {
   var valueProgress: number = parseInt(sessionStorage.getItem("progressBar")!);
   const handlerPage = (typeLesson: string) => {
     console.log("Joel");
-    if (parseInt(sessionStorage.getItem("progressBar")!) < 9) {
+    if (parseInt(sessionStorage.getItem("progressBar")!) < 11) {
       valueProgress++;
       sessionStorage.setItem("progressBar", valueProgress.toString());
     }
@@ -32,7 +32,7 @@ function ListLesson(): JSX.Element {
       <Progress
         progress="percent"
         value={parseInt(sessionStorage.getItem("progressBar")!)}
-        total={9}
+        total={11}
         size="small"
       />
 
