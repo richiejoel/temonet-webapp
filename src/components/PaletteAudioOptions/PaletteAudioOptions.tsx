@@ -164,8 +164,8 @@ function PaletteAudioOptions(props): JSX.Element {
                   <div
                     style={{
                       backgroundColor: item.color,
-                      width: size.x,
-                      height: size.y,
+                      /*width: size.x,
+                      height: size.y,*/
                     }}
                     className="box-audio"
                   >
