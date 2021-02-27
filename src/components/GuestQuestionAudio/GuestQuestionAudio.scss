@@ -68,3 +68,36 @@
   left: 350px;
   top: 90px;*/
 }
+
+@media only screen and (max-width: 600px) {
+  .img-audio-fix {
+    //object-fit: fill;
+
+    width: 120px !important;
+    height: 60px !important;
+    //margin-left: 220px;
+    background-repeat: no-repeat;
+    //background-size: cover;
+    //background-position: center;
+    outline: none;
+    position: relative;
+  }
+
+  .audio-lesson {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(249, 162, 144);
+  }
+}

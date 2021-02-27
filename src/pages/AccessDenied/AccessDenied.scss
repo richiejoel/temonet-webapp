@@ -24,3 +24,16 @@
   width: 500px;
   height: 500px;
 }
+
+@media only screen and (max-width: 600px) {
+  .title-denied {
+    font-size: 40px;
+  }
+  .resume-denied {
+    font-size: 20px;
+  }
+  #image-access-denied {
+    width: 300px;
+    height: 300px;
+  }
+}

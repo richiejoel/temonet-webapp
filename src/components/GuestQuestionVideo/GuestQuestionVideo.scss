@@ -79,3 +79,22 @@
   justify-content: center;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .video-lesson {
+    width: 450px;
+    height: 450px;
+  }
+  .img-video-fix {
+    width: 450px !important;
+    height: 450px !important;
+  }
+  .player-lesson-video {
+    width: 350px;
+    height: 400px;
+  }
+  .play-video-div {
+    width: 350px;
+    height: 400px;
+  }
+}

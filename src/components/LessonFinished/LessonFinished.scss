@@ -30,3 +30,21 @@
   width: 500px;
   height: 500px;
 }
+
+@media only screen and (max-width: 600px) {
+  .lesson-finished {
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .lesson-finished-title {
+    font-size: 40px;
+  }
+  .lesson-finished-resume {
+    font-size: 20px;
+  }
+  #image-lesson-finished {
+    width: 300px;
+    height: 300px;
+  }
+}
