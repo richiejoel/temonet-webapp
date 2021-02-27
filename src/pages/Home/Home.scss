@@ -77,3 +77,54 @@
   font-family: "dyslexicBold";
   color: $font-primary;
 }
+
+@media only screen and (max-width: 600px) {
+  #plane-one {
+    display: none;
+  }
+  .home {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-options {
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: "dyslexicBold";
+    color: $font-primary;
+  }
+  .home-bottom {
+    display: flex;
+    padding-left: 4px;
+    padding-right: 4px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-top {
+    background-color: var(--theme-color-light);
+    h1 {
+      color: var(--theme-color);
+      font-size: 40px;
+      font-family: "dyslexicBold";
+    }
+    h2 {
+      color: var(--theme-color);
+      font-size: 35px;
+      font-family: "dyslexicBold";
+    }
+    span {
+      color: $font-primary;
+      font-family: "dyslexicBold";
+    }
+  }
+
+  .resume {
+    margin-left: 3%;
+    margin-right: 3%;
+    p {
+      font-family: "dyslexicRegular";
+    }
+  }
+}

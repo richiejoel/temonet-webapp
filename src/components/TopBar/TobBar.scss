@@ -68,3 +68,45 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .top-bar {
+    height: 50px;
+    //background-color: $background-grey-dark-light;
+    display: flex;
+
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    //position: fixed;
+    z-index: 1;
+
+    &__left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      h2 {
+        font-size: 30px !important;
+        font-family: "dyslexicBold";
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      #image-logo {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+      }
+    }
+
+    &__center {
+      display: none;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}
