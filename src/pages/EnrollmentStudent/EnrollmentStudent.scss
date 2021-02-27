@@ -189,3 +189,25 @@
 .dropzone {
   outline: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .enrollment-student-form-data {
+    padding-left: 8%;
+    padding-right: 8%;
+    h3 {
+      font-family: "dyslexicBold";
+    }
+  }
+
+  .enrollment-student-form {
+    width: 100%;
+    padding: 4%;
+
+    h2 {
+      font-family: "dyslexicBold";
+      font-size: 40px;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

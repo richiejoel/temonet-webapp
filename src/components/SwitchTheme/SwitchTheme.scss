@@ -54,3 +54,20 @@
   border-radius: 50%;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .content-switch-theme {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px;
+  }
+
+  .switch-theme {
+    h3 {
+      font-size: 8px;
+    }
+  }
+}

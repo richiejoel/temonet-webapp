@@ -189,3 +189,58 @@
 .dropzone {
   outline: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .ui.form {
+    padding-top: 2%;
+    h3 {
+      text-align: left;
+    }
+    .field {
+      .input {
+        input {
+          border-radius: 10px;
+          background: $font-light;
+          font-family: "dyslexicBold";
+        }
+        i {
+          color: var(--theme-color);
+        }
+      }
+    }
+
+    .square-enrollment-teacher {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 6%;
+
+      .button {
+        background: $font-light;
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 4%;
+        font-family: "dyslexicBold";
+      }
+    }
+  }
+
+  .enrollment-teacher-form-data {
+    padding-left: 8%;
+    padding-right: 8%;
+    h3 {
+      font-family: "dyslexicBold";
+    }
+  }
+
+  .enrollment-teacher-form {
+    width: 100%;
+    padding: 4%;
+
+    h2 {
+      font-family: "dyslexicBold";
+      font-size: 40px;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

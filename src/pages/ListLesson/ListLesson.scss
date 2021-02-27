@@ -39,3 +39,28 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .list-lesson {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  .list-lesson {
+    span {
+      margin-top: 3% !important;
+      font-family: "dyslexicBold";
+      font-size: x-large;
+      text-align: center;
+      margin-bottom: 1% !important;
+    }
+  }
+}
