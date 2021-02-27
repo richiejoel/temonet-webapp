@@ -23,6 +23,12 @@ function PaletteInteractive(props): JSX.Element {
     deleteNoteTitle,
     updatePosTitle,
     isDraggable,
+    itemOption,
+    itemsOptions,
+    setItemOption,
+    newItemOption,
+    updatePosOption,
+    deleteNoteOption,
     setIsDraggable,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
@@ -39,9 +45,14 @@ function PaletteInteractive(props): JSX.Element {
     newItemTitle();
   };
 
+  const createOption = () => {
+    setItemOption(`Option`);
+    newItemOption();
+  };
+
   useEffect(() => {
     if (span != null && span.current != null) {
-      setWidth(span.current.offsetWidth + span.current.offsetWidth * 0.5);
+      setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
@@ -73,6 +84,15 @@ function PaletteInteractive(props): JSX.Element {
           >
             <img id="img-add" src={AddCard} alt="img-add" />
             <span>Añadir texto</span>
+          </div>
+          <div
+            className="notes"
+            onClick={() => {
+              createOption();
+            }}
+          >
+            <img id="img-add" src={AddCard} alt="img-add" />
+            <span>Añadir Opciones</span>
           </div>
         </div>
         <div className="palette-interactive__right">
@@ -156,6 +176,40 @@ function PaletteInteractive(props): JSX.Element {
                   </button>
                 </div>
               </Draggable>
+            );
+          })}
+
+          {/* Draggable options */}
+          {itemsOptions.map((itemOption, index) => {
+            return (
+              <>
+                <Draggable
+                  key={itemOption.id}
+                  disabled={isDraggable}
+                  defaultPosition={itemOption.defaultPosOption}
+                  onStop={(e, data) => {
+                    updatePosOption(data, index);
+                  }}
+                >
+                  <div
+                    style={{ backgroundColor: itemOption.color }}
+                    className="box-option-image"
+                  >
+                    <input
+                      id="input-card"
+                      type="text"
+                      onChange={(e) => setItemOption(e.target.value)}
+                      placeholder="Option..."
+                    />
+                    <button
+                      id="delete"
+                      onClick={(e) => deleteNoteOption(itemOption.id)}
+                    >
+                      X
+                    </button>
+                  </div>
+                </Draggable>
+              </>
             );
           })}
         </div>

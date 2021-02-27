@@ -61,6 +61,11 @@ function CreateLessonCard() {
     JSON.parse(localStorage.getItem("itemsTitle")!) || []
   );
 
+  const [itemOption, setItemOption] = useState("Option");
+  const [itemsOptions, setItemsOptions] = useState(
+    JSON.parse(localStorage.getItem("itemsOptionsImages")!) || []
+  );
+
   const newitem = () => {
     //if (item.trim() !== "") {
     const newitem = {
@@ -89,6 +94,18 @@ function CreateLessonCard() {
     setItemsTitle((itemsTitle) => [...itemsTitle, newItemTitle]);
   };
 
+  const newItemOption = () => {
+    const newItemOption = {
+      id: uuidv4(),
+      itemOption: itemOption,
+      /*color: randomColor({
+        luminosity: "light",
+      }),*/
+      defaultPosOption: { x: 100, y: -60 },
+    };
+    setItemsOptions((itemsOptions) => [...itemsOptions, newItemOption]);
+  };
+
   const keyPress = (event) => {
     var code = event.keyCode || event.which;
     if (code === 13) {
@@ -104,6 +121,10 @@ function CreateLessonCard() {
     localStorage.setItem("itemsTitle", JSON.stringify(itemsTitle));
   }, [itemsTitle]);
 
+  useEffect(() => {
+    localStorage.setItem("itemsOptionsImages", JSON.stringify(itemsOptions));
+  }, [itemsOptions]);
+
   const updatePos = (data, index) => {
     let newArr = [...items];
     newArr[index].defaultPos = { x: data.x, y: data.y };
@@ -116,12 +137,22 @@ function CreateLessonCard() {
     setItemsTitle(newArr);
   };
 
+  const updatePosOption = (data, index) => {
+    let newArr = [...itemsOptions];
+    newArr[index].defaultPosOption = { x: data.x, y: data.y };
+    setItemsOptions(newArr);
+  };
+
   const deleteNote = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
 
   const deleteNoteTitle = (id) => {
     setItemsTitle(itemsTitle.filter((itemTitle) => itemTitle.id !== id));
+  };
+
+  const deleteNoteOption = (id) => {
+    setItemsOptions(itemsOptions.filter((itemOption) => itemOption.id !== id));
   };
 
   const handleMouseUp = () => {
@@ -165,6 +196,12 @@ function CreateLessonCard() {
           updatePosTitle={updatePosTitle}
           isDraggable={isDraggable}
           setIsDraggable={setIsDraggable}
+          itemOption={itemOption}
+          itemsOptions={itemsOptions}
+          setItemOption={setItemOption}
+          newItemOption={newItemOption}
+          updatePosOption={updatePosOption}
+          deleteNoteOption={deleteNoteOption}
         />
 
         {/*<div id="new-item">
