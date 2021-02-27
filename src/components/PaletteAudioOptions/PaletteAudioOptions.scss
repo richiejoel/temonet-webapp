@@ -135,9 +135,10 @@
   border: none !important;
   outline: none !important;
   padding: 0px !important;
-  font-family: "dyslexicItalic";
+  font-family: "dyslexicBold";
   display: flex;
   min-width: 120px;
+  font-size: 1.72rem;
   //max-width: 700px;
 }
 
@@ -161,7 +162,26 @@
   padding: 1em;
   margin: auto;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
-  border: 0px solid black;
   user-select: none;
   border-color: black;
+  border: 3px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .box-option-audio {
+    max-width: 400px;
+    width: 180px !important;
+    height: 40px !important;
+  }
+  #input-title-text:not(.userListBox) {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;
+    font-family: "dyslexicItalic";
+    display: flex;
+    min-width: 120px;
+    font-size: 1.19rem;
+    //max-width: 700px;
+  }
 }

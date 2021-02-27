@@ -71,7 +71,7 @@ function PaletteAudioOptions(props): JSX.Element {
 
   useEffect(() => {
     if (span != null && span.current != null) {
-      setWidth(span.current.offsetWidth + span.current.offsetWidth * 0.5);
+      setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
@@ -236,7 +236,7 @@ function PaletteAudioOptions(props): JSX.Element {
                 >
                   <div
                     style={{ backgroundColor: itemOption.color }}
-                    className="box-option"
+                    className="box-option-audio"
                   >
                     <input
                       id="input-card"

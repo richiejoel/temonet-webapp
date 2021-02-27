@@ -58,7 +58,7 @@ function PaletteVideoOptions(props): JSX.Element {
 
   useEffect(() => {
     if (span != null && span.current != null) {
-      setWidth(span.current.offsetWidth + span.current.offsetWidth * 0.5);
+      setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
