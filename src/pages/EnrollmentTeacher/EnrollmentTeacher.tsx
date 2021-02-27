@@ -210,6 +210,21 @@ function EnrollmentTeacher(): JSX.Element {
             )}
           </Form.Field>
           <Form.Field>
+            <h3>Ingrese el registro del profesional</h3>
+            <Input
+              type="text"
+              name="scote"
+              placeholder="Registro Profesional"
+              icon="mail outline"
+              error={formError.score}
+            />
+            {formError.score && (
+              <span className="error-text">
+                Por favor, introduce un registro correcto.{" "}
+              </span>
+            )}
+          </Form.Field>
+          <Form.Field>
             <h3>Ingrese el nivel de educación del Logopeda</h3>
             <Input
               type="text"
@@ -221,6 +236,21 @@ function EnrollmentTeacher(): JSX.Element {
             {formError.score && (
               <span className="error-text">
                 Por favor, introduce un semestre correcto.{" "}
+              </span>
+            )}
+          </Form.Field>
+          <Form.Field>
+            <h3>Ingrese el número de contacto</h3>
+            <Input
+              type="number"
+              name="scote"
+              placeholder="Número de contacto"
+              icon="mail outline"
+              error={formError.score}
+            />
+            {formError.score && (
+              <span className="error-text">
+                Por favor, introduce un número de contacto correcto.{" "}
               </span>
             )}
           </Form.Field>

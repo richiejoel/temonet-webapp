@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Button, Icon, Form, Input } from "semantic-ui-react";
+import {
+  Button,
+  Icon,
+  Form,
+  Input,
+  Dropdown,
+  TextArea,
+} from "semantic-ui-react";
 import { toast } from "react-toastify";
 import { connect, useSelector } from "react-redux";
 import { useDropzone } from "react-dropzone";
 import { validateEmail } from "../../utils/Validations";
 import NoAvatar from "../../assets/svg/female.svg";
+import Male from "../../assets/svg/teacher-male.svg";
+import Hero from "../../assets/svg/teacher-hero.svg";
+import Female from "../../assets/svg/teacher-female.svg";
+import MaleTwo from "../../assets/svg/male.svg";
 
 import "./EnrollmentStudent.scss";
 import "../../styles/theme.scss";
@@ -74,6 +85,45 @@ function EnrollmentStudent(): JSX.Element {
       toast.error("Problemas de validación 😥");
     }
   };
+
+  const teacherOptions = [
+    {
+      key: "Jenny Hess",
+      text: "Jenny Hess",
+      value: "Jenny Hess",
+      image: { avatar: true, src: NoAvatar },
+    },
+    {
+      key: "Elliot Fu",
+      text: "Elliot Fu",
+      value: "Elliot Fu",
+      image: { avatar: true, src: Male },
+    },
+    {
+      key: "Stevie Feliciano",
+      text: "Stevie Feliciano",
+      value: "Stevie Feliciano",
+      image: { avatar: true, src: Hero },
+    },
+    {
+      key: "Christian",
+      text: "Christian",
+      value: "Christian",
+      image: { avatar: true, src: Female },
+    },
+    {
+      key: "Matt",
+      text: "Matt",
+      value: "Matt",
+      image: { avatar: true, src: MaleTwo },
+    },
+    {
+      key: "Justen Kitsune",
+      text: "Justen Kitsune",
+      value: "Justen Kitsune",
+      image: { avatar: true, src: Male },
+    },
+  ];
 
   const onChange = (e) => {
     setFormData({
@@ -209,19 +259,42 @@ function EnrollmentStudent(): JSX.Element {
             )}
           </Form.Field>
           <Form.Field>
-            <h3>Ingrese el semestre actual</h3>
+            <h3>Ingrese el nivel académico</h3>
             <Input
               type="text"
               name="scote"
-              placeholder="Score"
+              placeholder="Nivel académico"
               icon="mail outline"
               error={formError.score}
             />
             {formError.score && (
               <span className="error-text">
-                Por favor, introduce un semestre correcto.{" "}
+                Por favor, introduce un año escolar correcto.{" "}
               </span>
             )}
+          </Form.Field>
+          <Form.Field>
+            <h3>Ingrese el logopeda</h3>
+            <Dropdown
+              placeholder="Seleccione terapeuta"
+              fluid
+              selection
+              options={teacherOptions}
+              error={formError.score}
+            />
+            {formError.score && (
+              <span className="error-text">
+                Por favor, introduce el motivo de la terapia.{" "}
+              </span>
+            )}
+          </Form.Field>
+          <Form.Field>
+            <h3>Detalle los hábitos diarios del estudiante</h3>
+            <TextArea placeholder="Hábitos del estudiante" />
+          </Form.Field>
+          <Form.Field>
+            <h3>Ingrese el motivo de la terapia</h3>
+            <TextArea placeholder="Motivo de la terapia" />
           </Form.Field>
           <div className="square-enrollment-student">
             <Button
