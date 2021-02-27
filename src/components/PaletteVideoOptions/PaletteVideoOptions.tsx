@@ -102,14 +102,14 @@ function PaletteVideoOptions(props): JSX.Element {
           </div>
         </div>
         <div className="palette-video__right">
-          <div className="palette-video__right__colors"></div>
+          {/*<div className="palette-video__right__colors"></div>
           <div className="palette-video__right__colors"></div>
           <div className="palette-video__right__colors"></div>
           <div className="palette-video__right__colors"></div>
           <div className="palette-video__right__colors"></div>
           <div className="palette-video__right_colors"></div>
           <div className="palette-video__right__colors"></div>
-          <div className="palette-video__right__colors"></div>
+          <div className="palette-video__right__colors"></div>*/}
         </div>
 
         <div>

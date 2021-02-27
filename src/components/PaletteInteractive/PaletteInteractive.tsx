@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect, useSelector } from "react-redux";
 import AddCard from "../../assets/svg/add_note.svg";
+import AddImage from "../../assets/svg/no-image.svg";
 import Draggable from "react-draggable";
 import CardPreview from "../../components/CardPreview";
 import "./PaletteInteractive.scss";
@@ -61,7 +62,7 @@ function PaletteInteractive(props): JSX.Element {
               fix();
             }}
           >
-            <img id="img-add" src={AddCard} alt="img-add" />
+            <img id="img-add" src={AddImage} alt="img-add" />
             <span>Añadir elemento</span>
           </div>
           <div
@@ -75,14 +76,14 @@ function PaletteInteractive(props): JSX.Element {
           </div>
         </div>
         <div className="palette-interactive__right">
-          <div className="palette-interactive__right__colors"></div>
+          {/*<div className="palette-interactive__right__colors"></div>
           <div className="palette-interactive__right__colors"></div>
           <div className="palette-interactive__right__colors"></div>
           <div className="palette-interactive__right__colors"></div>
           <div className="palette-interactive__right__colors"></div>
           <div className="palette-interactive__right_colors"></div>
           <div className="palette-interactive__right__colors"></div>
-          <div className="palette-interactive__right__colors"></div>
+          <div className="palette-interactive__right__colors"></div>*/}
         </div>
 
         <div>

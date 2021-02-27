@@ -130,14 +130,14 @@ function PaletteAudioOptions(props): JSX.Element {
           </div>
         </div>
         <div className="palette-audio__right">
-          <div className="palette-audio__right__colors"></div>
+          {/*<div className="palette-audio__right__colors"></div>
           <div className="palette-audio__right__colors"></div>
           <div className="palette-audio__right__colors"></div>
           <div className="palette-audio__right__colors"></div>
           <div className="palette-audio__right__colors"></div>
           <div className="palette-audio__right_colors"></div>
           <div className="palette-audio__right__colors"></div>
-          <div className="palette-audio__right__colors"></div>
+          <div className="palette-audio__right__colors"></div>*/}
         </div>
 
         <div>
