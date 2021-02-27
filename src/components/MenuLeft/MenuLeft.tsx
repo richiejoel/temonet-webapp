@@ -87,7 +87,7 @@ function MenuLeft(props) {
           active={activeMenu === "/"}
           onClick={handlerMenu}
         >
-          <Icon name="home" /> Inicio
+          <Icon name="home" /> <span className="lyrics">Inicio</span>
         </Menu.Item>
         {sessionStorage.getItem("role") === "student" && (
           <>
@@ -98,7 +98,8 @@ function MenuLeft(props) {
               active={activeMenu === "/lesson"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" /> Actividad Demo
+              <Icon name="tasks" />{" "}
+              <span className="lyrics">Actividad Demo</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -107,7 +108,8 @@ function MenuLeft(props) {
               active={activeMenu === "/listLesson"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" /> Mis actividades
+              <Icon name="tasks" />{" "}
+              <span className="lyrics">Mis actividades</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -116,7 +118,8 @@ function MenuLeft(props) {
               active={activeMenu === "/score"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Mis calificaciones
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Mis calificaciones</span>
             </Menu.Item>
           </>
         )}
@@ -130,7 +133,8 @@ function MenuLeft(props) {
               active={activeMenu === "/createLesson"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" /> Crear Actividad Imágenes
+              <Icon name="tasks" />{" "}
+              <span className="lyrics">Crear Actividad Imágenes</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -140,7 +144,8 @@ function MenuLeft(props) {
               active={activeMenu === "/createLessonAudio"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Crear Actividad Audios
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Crear Actividad Audios</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -150,7 +155,8 @@ function MenuLeft(props) {
               active={activeMenu === "/createLessonVideo"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Crear Actividad Videos
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Crear Actividad Videos</span>
             </Menu.Item>
           </>
         )}
@@ -163,7 +169,8 @@ function MenuLeft(props) {
               active={activeMenu === "/enrollmentStudent"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" /> Crear cuenta estudiante
+              <Icon name="tasks" />{" "}
+              <span className="lyrics">Crear cuenta estudiante</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -172,7 +179,8 @@ function MenuLeft(props) {
               active={activeMenu === "/enrollmentTeacher"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Crear cuenta Profesor
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Crear cuenta Profesor</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -181,7 +189,8 @@ function MenuLeft(props) {
               active={activeMenu === "/getAllStudents"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Listar Estudiantes
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Listar Estudiantes</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -190,7 +199,8 @@ function MenuLeft(props) {
               active={activeMenu === "/getAllTeachers"}
               onClick={handlerMenu}
             >
-              <Icon name="edit" /> Listar Profesores
+              <Icon name="edit" />{" "}
+              <span className="lyrics">Listar Profesores</span>
             </Menu.Item>
           </>
         )}
@@ -202,7 +212,7 @@ function MenuLeft(props) {
           active={activeMenu === "/signin"}
           onClick={handlerMenu}
         >
-          <Icon name="sign-out" /> Cerrar Sesión
+          <Icon name="sign-out" /> <span className="lyrics">Cerrar Sesión</span>
         </Menu.Item>
       </div>
 
