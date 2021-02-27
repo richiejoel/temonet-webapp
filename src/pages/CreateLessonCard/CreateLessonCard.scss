@@ -67,3 +67,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .box {
+    width: 90px;
+    height: 90px;
+  }
+}
