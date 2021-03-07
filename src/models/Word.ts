@@ -16,6 +16,12 @@ class Word {
     public name_three!: string;
     public video!: string;
     public audio!: string;
+    public history!: string;
+    public title_history!: string;
+    public terapia!: string;
+    public title_terapia!: string;
+    public instructions!: string;
+    public instructions_text!: string;
   }
   
   export default Word;

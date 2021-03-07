@@ -9,7 +9,7 @@ interface IProps {
   questionObject: Word;
 }
 
-const GuessQuestion = ({ question, options, onChange, questionObject }: IProps) => {
+const GuessQuestionSecond = ({ question, options, onChange, questionObject }: IProps) => {
   const [localQuestion] = React.useState(question);
   const [localOptions, setLocalOptions] = React.useState([...options]);
 
@@ -56,6 +56,6 @@ const GuessQuestion = ({ question, options, onChange, questionObject }: IProps) 
   );
 };
 
-(GuessQuestion as any).whyDidYouRender = false;
+//(GuessQuestionSecond as any).whyDidYouRender = true;
 
-export default GuessQuestion;
+export default GuessQuestionSecond;

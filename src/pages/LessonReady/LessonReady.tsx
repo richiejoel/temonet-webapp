@@ -1,12 +1,16 @@
 import React from "react";
 import { AxiosResponse } from "axios";
 import { useDispatch } from "react-redux";
-import { RouteComponentProps, useHistory } from "react-router";
+import { RouteComponentProps, useHistory, useLocation } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
+import CompoundQuestionImage from "../../components/CompoundQuestionImage";
+import CompoundQuestionImageSecond from "../../components/CompoundQuestionImageSecond";
 import GuessQuestionAudio from "../../components/GuestQuestionAudio";
 import GuessQuestionImages from "../../components/GuestQuestionImages";
 import GuessQuestionVideo from "../../components/GuestQuestionVideo";
+import GuessQuestionVideoSecond from "../../components/GuestQuestionVideoSecond";
 import GuessQuestion from "../../components/GuessQuestion";
+import GuessQuestionSecond from "../../components/GuessQuestionSecond";
 import Loading from "../../components/Loading";
 import ProgressBar from "../../components/ProgressBar";
 import Answer from "../../models/Answer";
@@ -15,25 +19,61 @@ import http from "../../utils/http";
 import * as S from "./styled";
 //import { Logger, ConsoleLogger } from "react-console-logger";
 import Data from "../../data/lesson.json";
+import Data1 from "../../data/terapia_1.json";
+import Data2 from "../../data/terapia_2.json";
+import Data3 from "../../data/terapia_3.json";
+import Data4 from "../../data/terapia_4.json";
+import Data5 from "../../data/terapia_5.json";
+import Data6 from "../../data/terapia_6.json";
 import "../../styles/theme.scss";
 
-function generateJSON(): any {
-  const data = JSON.stringify(Data);
-  const dataJSON = JSON.parse(data);
-  return dataJSON;
+function generateJSON(location): any {
+ 
+  if(location?.state?.typeLesson === "terapia_1"){
+    const data = JSON.stringify(Data1);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "terapia_2"){
+    const data = JSON.stringify(Data2);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "terapia_3"){
+    const data = JSON.stringify(Data3);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "terapia_4"){
+    const data = JSON.stringify(Data4);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "terapia_5"){
+    const data = JSON.stringify(Data5);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "tearapia_6"){
+    const data = JSON.stringify(Data6);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else {
+    const data = JSON.stringify(Data);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  }
+  
 }
 
 const LessonReady = (props: RouteComponentProps) => {
   const [answers, setAnswers] = React.useState<Answer[]>([]);
   const [isCorrect, setCorrect] = React.useState(true);
+  const location: any = useLocation();
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
   const [disabledCheckButton, setDisabledCheckButton] = React.useState(true);
   const [progress, setProgress] = React.useState(0);
-  const [questions, setQuestions] = React.useState<Word[]>(generateJSON());
+  const [questions, setQuestions] = React.useState<Word[]>(generateJSON(location));
   const [visibleAnswerBox, setVisibleAnswerBox] = React.useState(false);
   const isButtonDisabled = () => disabledCheckButton && !answers.length;
   const dispatch = useDispatch();
   const history = useHistory();
+  
 
   //setQuestions(prueba());
   //const myLogger = new Logger();
@@ -69,7 +109,22 @@ const LessonReady = (props: RouteComponentProps) => {
       }
       currentAnswer.options = [...answer];
       answers[currentQuestionIndex] = currentAnswer;
-    } else {
+    } else if (questions[currentQuestionIndex].category === "compoundImage") {
+      let currentAnswer: Answer = answers[currentQuestionIndex];
+      if (currentAnswer === undefined) {
+        currentAnswer = new Answer();
+      }
+      currentAnswer.options = [...answer];
+      answers[currentQuestionIndex] = currentAnswer;
+    } else if (questions[currentQuestionIndex].category === "compoundImageSecond") {
+      let currentAnswer: Answer = answers[currentQuestionIndex];
+      if (currentAnswer === undefined) {
+        currentAnswer = new Answer();
+      }
+      currentAnswer.options = [...answer];
+      answers[currentQuestionIndex] = currentAnswer;
+    }
+    else {
       answers[currentQuestionIndex] = answer;
     }
     setAnswers(answers);
@@ -82,6 +137,14 @@ const LessonReady = (props: RouteComponentProps) => {
     const currentAnswer: Answer = answers[currentQuestionIndex];
     let currentProgress: number;
     if (currentQuestion.category === "guess") {
+      setCorrect(currentAnswer.correct);
+      setDisabledCheckButton(true);
+      setVisibleAnswerBox(true);
+      currentProgress = currentAnswer.correct
+        ? questions[currentQuestionIndex].weight
+        : -questions[currentQuestionIndex].weight;
+      questions[currentQuestionIndex].correct = currentAnswer.correct;
+    } else if (currentQuestion.category === "guessSecond") {
       setCorrect(currentAnswer.correct);
       setDisabledCheckButton(true);
       setVisibleAnswerBox(true);
@@ -106,6 +169,14 @@ const LessonReady = (props: RouteComponentProps) => {
         : -questions[currentQuestionIndex].weight;
       questions[currentQuestionIndex].correct = currentAnswer.correct;
     } else if (currentQuestion.category === "video") {
+      setCorrect(currentAnswer.correct);
+      setDisabledCheckButton(true);
+      setVisibleAnswerBox(true);
+      currentProgress = currentAnswer.correct
+        ? questions[currentQuestionIndex].weight
+        : -questions[currentQuestionIndex].weight;
+      questions[currentQuestionIndex].correct = currentAnswer.correct;
+    } else if (currentQuestion.category === "videoSecond") {
       setCorrect(currentAnswer.correct);
       setDisabledCheckButton(true);
       setVisibleAnswerBox(true);
@@ -154,7 +225,7 @@ const LessonReady = (props: RouteComponentProps) => {
       setDisabledCheckButton(false);
       setVisibleAnswerBox(false);
     } else {
-      http.post(`https://duopettaja-api.herokuapp.com/lessons/1`, {});
+      //http.post(`https://duopettaja-api.herokuapp.com/lessons/1`, {});
       /*dispatchReachGoal();*/
       history.push({
         pathname: "/lessonFinished",
@@ -257,12 +328,35 @@ const LessonReady = (props: RouteComponentProps) => {
         );
         break;
 
+        case "videoSecond":
+        question = (
+          <GuessQuestionVideoSecond
+            question={currentQuestion.expression}
+            options={currentQuestion.options}
+            onChange={getAnswer}
+            questionObject={currentQuestion}
+          />
+        );
+        break;
+
       case "guess":
         question = (
           <GuessQuestion
             question={currentQuestion.expression}
             options={currentQuestion.options}
             onChange={getAnswer}
+            questionObject={currentQuestion}
+          />
+        );
+        break;
+
+        case "guessSecond":
+        question = (
+          <GuessQuestionSecond
+            question={currentQuestion.expression}
+            options={currentQuestion.options}
+            onChange={getAnswer}
+            questionObject={currentQuestion}
           />
         );
         break;
@@ -276,6 +370,29 @@ const LessonReady = (props: RouteComponentProps) => {
           />
         );
         break;
+
+      case "compoundImage":
+        question = (
+          <CompoundQuestionImage
+              question={currentQuestion.expression}
+              options={currentQuestion.options}
+              onChange={getAnswer}
+              questionObject={currentQuestion}
+          />
+        );
+        break;
+
+        case "compoundImageSecond":
+        question = (
+          <CompoundQuestionImageSecond
+              question={currentQuestion.expression}
+              options={currentQuestion.options}
+              onChange={getAnswer}
+              questionObject={currentQuestion}
+          />
+        );
+        break;
+
       default:
         question = <div></div>;
         break;

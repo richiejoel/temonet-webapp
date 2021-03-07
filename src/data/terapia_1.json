@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "category": "guess",
+        "terapia": "Terapia 1",
+        "title_terapia": "Significado de la palabra según el contexto",
+        "instructions": "Instrucciones",
+        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
+        "expression": "Significado de la palabra: Entretenido",
+        "title_history": "Visitemos el zoológico",
+        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Alegre",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Divertido",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Amistoso",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Felices",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "guessSecond",
+        "terapia": "Terapia 1",
+        "title_terapia": "Significado de la palabra según el contexto",
+        "instructions": "Instrucciones",
+        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
+        "expression": "Significado de la palabra: Feroces",
+        "title_history": "Visitemos el zoológico",
+        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Golpe",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Cruel",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Tristes",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Desagradable",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "guess",
+        "terapia": "Terapia 1",
+        "title_terapia": "Significado de la palabra según el contexto",
+        "instructions": "Instrucciones",
+        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
+        "expression": "Significado de la palabra: Apesadumbrados",
+        "title_history": "Visitemos el zoológico",
+        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Bajaba",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Aburrido",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Desagradable",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Triste",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "guessSecond",
+        "terapia": "Terapia 1",
+        "title_terapia": "Significado de la palabra según el contexto",
+        "instructions": "Instrucciones",
+        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
+        "expression": "Significado de la palabra: Trepaba",
+        "title_history": "Visitemos el zoológico",
+        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Bajaba",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Subia",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Golpe",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Fracasaba",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    }
+]

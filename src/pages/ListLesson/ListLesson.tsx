@@ -40,52 +40,52 @@ function ListLesson(): JSX.Element {
       <div className="list-lesson__container">
         <Card
           src={ImageActivityText}
-          title="Comprensión Oral"
-          description="Actividad para mejorar su comprensión oral."
+          title="Terapia 1"
+          description="Significado de la palabra según el contexto"
           onClick={() => {
-            handlerPage("oral");
+            handlerPage("terapia_1");
           }}
         />
         <Card
           src={ImageActivityGraphics}
-          title="Lógica Matemática"
-          description="Actividad para evaluar su lógica matemática."
+          title="Terapia 2"
+          description="Formando palabras"
           onClick={() => {
-            handlerPage("matematica");
+            handlerPage("terapia_2");
           }}
         />
         <Card
           src={ImageActivityText}
-          title="Comprensión Escrita"
-          description="Actividad para mejorar su comprensión escrita."
+          title="Terapia 3"
+          description="Discriminación visual de una palabra real"
           onClick={() => {
-            handlerPage("escrita");
+            handlerPage("terapia_3");
           }}
         />
       </div>
       <div className="list-lesson__container">
         <Card
           src={ImageActivityText}
-          title="Ortografía"
-          description="Actividad para evaluar su ortografía."
+          title="Terapia 4"
+          description="Formulación de preguntas"
           onClick={() => {
-            handlerPage("ortografia");
+            handlerPage("terapia_4");
           }}
         />
         <Card
           src={ImageActivityGraphics}
-          title="Entorno natural y social"
-          description="Actividad para evaluar su entorno natural."
+          title="Terapia 5"
+          description="Encontrar letras en palabras"
           onClick={() => {
-            handlerPage("social");
+            handlerPage("terapia_5");
           }}
         />
         <Card
           src={ImageActivityText}
-          title="Lenguaje y comunicación"
-          description="Actividad para evaluar su la lengua española."
+          title="Terapia 6"
+          description="Miscelánea"
           onClick={() => {
-            handlerPage("lenguaje");
+            handlerPage("terapia_6");
           }}
         />
       </div>

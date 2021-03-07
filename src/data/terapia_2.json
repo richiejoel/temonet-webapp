@@ -1,0 +1,344 @@
+[
+    {
+        "id": 1,
+        "category": "compoundImage",
+        "terapia": "Terapia 2",
+        "title_terapia": "Formando palabras",
+        "instructions": "Instrucciones",
+        "expression": "Debe seleccionar cada letra en el orden correspondiente para formar una palabra. Trabajará el vocabulario, la heminegligencia y la memoria de trabajo",
+        "num_images": 1,
+        "image_one": "https://img2.rtve.es/i/?w=1200&i=https://img2.rtve.es/imagenes/temperatura-del-ultimo-periodo-glacial-era-6-grados-mas-baja-ahora/1598488775060.jpg",
+        "name_one": "",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "G",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "a",
+                "correct": true,
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "c",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "a",
+                "correct": true,
+                "order": 6,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "l",
+                "correct": true,
+                "order": 7,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "i",
+                "correct": true,
+                "order": 5,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "l",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "compoundImageSecond",
+        "terapia": "Terapia 2",
+        "title_terapia": "Formando palabras",
+        "instructions": "Instrucciones",
+        "expression": "Debe seleccionar cada letra en el orden correspondiente para formar una palabra. Trabajará el vocabulario, la heminegligencia y la memoria de trabajo",
+        "num_images": 1,
+        "image_one": "https://i.pinimg.com/474x/a2/14/d7/a214d70ffaabfbd2a53a746f414d3a73.jpg",
+        "name_one": "",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "b",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "e",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "l",
+                "correct": true,
+                "order": 5,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "u",
+                "correct": true,
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "a",
+                "correct": true,
+                "order": 6,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "A",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "t",
+                "correct": false,
+                "order": 0,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "compoundImage",
+        "terapia": "Terapia 2",
+        "title_terapia": "Formando palabras",
+        "instructions": "Instrucciones",
+        "expression": "Debe seleccionar cada letra en el orden correspondiente para formar una palabra. Trabajará el vocabulario, la heminegligencia y la memoria de trabajo",
+        "num_images": 1,
+        "image_one": "https://c8.alamy.com/compes/bpy2kp/dibujo-de-una-cafetera-bpy2kp.jpg",
+        "name_one": "",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "r",
+                "correct": true,
+                "order": 7,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "a",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "a",
+                "correct": true,
+                "order": 8,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "f",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "t",
+                "correct": true,
+                "order": 5,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "e",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "C",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 2,
+                "text": "e",
+                "correct": true,
+                "order": 6,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "compoundImageSecond",
+        "terapia": "Terapia 2",
+        "title_terapia": "Formando palabras",
+        "instructions": "Instrucciones",
+        "expression": "Debe seleccionar cada letra en el orden correspondiente para formar una palabra. Trabajará el vocabulario, la heminegligencia y la memoria de trabajo",
+        "num_images": 1,
+        "image_one": "https://thumbs.dreamstime.com/b/ejemplo-de-la-camiseta-ropa-del-dibujo-esquema-los-ni%C3%B1os-camisetas-amarillas-bosquejo-131070358.jpg",
+        "name_one": "",
+        "audio": "",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
+        "options": [
+            {
+                "id": 5,
+                "text": "C",
+                "correct": true,
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
+            },
+            {
+                "id": 6,
+                "text": "i",
+                "correct": true,
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
+            },
+            {
+                "id": 7,
+                "text": "t",
+                "correct": true,
+                "order": 7,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
+            },
+            {
+                "id": 8,
+                "text": "s",
+                "correct": true,
+                "order": 5,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
+            },
+            {
+                "id": 9,
+                "text": "m",
+                "correct": true,
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
+            },
+            {
+                "id": 10,
+                "text": "e",
+                "correct": true,
+                "order": 6,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "a",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 2,
+                "text": "a",
+                "correct": true,
+                "order": 8,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            }
+        ]
+    }
+]

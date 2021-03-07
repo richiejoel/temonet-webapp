@@ -86,7 +86,17 @@ const Lesson = (props: RouteComponentProps) => {
         ? questions[currentQuestionIndex].weight
         : -questions[currentQuestionIndex].weight;
       questions[currentQuestionIndex].correct = currentAnswer.correct;
-    } else {
+    } else if (currentQuestion.category === "prueba") {
+      setCorrect(currentAnswer.correct);
+      setDisabledCheckButton(true);
+      setVisibleAnswerBox(true);
+      currentProgress = currentAnswer.correct
+        ? questions[currentQuestionIndex].weight
+        : -questions[currentQuestionIndex].weight;
+      questions[currentQuestionIndex].correct = currentAnswer.correct;
+    }
+    
+    else {
       // check if there is any incorrect word
       const hasWrongWord: boolean = currentAnswer.options
         .map((x: Answer) => x.correct)
@@ -203,9 +213,22 @@ const Lesson = (props: RouteComponentProps) => {
             question={currentQuestion.expression}
             options={currentQuestion.options}
             onChange={getAnswer}
+            questionObject={currentQuestion}
           />
         );
         break;
+
+        case "prueba":
+          question = (
+            <GuessQuestion
+              question={currentQuestion.expression}
+              options={currentQuestion.options}
+              onChange={getAnswer}
+              questionObject={currentQuestion}
+            />
+          );
+          break;
+
       case "compound":
         question = (
           <CompoundQuestion

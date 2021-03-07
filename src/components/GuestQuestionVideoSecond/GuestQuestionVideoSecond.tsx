@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import { Icon } from "semantic-ui-react";
 import NoImage from "../../assets/svg/no-audio.svg";
 
-import "./GuestQuestionVideo.scss";
+import "./GuestQuestionVideoSecond.scss";
 
 interface IProps {
   options: Word[];
