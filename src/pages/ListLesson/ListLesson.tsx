@@ -36,12 +36,13 @@ function ListLesson(): JSX.Element {
         size="small"
       />
 
-      <span className="list-title">Lista de actividades</span>
+      <span className="list-title">Lista de Terapias</span>
       <div className="list-lesson__container">
         <Card
           src={ImageActivityText}
           title="Terapia 1"
           description="Significado de la palabra según el contexto"
+          min={4}
           onClick={() => {
             handlerPage("terapia_1");
           }}
@@ -50,6 +51,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityGraphics}
           title="Terapia 2"
           description="Formando palabras"
+          min={2}
           onClick={() => {
             handlerPage("terapia_2");
           }}
@@ -58,6 +60,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 3"
           description="Discriminación visual de una palabra real"
+          min={5}
           onClick={() => {
             handlerPage("terapia_3");
           }}
@@ -68,6 +71,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 4"
           description="Formulación de preguntas"
+          min={3}
           onClick={() => {
             handlerPage("terapia_4");
           }}
@@ -76,6 +80,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityGraphics}
           title="Terapia 5"
           description="Encontrar letras en palabras"
+          min={1}
           onClick={() => {
             handlerPage("terapia_5");
           }}
@@ -84,6 +89,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 6"
           description="Miscelánea"
+          min={4}
           onClick={() => {
             handlerPage("terapia_6");
           }}
@@ -92,26 +98,29 @@ function ListLesson(): JSX.Element {
       <div className="list-lesson__container">
         <Card
           src={ImageActivityText}
-          title="Geometría"
-          description="Actividad para evaluar su lógica matemática."
+          title="Terapia 7"
+          description="Miscelánea"
+          min={3}
           onClick={() => {
-            handlerPage("geometria");
+            handlerPage("terapia_7");
           }}
         />
         <Card
           src={ImageActivityGraphics}
-          title="Historia"
-          description="Actividad para mejorar su conocimiento en historia."
+          title="Terapia 8"
+          description="Miscelánea"
+          min={4}
           onClick={() => {
-            handlerPage("historia");
+            handlerPage("terapia_8");
           }}
         />
         <Card
           src={ImageActivityText}
-          title="Geografía"
-          description="Actividad para evaluar su conocimiento en geografía."
+          title="Terapia 9"
+          description="Miscelánea"
+          min={5}
           onClick={() => {
-            handlerPage("geografia");
+            handlerPage("terapia_9");
           }}
         />
       </div>

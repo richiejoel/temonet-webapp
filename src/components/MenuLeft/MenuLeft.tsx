@@ -109,7 +109,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="tasks" />{" "}
-              <span className="lyrics">Mis actividades</span>
+              <span className="lyrics">Mis Terapias</span>
             </Menu.Item>
             <Menu.Item
               as={Link}

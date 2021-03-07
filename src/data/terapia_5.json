@@ -1,217 +1,161 @@
 [
     {
         "id": 1,
-        "category": "guess",
-        "terapia": "Terapia 1",
-        "title_terapia": "Significado de la palabra según el contexto",
+        "category": "compoundAudio",
+        "terapia": "Terapia 5",
+        "title_terapia": "Encontrar letras en palabras",
         "instructions": "Instrucciones",
-        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
-        "expression": "Significado de la palabra: Entretenido",
-        "title_history": "Visitemos el zoológico",
-        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
-        "audio": "",
+        "instructions_text": "",
+        "expression": "Escuchar la siguiente lectura titulada PEDRO Y EL LOBO y separar las palabras que tengan la letra: B",
+        "audio": "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
         "weight": 33,
         "lesson_id": 1,
-        "created_at": "2018-02-16T15:07:56.437Z",
-        "updated_at": "2018-02-16T15:07:56.437Z",
+        "created_at": "2018-02-16T15:07:56.453Z",
+        "updated_at": "2018-02-16T15:07:56.453Z",
         "options": [
             {
-                "id": 1,
-                "text": "Alegre",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.528Z",
-                "updated_at": "2018-02-16T15:07:56.528Z"
-            },
-            {
-                "id": 2,
-                "text": "Divertido",
+                "id": 5,
+                "text": "Barba",
                 "correct": true,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.540Z",
-                "updated_at": "2018-02-16T15:07:56.540Z"
+                "order": 1,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.605Z",
+                "updated_at": "2018-02-16T15:07:56.605Z"
             },
             {
-                "id": 3,
-                "text": "Amistoso",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.552Z",
-                "updated_at": "2018-02-16T15:07:56.552Z"
-            },
-            {
-                "id": 4,
-                "text": "Felices",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.570Z",
-                "updated_at": "2018-02-16T15:07:56.570Z"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "category": "guess",
-        "terapia": "Terapia 1",
-        "title_terapia": "Significado de la palabra según el contexto",
-        "instructions": "Instrucciones",
-        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
-        "expression": "Significado de la palabra: Feroces",
-        "title_history": "Visitemos el zoológico",
-        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
-        "audio": "",
-        "weight": 33,
-        "lesson_id": 1,
-        "created_at": "2018-02-16T15:07:56.437Z",
-        "updated_at": "2018-02-16T15:07:56.437Z",
-        "options": [
-            {
-                "id": 1,
-                "text": "Golpe",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.528Z",
-                "updated_at": "2018-02-16T15:07:56.528Z"
-            },
-            {
-                "id": 2,
-                "text": "Cruel",
+                "id": 6,
+                "text": "Pedro",
                 "correct": true,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.540Z",
-                "updated_at": "2018-02-16T15:07:56.540Z"
+                "order": 3,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.628Z",
+                "updated_at": "2018-02-16T15:07:56.628Z"
             },
             {
-                "id": 3,
-                "text": "Tristes",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.552Z",
-                "updated_at": "2018-02-16T15:07:56.552Z"
-            },
-            {
-                "id": 4,
-                "text": "Desagradable",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.570Z",
-                "updated_at": "2018-02-16T15:07:56.570Z"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "category": "guess",
-        "terapia": "Terapia 1",
-        "title_terapia": "Significado de la palabra según el contexto",
-        "instructions": "Instrucciones",
-        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
-        "expression": "Significado de la palabra: Apesadumbrados",
-        "title_history": "Visitemos el zoológico",
-        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
-        "audio": "",
-        "weight": 33,
-        "lesson_id": 1,
-        "created_at": "2018-02-16T15:07:56.437Z",
-        "updated_at": "2018-02-16T15:07:56.437Z",
-        "options": [
-            {
-                "id": 1,
-                "text": "Bajaba",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.528Z",
-                "updated_at": "2018-02-16T15:07:56.528Z"
-            },
-            {
-                "id": 2,
-                "text": "Aburrido",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.540Z",
-                "updated_at": "2018-02-16T15:07:56.540Z"
-            },
-            {
-                "id": 3,
-                "text": "Desagradable",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.552Z",
-                "updated_at": "2018-02-16T15:07:56.552Z"
-            },
-            {
-                "id": 4,
-                "text": "Triste",
+                "id": 7,
+                "text": "Bosque",
                 "correct": true,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.570Z",
-                "updated_at": "2018-02-16T15:07:56.570Z"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "category": "guess",
-        "terapia": "Terapia 1",
-        "title_terapia": "Significado de la palabra según el contexto",
-        "instructions": "Instrucciones",
-        "instructions_text": "Lee el texto las veces que sean necesarias y luego escoge el significado correcto de las palabras subrayadas.",
-        "expression": "Significado de la palabra: Trepaba",
-        "title_history": "Visitemos el zoológico",
-        "history": "El domingo fuimos al zoológico. El zoológico es un lugar muy <u>entretenido</u>. Allí pudimos conocer muchos animales <u>feroces</u>, por eso están en sus jaulas. Mis hermanos y yo estábamos muy <u>apesadumbrados</u> porque el elefante estaba enfermo. El animal que más me gustó fue el mono. Disfrutamos mucho viendo como <u>trepaba</u> por las ramas de los árboles. El animal que más nos asustó fue el oso, porque le dio un zarpazo tan fuerte a otro oso, que lo tiró al suelo. Todos pasamos un día muy gozosos.",
-        "audio": "",
-        "weight": 33,
-        "lesson_id": 1,
-        "created_at": "2018-02-16T15:07:56.437Z",
-        "updated_at": "2018-02-16T15:07:56.437Z",
-        "options": [
-            {
-                "id": 1,
-                "text": "Bajaba",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.528Z",
-                "updated_at": "2018-02-16T15:07:56.528Z"
+                "order": 4,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.653Z",
+                "updated_at": "2018-02-16T15:07:56.653Z"
             },
             {
-                "id": 2,
-                "text": "Subia",
+                "id": 8,
+                "text": "Pajarito",
                 "correct": true,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.540Z",
-                "updated_at": "2018-02-16T15:07:56.540Z"
+                "order": 6,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.679Z",
+                "updated_at": "2018-02-16T15:07:56.679Z"
             },
             {
-                "id": 3,
-                "text": "Golpe",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.552Z",
-                "updated_at": "2018-02-16T15:07:56.552Z"
+                "id": 9,
+                "text": "Quiso",
+                "correct": true,
+                "order": 7,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.699Z",
+                "updated_at": "2018-02-16T15:07:56.699Z"
             },
             {
-                "id": 4,
-                "text": "Fracasaba",
-                "correct": false,
-                "order": 0,
-                "question_id": 1,
-                "created_at": "2018-02-16T15:07:56.570Z",
-                "updated_at": "2018-02-16T15:07:56.570Z"
+                "id": 10,
+                "text": "Pasará",
+                "correct": true,
+                "order": 5,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.714Z",
+                "updated_at": "2018-02-16T15:07:56.714Z"
+            },
+            {
+                "id": 11,
+                "text": "Lobo",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 12,
+                "text": "Cuerda",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 13,
+                "text": "Subió",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 14,
+                "text": "Trampa",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 15,
+                "text": "Árbol",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 16,
+                "text": "Centro",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 16,
+                "text": "Aro",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 17,
+                "text": "Círculo",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 18,
+                "text": "Rama",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
+            },
+            {
+                "id": 19,
+                "text": "Brincó",
+                "correct": true,
+                "order": 2,
+                "question_id": 2,
+                "created_at": "2018-02-16T15:07:56.727Z",
+                "updated_at": "2018-02-16T15:07:56.727Z"
             }
         ]
     }

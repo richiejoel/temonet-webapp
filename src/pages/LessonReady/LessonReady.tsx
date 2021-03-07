@@ -5,6 +5,7 @@ import { RouteComponentProps, useHistory, useLocation } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
 import CompoundQuestionImage from "../../components/CompoundQuestionImage";
 import CompoundQuestionImageSecond from "../../components/CompoundQuestionImageSecond";
+import CompoundQuestionAudio from "../../components/CompoundQuestionAudio";
 import GuessQuestionAudio from "../../components/GuestQuestionAudio";
 import GuessQuestionImages from "../../components/GuestQuestionImages";
 import GuessQuestionVideo from "../../components/GuestQuestionVideo";
@@ -117,6 +118,13 @@ const LessonReady = (props: RouteComponentProps) => {
       currentAnswer.options = [...answer];
       answers[currentQuestionIndex] = currentAnswer;
     } else if (questions[currentQuestionIndex].category === "compoundImageSecond") {
+      let currentAnswer: Answer = answers[currentQuestionIndex];
+      if (currentAnswer === undefined) {
+        currentAnswer = new Answer();
+      }
+      currentAnswer.options = [...answer];
+      answers[currentQuestionIndex] = currentAnswer;
+    } else if (questions[currentQuestionIndex].category === "compoundAudio") {
       let currentAnswer: Answer = answers[currentQuestionIndex];
       if (currentAnswer === undefined) {
         currentAnswer = new Answer();
@@ -393,11 +401,22 @@ const LessonReady = (props: RouteComponentProps) => {
         );
         break;
 
+        case "compoundAudio":
+        question = (
+          <CompoundQuestionAudio
+              question={currentQuestion.expression}
+              options={currentQuestion.options}
+              onChange={getAnswer}
+              questionObject={currentQuestion}
+          />
+        );
+        break;
+
       default:
         question = <div></div>;
         break;
     }
-
+    
     const nextStepBox: JSX.Element = (
       <S.SuccessBox isCorrect={isCorrect} isVisible={visibleAnswerBox}>
         <h2>{isCorrect ? "Correct" : "Incorrect"}!</h2>
