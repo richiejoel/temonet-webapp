@@ -78,13 +78,45 @@ const GuessQuestionImages = ({
     player?.current?.seekTo(parseFloat(e.target.value))!;
   };
 
+
   return (
     <div>
       <S.LocalQuestionRow>
         <h2>{localQuestion}</h2>
       </S.LocalQuestionRow>
       <div className="content-image">
+        {
+          questionObject.num_images === 1 ? (
+            <div className="image-lesson">
+              <h3>{questionObject.name_one}</h3>
+              <img
+                className="img-image-fix"
+                src={questionObject.image_one}
+                alt="lesson-fix-figure"
+              />
+            </div>
+          ) : questionObject.num_images === 2 ? (
+            <>
+             <div className="image-lesson">
+          <h3>{questionObject.name_one}</h3>
+          <img
+            className="img-image-fix"
+            src={questionObject.image_one}
+            alt="lesson-fix-figure"
+          />
+        </div>
         <div className="image-lesson">
+          <h3>{questionObject.name_two}</h3>
+          <img
+            className="img-image-fix"
+            src={questionObject.image_two}
+            alt="lesson-fix-figure"
+          />
+        </div>
+            </>
+          ) : questionObject.num_images === 3 ? (
+            <>
+            <div className="image-lesson">
           <h3>{questionObject.name_one}</h3>
           <img
             className="img-image-fix"
@@ -108,6 +140,13 @@ const GuessQuestionImages = ({
             alt="lesson-fix-figure"
           />
         </div>
+            </>
+          ) : (
+            <>
+            </>
+          )
+        }
+        
       </div>
       <S.QuestionsContainer>
         {localOptions.map((option: any) => (

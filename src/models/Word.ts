@@ -7,6 +7,7 @@ class Word {
     public expression!: string;
     public options!: any[];
     public weight!: number;
+    public num_images!: number;
     public image_one!: string;
     public image_two!: string;
     public image_three!: string;

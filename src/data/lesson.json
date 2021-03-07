@@ -52,6 +52,7 @@
         "category": "images",
         "expression": "¿A qué tipo de animales pertenecen las siguientes imágenes?",
         "audio": "",
+        "num_images": 3,
         "image_one": "https://i.pinimg.com/736x/15/94/d8/1594d8be77981ac17df0d8e4696843e4.jpg",
         "image_two": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-marron_0.jpg",
         "image_three": "https://cumbrepuebloscop20.org/wp-content/uploads/2018/09/Le%C3%B3n-2.jpg",
@@ -278,6 +279,7 @@
         "category": "images",
         "expression": "¿A qué tipo de animales pertenecen las siguientes imágenes?",
         "audio": "",
+        "num_images": 3,
         "image_one": "https://i.pinimg.com/736x/15/94/d8/1594d8be77981ac17df0d8e4696843e4.jpg",
         "image_two": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-marron_0.jpg",
         "image_three": "https://cumbrepuebloscop20.org/wp-content/uploads/2018/09/Le%C3%B3n-2.jpg",
@@ -654,6 +656,57 @@
             {
                 "id": 4,
                 "text": "Morada",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.570Z",
+                "updated_at": "2018-02-16T15:07:56.570Z"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "category": "images",
+        "expression": "¿A qué tipo de animales pertenecen las siguientes imágenes?",
+        "audio": "",
+        "num_images": 1,
+        "image_one": "https://i.pinimg.com/736x/15/94/d8/1594d8be77981ac17df0d8e4696843e4.jpg",
+        "name_one": "Jirafa",
+        "weight": 33,
+        "lesson_id": 1,
+        "created_at": "2018-02-16T15:07:56.437Z",
+        "updated_at": "2018-02-16T15:07:56.437Z",
+        "options": [
+            {
+                "id": 1,
+                "text": "Peces",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.528Z",
+                "updated_at": "2018-02-16T15:07:56.528Z"
+            },
+            {
+                "id": 2,
+                "text": "Mamíferos",
+                "correct": true,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.540Z",
+                "updated_at": "2018-02-16T15:07:56.540Z"
+            },
+            {
+                "id": 3,
+                "text": "Reptiles",
+                "correct": false,
+                "order": 0,
+                "question_id": 1,
+                "created_at": "2018-02-16T15:07:56.552Z",
+                "updated_at": "2018-02-16T15:07:56.552Z"
+            },
+            {
+                "id": 4,
+                "text": "Ninguno",
                 "correct": false,
                 "order": 0,
                 "question_id": 1,
