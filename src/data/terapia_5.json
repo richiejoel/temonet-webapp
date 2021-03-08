@@ -25,8 +25,8 @@
             {
                 "id": 6,
                 "text": "Pedro",
-                "correct": true,
-                "order": 3,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.628Z",
                 "updated_at": "2018-02-16T15:07:56.628Z"
@@ -35,7 +35,7 @@
                 "id": 7,
                 "text": "Bosque",
                 "correct": true,
-                "order": 4,
+                "order": 2,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.653Z",
                 "updated_at": "2018-02-16T15:07:56.653Z"
@@ -43,8 +43,8 @@
             {
                 "id": 8,
                 "text": "Pajarito",
-                "correct": true,
-                "order": 6,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.679Z",
                 "updated_at": "2018-02-16T15:07:56.679Z"
@@ -52,8 +52,8 @@
             {
                 "id": 9,
                 "text": "Quiso",
-                "correct": true,
-                "order": 7,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.699Z",
                 "updated_at": "2018-02-16T15:07:56.699Z"
@@ -61,8 +61,8 @@
             {
                 "id": 10,
                 "text": "Pasará",
-                "correct": true,
-                "order": 5,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.714Z",
                 "updated_at": "2018-02-16T15:07:56.714Z"
@@ -71,7 +71,7 @@
                 "id": 11,
                 "text": "Lobo",
                 "correct": true,
-                "order": 2,
+                "order": 3,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -79,8 +79,8 @@
             {
                 "id": 12,
                 "text": "Cuerda",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -89,7 +89,7 @@
                 "id": 13,
                 "text": "Subió",
                 "correct": true,
-                "order": 2,
+                "order": 4,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -97,8 +97,8 @@
             {
                 "id": 14,
                 "text": "Trampa",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -107,7 +107,7 @@
                 "id": 15,
                 "text": "Árbol",
                 "correct": true,
-                "order": 2,
+                "order": 5,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -115,8 +115,8 @@
             {
                 "id": 16,
                 "text": "Centro",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -124,8 +124,8 @@
             {
                 "id": 16,
                 "text": "Aro",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -133,8 +133,8 @@
             {
                 "id": 17,
                 "text": "Círculo",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -142,8 +142,8 @@
             {
                 "id": 18,
                 "text": "Rama",
-                "correct": true,
-                "order": 2,
+                "correct": false,
+                "order": 0,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
@@ -152,7 +152,7 @@
                 "id": 19,
                 "text": "Brincó",
                 "correct": true,
-                "order": 2,
+                "order": 6,
                 "question_id": 2,
                 "created_at": "2018-02-16T15:07:56.727Z",
                 "updated_at": "2018-02-16T15:07:56.727Z"
