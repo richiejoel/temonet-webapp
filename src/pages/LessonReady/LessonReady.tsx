@@ -26,6 +26,9 @@ import Data3 from "../../data/terapia_3.json";
 import Data4 from "../../data/terapia_4.json";
 import Data5 from "../../data/terapia_5.json";
 import Data6 from "../../data/terapia_6.json";
+import Data7 from "../../data/terapia_7.json"
+import Data8 from "../../data/terapia_8.json"
+import Data9 from "../../data/terapia_9.json"
 import "../../styles/theme.scss";
 
 function generateJSON(location): any {
@@ -50,7 +53,19 @@ function generateJSON(location): any {
     const data = JSON.stringify(Data5);
     const dataJSON = JSON.parse(data);
     return dataJSON;
-  } else if(location?.state?.typeLesson === "tearapia_6"){
+  } else if(location?.state?.typeLesson === "terapia_6"){
+    const data = JSON.stringify(Data6);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  }else if(location?.state?.typeLesson === "terapia_7"){
+    const data = JSON.stringify(Data6);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  } else if(location?.state?.typeLesson === "terapia_8"){
+    const data = JSON.stringify(Data6);
+    const dataJSON = JSON.parse(data);
+    return dataJSON;
+  }else if(location?.state?.typeLesson === "terapia_9"){
     const data = JSON.stringify(Data6);
     const dataJSON = JSON.parse(data);
     return dataJSON;
