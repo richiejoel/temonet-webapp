@@ -21,15 +21,18 @@ font-family: "dyslexicRegular";
   justify-content: center;
   // margin: 20px;
   position: fixed;
-  bottom: 80px;
+  bottom: 100px;
+  right: -40%;
   z-index: 1;
+  
 
   button {
-    width: 25%;
+    width: 15%;
     background-color: ${({isCorrect}: ICheckButtonProps) => isCorrect ? 'green' : 'red'}
     color: white;
     font-weight: bold;
     font-family: "dyslexicBold";
+   
   }
 `;
 
