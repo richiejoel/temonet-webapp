@@ -5,11 +5,14 @@ interface ICheckButtonProps {
   isVisible?: boolean;
 };
 
-export const LessonContainer = styled.div`
+export const LessonContainer = styled.div.attrs(props => ({
+  className: props.className,
+}))`
   @import "../../scss/index.scss";
   font-family: "dyslexicRegular";
   height: 100%;
   justify-content: center;
+  background-color: var(--theme-color-light);
 `;
 
 export const CheckButtonRow = styled.div`

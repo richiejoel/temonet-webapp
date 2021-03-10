@@ -1,7 +1,8 @@
 @import "../../scss/index.scss";
 
 .students {
-  margin: 50px;
+  //margin: 50px;
+  background-color: var(--theme-color-light);
 
   > h1 {
     //border-bottom: 1px solid $border-grey-light;
@@ -33,7 +34,7 @@
 
 @media only screen and (max-width: 600px) {
   .students {
-    margin: 30px;
+    //margin: 30px;
 
     > h1 {
       //border-bottom: 1px solid $border-grey-light;

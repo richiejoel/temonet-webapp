@@ -1,6 +1,7 @@
 import React from "react";
 import { AxiosResponse } from "axios";
 import { useDispatch } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { RouteComponentProps, useHistory, useLocation } from "react-router";
 import CompoundQuestion from "../../components/CompoundQuestion";
 import CompoundQuestionImage from "../../components/CompoundQuestionImage";
@@ -78,6 +79,7 @@ function generateJSON(location): any {
 }
 
 const LessonReady = (props: RouteComponentProps) => {
+  const theme_global = useSelector((state: any) => state.theme_global);
   const [answers, setAnswers] = React.useState<Answer[]>([]);
   const [isCorrect, setCorrect] = React.useState(true);
   const location: any = useLocation();
@@ -439,7 +441,7 @@ const LessonReady = (props: RouteComponentProps) => {
     );
 
     return (
-      <S.LessonContainer>
+      <S.LessonContainer className={`${theme_global.theme}`}>
         <S.ProgressBarRow className={`fix`}>
           <ProgressBar progress={progress} />
         </S.ProgressBarRow>
@@ -462,4 +464,4 @@ const LessonReady = (props: RouteComponentProps) => {
   }
 };
 
-export default LessonReady;
+export default connect()(LessonReady);

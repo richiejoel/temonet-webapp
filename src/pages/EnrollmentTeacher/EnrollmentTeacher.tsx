@@ -105,7 +105,7 @@ function EnrollmentTeacher(): JSX.Element {
 
   return (
     <div>
-      <div className="enrollment-teacher-form">
+      <div className={`enrollment-teacher-form ${theme_global.theme}`}>
         <h2>Crear Logopedas</h2>
         <Form
           className="enrollment-teacher-form-data"

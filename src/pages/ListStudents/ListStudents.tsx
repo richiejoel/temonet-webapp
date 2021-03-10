@@ -1,12 +1,15 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
+import { connect, useSelector } from "react-redux";
 import Male from "../../assets/svg/male.svg";
 import Female from "../../assets/svg/female.svg";
 import "./ListStudents.scss";
+import "../../styles/theme.scss";
 
 function ListStudents(): JSX.Element {
+  const theme_global = useSelector((state: any) => state.theme_global);
   return (
-    <div className="students">
+    <div className={`students ${theme_global.theme}`}>
       <h1>Lista de estudiantes</h1>
       <Grid>
         <Grid.Column mobile={8} tablet={4} computer={3}>
@@ -104,4 +107,4 @@ function ListStudents(): JSX.Element {
   );
 }
 
-export default ListStudents;
+export default connect()(ListStudents);

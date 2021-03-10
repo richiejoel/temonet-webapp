@@ -154,7 +154,7 @@ function EnrollmentStudent(): JSX.Element {
 
   return (
     <div>
-      <div className="enrollment-student-form">
+      <div className={`enrollment-student-form ${theme_global.theme}`}>
         <h2>Matricular Estudiantes</h2>
         <Form
           className="enrollment-student-form-data"
