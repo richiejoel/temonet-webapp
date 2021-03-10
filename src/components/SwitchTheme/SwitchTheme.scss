@@ -1,7 +1,8 @@
 @import "../../scss/index.scss";
 
 .switch-theme {
-  position: fixed;
+  position: fixed !important;
+  z-index: 100;
   right: 0.3%;
   top: 6%;
   margin: 10px;

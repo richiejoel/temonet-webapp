@@ -127,7 +127,7 @@ function PaletteInteractive(props): JSX.Element {
                     updatePos(data, index);
                   }}
                 >
-                  <div style={{ backgroundColor: item.color }} className="box">
+                  <div style={{ backgroundColor: 'rgb(249, 162, 144)' }} className="box">
                     <input
                       id="input-card"
                       type="text"

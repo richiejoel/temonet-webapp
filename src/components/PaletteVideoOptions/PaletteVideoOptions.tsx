@@ -134,7 +134,7 @@ function PaletteVideoOptions(props): JSX.Element {
                   }}
                 >
                   <div
-                    style={{ backgroundColor: item.color }}
+                    style={{ backgroundColor: 'rgb(249, 162, 144)' }}
                     className="box-video"
                   >
                     <input

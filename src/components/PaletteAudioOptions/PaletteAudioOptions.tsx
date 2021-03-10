@@ -163,7 +163,7 @@ function PaletteAudioOptions(props): JSX.Element {
                 >
                   <div
                     style={{
-                      backgroundColor: item.color,
+                      backgroundColor: 'rgb(249, 162, 144)',
                       /*width: size.x,
                       height: size.y,*/
                     }}

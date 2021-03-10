@@ -91,7 +91,7 @@ function MenuLeft(props) {
         </Menu.Item>
         {sessionStorage.getItem("role") === "student" && (
           <>
-            <Menu.Item
+            {/*<Menu.Item
               as={Link}
               to="/lesson"
               name="lesson"
@@ -100,7 +100,7 @@ function MenuLeft(props) {
             >
               <Icon name="tasks" />{" "}
               <span className="lyrics">Actividad Demo</span>
-            </Menu.Item>
+            </Menu.Item>*/}
             <Menu.Item
               as={Link}
               to="/listLesson"

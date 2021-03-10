@@ -5,15 +5,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--theme-color-light);
 
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
-}
-
-.list-lesson {
   span {
     margin-top: 3% !important;
     font-family: "dyslexicBold";
