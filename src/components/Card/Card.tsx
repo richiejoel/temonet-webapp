@@ -3,7 +3,7 @@ import { Progress } from "semantic-ui-react";
 import "./Card.scss";
 
 function Card(props: any): JSX.Element {
-  const { src, title, description, price, onClick, min } = props;
+  const { src, title, description, price, onClick, min, percent } = props;
   return (
     <div className="card" onClick={onClick}>
       <img src={src} alt="" />
@@ -18,6 +18,7 @@ function Card(props: any): JSX.Element {
         total={5}
         size="tiny"
       />
+      <span>{percent}</span>
     </div>
   );
 }

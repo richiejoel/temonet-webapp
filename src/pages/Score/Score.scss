@@ -1,0 +1,49 @@
+@import "../../scss/index.scss";
+
+.score {
+  padding-top: 80px;
+  padding-bottom: 220px;
+  background-color: var(--theme-color-light);
+
+  h1 {
+    font-family: "dyslexicBold";
+    text-align: center !important;
+    font-size: 60px;
+  }
+  justify-content: center;
+}
+
+#image-score {
+  width: 500px;
+  height: 400px;
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 40px;
+}
+
+.ui.celled.table {
+  font-family: "dyslexicBold" !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .score {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  #image-score {
+    width: 250px;
+    height: 250px;
+  }
+  .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
