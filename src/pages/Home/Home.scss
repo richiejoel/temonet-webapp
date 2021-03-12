@@ -56,6 +56,14 @@
   text-align: center;
 }
 
+.home-bottom-two {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
 #plane-one {
   position: absolute;
   left: 0;
@@ -78,6 +86,115 @@
   font-size: 30px;
   font-family: "dyslexicBold";
   color: $font-primary;
+}
+
+.footer-home {
+  #final-resume {
+    font-family: "dyslexicItalic";
+    font-size: 20px;
+    color: $font-primary;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #final-text {
+    font-family: "dyslexicBold";
+    font-weight: bold;
+    font-size: 30px;
+    color: $font-primary;
+  }
+}
+
+.home-items {
+  margin-left: 20%;
+  margin-right: 20%;
+  ul {
+    text-align: start;
+    li {
+      font-family: "dyslexicRegular" !important;
+      font-size: 18px;
+    }
+  }
+}
+
+.content-video-home {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.video-lesson-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  border: 0px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  width: 650px;
+  height: 450px;
+  text-align: center;
+  background-color: var(--theme-color);
+}
+
+.img-video-fix-home {
+  //object-fit: fill;
+
+  width: 650px !important;
+  height: 450px !important;
+  //margin-left: 220px;
+  background-repeat: no-repeat;
+  //background-size: cover;
+  //background-position: center;
+  outline: none;
+  position: relative;
+}
+
+.seek-player-video-home {
+  margin-top: 40px;
+  justify-content: center;
+  margin-left: 130px;
+}
+
+.player-lesson-video-home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  //margin-top: 150px;
+  //margin-left: -160px;
+}
+
+.play-video-div-home {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+
+.play-video-std-home {
+  position: absolute !important;
+  top: 365px !important;
+  left: 300px !important;
+  color: $font-light !important;
+  font-size: 30px !important;
+  justify-content: center;
+  text-align: center;
+}
+.pause-video-std-home {
+  position: absolute !important;
+  top: 365px !important;
+  left: 300px !important;
+  color: $font-light !important;
+  font-size: 30px !important;
+  justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -104,6 +221,36 @@
     flex-direction: column;
     align-items: center;
   }
+  .home-bottom-two {
+    display: flex;
+    padding-left: 4px;
+    padding-right: 4px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-items {
+    margin-left: 5%;
+    margin-right: 5%;
+    ul {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .footer-home {
+    #final-resume {
+      font-size: 12px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    #final-text {
+      font-size: 18px;
+    }
+  }
   .home-top {
     background-color: var(--theme-color-light);
     h1 {
@@ -128,5 +275,22 @@
     p {
       font-family: "dyslexicRegular";
     }
+  }
+
+  .video-lesson-home {
+    width: 450px;
+    height: 450px;
+  }
+  .img-video-fix-home {
+    width: 450px !important;
+    height: 450px !important;
+  }
+  .player-lesson-video-home {
+    width: 350px;
+    height: 400px;
+  }
+  .play-video-div-home {
+    width: 350px;
+    height: 400px;
   }
 }
