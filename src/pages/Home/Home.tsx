@@ -18,63 +18,20 @@ function Home(): JSX.Element {
     <div className={`home ${theme_global.theme}`}>
       <div className="home-top">
         <h1>TEMONET</h1>
-        <h2>
-          Mi escuela de <span>Terapias</span>
-        </h2>
         <img id="plane-one" src={plane} alt="plane_one" />
         <div className="resume">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took.
+            La dislexia se presenta en niños con niveles normales de
+            inteligencia y visión. Algunos de los síntomas son el retraso para
+            aprender a hablar y leer, y la dificultad para aprender nuevas
+            palabras. La mayoría de los niños con dislexia puede salir adelante
+            en la escuela con la ayuda de tutores o programas de educación
+            especializada.
           </p>
-        </div>
-        <div>
-          <Button className="btn-home">Iniciar Programa</Button>
         </div>
       </div>
       <div className="subtitle">
-        <h2>Actividades Recientes</h2>
-        <p>
-          Completa las actividades recientemente asignadas por el logopeda, para
-          obtener puntos extras.
-        </p>
-      </div>
-      <span className="title-options">Opciones Múltiples</span>
-      <div className="home-bottom">
-        <Card
-          src={ImageActivityText}
-          title="Online Experiences"
-          description="Unique activities we can do together, led by a world of hosts."
-        />
-        <Card
-          src={ImageActivityGraphics}
-          title="Unique stays"
-          description="Spaces that are more than just a place to sleep."
-        />
-        <Card
-          src={ImageActivityText}
-          title="Entire homes"
-          description="Comfortable private places, with room for friends or family."
-        />
-      </div>
-      <span className="title-options">Preguntas abiertas</span>
-      <div className="home-bottom">
-        <Card
-          src={ImageActivityGraphics}
-          title="Online Experiences"
-          description="Unique activities we can do together, led by a world of hosts."
-        />
-        <Card
-          src={ImageActivityText}
-          title="Unique stays"
-          description="Spaces that are more than just a place to sleep."
-        />
-        <Card
-          src={ImageActivityGraphics}
-          title="Entire homes"
-          description="Comfortable private places, with room for friends or family."
-        />
+        <h2>Qué es la dislexia?</h2>
       </div>
     </div>
   );

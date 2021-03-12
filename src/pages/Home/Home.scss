@@ -33,7 +33,7 @@
   }
   p {
     color: $font-primary;
-    font-size: 15px;
+    font-size: 30px;
     font-family: "dyslexicRegular";
   }
 }
@@ -41,8 +41,10 @@
 .resume {
   margin-left: 25%;
   margin-right: 25%;
+  padding-bottom: 5%;
   p {
     font-family: "dyslexicRegular";
+    font-size: 15px;
   }
 }
 
