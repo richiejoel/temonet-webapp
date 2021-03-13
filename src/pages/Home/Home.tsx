@@ -4,10 +4,6 @@ import CardInfo from "../../components/CardInfo";
 import plane from "../../assets/paper_plane.svg";
 import ReactPlayer from "react-player";
 import { Icon } from "semantic-ui-react";
-
-import ImageActivityText from "../../assets/svg/quiz_multiple_text.svg";
-import ImageActivityGraphics from "../../assets/svg/quiz_multiples-images.svg";
-
 import "./Home.scss";
 import "../../styles/theme.scss";
 

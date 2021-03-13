@@ -95,26 +95,6 @@ function Routes() {
 
 export default connect()(Routes);
 
-const LoginContainer = () => (
-  <div className="container">
-    <Route exact path="/" render={() => <Redirect to="/signin" />} />
-    <Route path="/signin" component={Login} />
-    <Route path="/signup" component={RegisterPage} />
-  </div>
-);
-
-const DefaultContainer = () => (
-  <div className="container">
-    <LoggedLayout />
-    <PrivateRoute path="/" exact>
-      <Home />
-    </PrivateRoute>
-    <PrivateRoute path="/question" exact>
-      <MultiplesActivities />
-    </PrivateRoute>
-  </div>
-);
-
 function PrivateRoute({ children, ...rest }, props) {
   const location = useLocation();
   console.log(`${state_global.authenticate}`);

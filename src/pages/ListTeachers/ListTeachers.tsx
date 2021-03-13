@@ -16,7 +16,7 @@ function ListTeachers(): JSX.Element {
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Male} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Joel García</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
@@ -34,73 +34,73 @@ function ListTeachers(): JSX.Element {
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Female} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Pepito Piguave</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Male} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Louis Velez</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Hero} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Mary Lopez</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Male} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Harry Styles</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Female} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Abel Garcia</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Hero} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Selena Gomez</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Female} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Ariana Grande</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Male} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Justin Bieber</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Hero} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Carlos Andrade</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Male} alt="avatar_teacher" />
-            <h3>Joel Garcia</h3>
+            <h3>Barbara Palvin</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Female} alt="avatar_teacher" />
-            <h3>Stefania Martillo</h3>
+            <h3>Enrique Valdez</h3>
           </div>
         </Grid.Column>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="teachers__item">
             <img className="avatar_teacher" src={Hero} alt="avatar_teacher" />
-            <h3>Michell Campaña</h3>
+            <h3>Amy López</h3>
           </div>
         </Grid.Column>
       </Grid>
