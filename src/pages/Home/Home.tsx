@@ -4,6 +4,8 @@ import CardInfo from "../../components/CardInfo";
 import plane from "../../assets/paper_plane.svg";
 import ReactPlayer from "react-player";
 import { Icon } from "semantic-ui-react";
+import boy from "../../assets/svg/boy.svg";
+import girl from "../../assets/svg/girl.svg";
 import "./Home.scss";
 import "../../styles/theme.scss";
 
@@ -67,6 +69,7 @@ function Home(): JSX.Element {
         <h2>¿Qué es la dislexia?</h2>
       </div>
       <div className="content-video-home">
+        <img className="image-children" src={boy} alt="boy" />
         <div className="video-lesson-home">
           <div className={`player-lesson-video-home`}>
             <ReactPlayer
@@ -106,6 +109,7 @@ function Home(): JSX.Element {
             )}
           </div>
         </div>
+        <img className="image-children" src={girl} alt="boy" />
       </div>
       <div className="home-items">
         <ul>

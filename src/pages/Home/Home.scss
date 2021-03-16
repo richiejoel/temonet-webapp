@@ -120,9 +120,10 @@
 .content-video-home {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 40px;
+  flex-direction: row;
 }
 .video-lesson-home {
   display: flex;
@@ -197,6 +198,11 @@
   text-align: center;
 }
 
+.image-children{
+  width: 300px;
+  height: 300px;
+}
+
 @media only screen and (max-width: 600px) {
   #plane-one {
     display: none;
@@ -211,6 +217,9 @@
     font-size: 20px;
     font-family: "dyslexicBold";
     color: $font-primary;
+  }
+  .image-children{
+    display: none;
   }
   .home-bottom {
     display: flex;
@@ -292,5 +301,8 @@
   .play-video-div-home {
     width: 350px;
     height: 400px;
+  }
+  .content-video-home{
+    justify-content: center;
   }
 }

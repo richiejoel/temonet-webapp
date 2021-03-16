@@ -9,7 +9,12 @@ interface IProps {
   questionObject: Word;
 }
 
-const GuessQuestion = ({ question, options, onChange, questionObject }: IProps) => {
+const GuessQuestion = ({
+  question,
+  options,
+  onChange,
+  questionObject,
+}: IProps) => {
   const [localQuestion] = React.useState(question);
   const [localOptions, setLocalOptions] = React.useState([...options]);
 
