@@ -40,9 +40,13 @@ export const LocalQuestionRow = styled.div`
   @import "../../scss/index.scss";
   h3{
     font-family: "dyslexicItalic"; 
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
 h1, h2{
   font-family: "dyslexicRegular"; 
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 `;

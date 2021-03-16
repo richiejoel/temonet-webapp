@@ -63,9 +63,13 @@ export const QuestionRow = styled.div`
 
   h3{
     font-family: "dyslexicItalic"; 
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
 h1,h2{
   font-family: "dyslexicBold"; 
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 `;

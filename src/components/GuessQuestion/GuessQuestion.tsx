@@ -41,7 +41,9 @@ const GuessQuestion = ({
         <h1>{questionObject.terapia}</h1>
         <h1>{questionObject.title_terapia}</h1>
         <h3>{questionObject.instructions}</h3>
-        <h3>{questionObject.instructions_text}</h3>
+        {questionObject.instructions_text && (
+          <h3>{questionObject.instructions_text}</h3>
+        )}
         <p>{questionObject.history}</p>
         <h2>{localQuestion}</h2>
       </S.LocalQuestionRow>
