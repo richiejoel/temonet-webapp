@@ -24,13 +24,14 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+git clone https://github.com/richiejoel/temonet-webapp.git
 ```
 
 And repeat
 
 ```
-until finished
+yarn
+yarn install
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -61,9 +62,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With 🛠️
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [React](https://reactjs.org/) - The web framework used
+- [SASS](https://sass-lang.com/) - CSS preprocessor
+- [Styled Components](https://styled-components.com/) - CSS framework
 
 ## Contributing 🖇️
 
@@ -75,9 +76,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors ✒️
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Richard Joel Garcia** - _Initial work_ - [richiejoel](https://github.com/richiejoel)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/richiejoel) who participated in this project.
 
 ## License 📄
 
