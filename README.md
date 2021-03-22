@@ -90,4 +90,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - Inspiration
 - etc
 
-⌨️ con ❤️ por [richiejoel](https://github.com/richiejoel) 😊
+⌨️ with ❤️ by [richiejoel](https://github.com/richiejoel) 😊
