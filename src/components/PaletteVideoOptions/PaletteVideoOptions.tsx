@@ -33,7 +33,8 @@ function PaletteVideoOptions(props): JSX.Element {
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
   const [content, setContent] = useState("");
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(40);
+  const [height, setHeight] = useState(30);
   const [activeDrags, setActiveDrags] = useState(0);
 
   const span = useRef<HTMLDivElement>(null);
@@ -59,6 +60,7 @@ function PaletteVideoOptions(props): JSX.Element {
   useEffect(() => {
     if (span != null && span.current != null) {
       setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
+      setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.2);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
@@ -134,7 +136,7 @@ function PaletteVideoOptions(props): JSX.Element {
                   }}
                 >
                   <div
-                    style={{ backgroundColor: 'rgb(249, 162, 144)' }}
+                    style={{ backgroundColor: "rgb(249, 162, 144)" }}
                     className="box-video"
                   >
                     <input
@@ -168,11 +170,10 @@ function PaletteVideoOptions(props): JSX.Element {
                     <span id="hide" ref={span}>
                       {content}
                     </span>
-                    <input
-                      id="input-title-text"
-                      type="text"
+                    <textarea
+                      id="input-title-text-video"
                       autoFocus
-                      style={{ width }}
+                      style={{ width, height }}
                       placeholder="Title lesson..."
                       onChange={changeHandler}
                     />

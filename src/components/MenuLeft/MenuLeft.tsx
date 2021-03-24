@@ -108,8 +108,7 @@ function MenuLeft(props) {
               active={activeMenu === "/listLesson"}
               onClick={handlerMenu}
             >
-              <Icon name="tasks" />{" "}
-              <span className="lyrics">Mis Terapias</span>
+              <Icon name="tasks" /> <span className="lyrics">Mis Terapias</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -134,7 +133,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="tasks" />{" "}
-              <span className="lyrics">Crear Actividad Imágenes</span>
+              <span className="lyrics">Crear Terapia Imágenes</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -145,7 +144,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="edit" />{" "}
-              <span className="lyrics">Crear Actividad Audios</span>
+              <span className="lyrics">Crear Terapia Audios</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -156,7 +155,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="edit" />{" "}
-              <span className="lyrics">Crear Actividad Videos</span>
+              <span className="lyrics">Crear Terapia Vídeos</span>
             </Menu.Item>
           </>
         )}

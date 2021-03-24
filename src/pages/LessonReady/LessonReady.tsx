@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AxiosResponse } from "axios";
 import { useDispatch } from "react-redux";
 import { connect, useSelector } from "react-redux";
@@ -83,7 +83,7 @@ const LessonReady = (props: RouteComponentProps) => {
   const location: any = useLocation();
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
   const [disabledCheckButton, setDisabledCheckButton] = React.useState(true);
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = useState(0);
   const [questions, setQuestions] = React.useState<Word[]>(
     generateJSON(location)
   );

@@ -129,7 +129,7 @@
   font-family: "dyslexicItalic";
 }
 
-#input-title-text:not(.userListBox) {
+#input-title-text-video:not(.userListBox) {
   background: transparent !important;
   border: none !important;
   outline: none !important;
@@ -138,6 +138,9 @@
   display: flex;
   min-width: 120px;
   font-size: 1.72rem;
+  overflow: hidden;
+  max-width: 1100px !important;
+  resize: none !important;
   //max-width: 700px;
 }
 

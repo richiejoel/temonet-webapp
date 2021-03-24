@@ -33,7 +33,8 @@ function PaletteInteractive(props): JSX.Element {
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
   const [content, setContent] = useState("");
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(40);
+  const [height, setHeight] = useState(30);
   const span = useRef<HTMLDivElement>(null);
 
   const fix = () => {
@@ -53,6 +54,7 @@ function PaletteInteractive(props): JSX.Element {
   useEffect(() => {
     if (span != null && span.current != null) {
       setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
+      setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.2);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
@@ -127,7 +129,10 @@ function PaletteInteractive(props): JSX.Element {
                     updatePos(data, index);
                   }}
                 >
-                  <div style={{ backgroundColor: 'rgb(249, 162, 144)' }} className="box">
+                  <div
+                    style={{ backgroundColor: "rgb(249, 162, 144)" }}
+                    className="box"
+                  >
                     <input
                       id="input-card"
                       type="text"
@@ -159,11 +164,10 @@ function PaletteInteractive(props): JSX.Element {
                     <span id="hide" ref={span}>
                       {content}
                     </span>
-                    <input
+                    <textarea
                       id="input-title-text"
-                      type="text"
                       autoFocus
-                      style={{ width }}
+                      style={{ width, height }}
                       placeholder="Title lesson..."
                       onChange={changeHandler}
                     />
