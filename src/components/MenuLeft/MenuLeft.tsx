@@ -169,7 +169,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="tasks" />{" "}
-              <span className="lyrics">Crear cuenta estudiante</span>
+              <span className="lyrics">Crear cuenta paciente</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -179,7 +179,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="edit" />{" "}
-              <span className="lyrics">Crear cuenta Profesor</span>
+              <span className="lyrics">Crear cuenta Logopeda</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -189,7 +189,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="edit" />{" "}
-              <span className="lyrics">Listar Estudiantes</span>
+              <span className="lyrics">Listar Pacientes</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -199,7 +199,7 @@ function MenuLeft(props) {
               onClick={handlerMenu}
             >
               <Icon name="edit" />{" "}
-              <span className="lyrics">Listar Profesores</span>
+              <span className="lyrics">Listar Logopedas</span>
             </Menu.Item>
           </>
         )}

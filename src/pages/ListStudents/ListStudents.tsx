@@ -10,7 +10,7 @@ function ListStudents(): JSX.Element {
   const theme_global = useSelector((state: any) => state.theme_global);
   return (
     <div className={`students ${theme_global.theme}`}>
-      <h1>Lista de estudiantes</h1>
+      <h1>Lista de Pacientes</h1>
       <Grid>
         <Grid.Column mobile={8} tablet={4} computer={3}>
           <div className="students__item">

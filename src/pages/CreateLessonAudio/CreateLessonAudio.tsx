@@ -172,7 +172,7 @@ function CreateLessonAudio() {
             onWait();
           }}
         >
-          Guardar Lección
+          Guardar Terapia
         </Button>
       </div>
       <div className="palette">

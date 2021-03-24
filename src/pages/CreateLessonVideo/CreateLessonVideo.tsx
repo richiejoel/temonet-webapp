@@ -167,7 +167,7 @@ function CreateLessonVideo() {
       <div className="content-lesson-video">
         {/*<PopupShadow hightWords={hightWords} />*/}
         <Button className="btn-lesson-video" onClick={() => onWait()}>
-          Guardar Lección
+          Guardar Terapia
         </Button>
       </div>
       <div className="palette">

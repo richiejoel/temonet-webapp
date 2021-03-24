@@ -176,7 +176,7 @@ function CreateLessonCard() {
   </Draggable>*/}
         {/*<PopupShadow hightWords={hightWords} />*/}
         <Button className="btn-lesson" onClick={() => onWait()}>
-          Guardar Lección
+          Guardar Terapia
         </Button>
       </div>
       <div className="palette">
