@@ -42,7 +42,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 1"
           description="Significado de la palabra según el contexto"
-          min={4}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_1");
@@ -52,7 +52,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityGraphics}
           title="Terapia 2"
           description="Formando palabras"
-          min={2}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_2");
@@ -74,7 +74,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 4"
           description="Formulación de preguntas"
-          min={3}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_4");
@@ -84,7 +84,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityGraphics}
           title="Terapia 5"
           description="Encontrar letras en palabras"
-          min={1}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_5");
@@ -94,7 +94,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 6"
           description="Miscelánea"
-          min={4}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_6");
@@ -106,7 +106,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityText}
           title="Terapia 7"
           description="Miscelánea"
-          min={3}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_7");
@@ -116,7 +116,7 @@ function ListLesson(): JSX.Element {
           src={ImageActivityGraphics}
           title="Terapia 8"
           description="Miscelánea"
-          min={4}
+          min={5}
           percent={`100%`}
           onClick={() => {
             handlerPage("terapia_8");
