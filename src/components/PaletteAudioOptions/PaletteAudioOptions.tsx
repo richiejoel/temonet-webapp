@@ -73,7 +73,7 @@ function PaletteAudioOptions(props): JSX.Element {
   useEffect(() => {
     if (span != null && span.current != null) {
       setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
-      setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.2);
+      setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.6);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
@@ -204,10 +204,8 @@ function PaletteAudioOptions(props): JSX.Element {
                     <span id="hide" ref={span}>
                       {content}
                     </span>
-                    <input
+                    <textarea
                       id="input-title-text-audio"
-                      type="text"
-                      autoFocus
                       style={{ width, height }}
                       placeholder="Title lesson..."
                       onChange={changeHandler}
