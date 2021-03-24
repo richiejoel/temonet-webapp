@@ -43,7 +43,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 1"
           description="Significado de la palabra según el contexto"
           min={4}
-          percent={`80%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_1");
           }}
@@ -53,7 +53,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 2"
           description="Formando palabras"
           min={2}
-          percent={`30%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_2");
           }}
@@ -75,7 +75,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 4"
           description="Formulación de preguntas"
           min={3}
-          percent={`60%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_4");
           }}
@@ -85,7 +85,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 5"
           description="Encontrar letras en palabras"
           min={1}
-          percent={`10%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_5");
           }}
@@ -95,7 +95,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 6"
           description="Miscelánea"
           min={4}
-          percent={`80%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_6");
           }}
@@ -107,7 +107,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 7"
           description="Miscelánea"
           min={3}
-          percent={`60%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_7");
           }}
@@ -117,7 +117,7 @@ function ListLesson(): JSX.Element {
           title="Terapia 8"
           description="Miscelánea"
           min={4}
-          percent={`80%`}
+          percent={`100%`}
           onClick={() => {
             handlerPage("terapia_8");
           }}
