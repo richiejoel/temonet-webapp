@@ -1,0 +1,16 @@
+#input-title-text-new:not(.userListBox) {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0px !important;
+  font-family: "dyslexicBold";
+  display: flex;
+  min-width: 120px;
+  font-size: 1.72rem;
+  position: absolute;
+  overflow: hidden;
+  text-decoration: none;
+  max-width: 2100px !important;
+  resize: none !important;
+  //max-width: 700px;
+}

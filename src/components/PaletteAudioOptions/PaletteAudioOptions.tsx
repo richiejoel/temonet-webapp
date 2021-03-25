@@ -5,6 +5,7 @@ import AddAudio from "../../assets/svg/no-audio.svg";
 import Draggable from "react-draggable";
 import AudioPreview from "../../components/AudioPreview";
 import useLongPress from "../../hooks/useLongPress";
+import AutoTextArea from "../../components/AutoTextArea";
 import "./PaletteAudioOptions.scss";
 import "../../styles/theme.scss";
 
@@ -32,10 +33,10 @@ function PaletteAudioOptions(props): JSX.Element {
     isDraggable,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
-  const [content, setContent] = useState("");
+  /*const [content, setContent] = useState("");
   const [width, setWidth] = useState(40);
   const [height, setHeight] = useState(30);
-  const span = useRef<HTMLDivElement>(null);
+  const span = useRef<HTMLDivElement>(null);*/
 
   const [size, setSize] = useState({ x: 600, y: 150 });
   const dragSize = useRef<any>(null);
@@ -70,7 +71,7 @@ function PaletteAudioOptions(props): JSX.Element {
     newItemOption();
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (span != null && span.current != null) {
       setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
       setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.6);
@@ -80,7 +81,7 @@ function PaletteAudioOptions(props): JSX.Element {
 
   const changeHandler = (evt) => {
     setContent(evt.target.value);
-  };
+  };*/
 
   const itemIndex = () => {};
 
@@ -199,8 +200,8 @@ function PaletteAudioOptions(props): JSX.Element {
                   updatePosTitle(data, index);
                 }}
               >
-                <div className="texto">
-                  <>
+                <div className="texto-audio">
+                  {/*<>
                     <span id="hide" ref={span}>
                       {content}
                     </span>
@@ -210,7 +211,8 @@ function PaletteAudioOptions(props): JSX.Element {
                       placeholder="Title lesson..."
                       onChange={changeHandler}
                     />
-                  </>
+                  </>*/}
+                  <AutoTextArea />
                   <button
                     id="delete-title"
                     onClick={(e) => deleteNoteTitle(itemTitle.id)}

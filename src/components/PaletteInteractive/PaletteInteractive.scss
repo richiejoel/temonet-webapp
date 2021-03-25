@@ -168,6 +168,9 @@
   border-color: black;
   border: 3px solid black;
 }
+.texto {
+  position: absolute;
+}
 
 @media only screen and (max-width: 600px) {
   .box-option-image {

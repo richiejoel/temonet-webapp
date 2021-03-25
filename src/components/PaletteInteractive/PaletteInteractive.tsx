@@ -4,6 +4,7 @@ import AddCard from "../../assets/svg/add_note.svg";
 import AddImage from "../../assets/svg/no-image.svg";
 import Draggable from "react-draggable";
 import CardPreview from "../../components/CardPreview";
+import AutoTextArea from "../../components/AutoTextArea";
 import "./PaletteInteractive.scss";
 import "../../styles/theme.scss";
 
@@ -32,10 +33,10 @@ function PaletteInteractive(props): JSX.Element {
     setIsDraggable,
   } = props;
   const theme_global_color = useSelector((state: any) => state.theme_global);
-  const [content, setContent] = useState("");
+  /*const [content, setContent] = useState("");
   const [width, setWidth] = useState(40);
   const [height, setHeight] = useState(30);
-  const span = useRef<HTMLDivElement>(null);
+  const span = useRef<HTMLSpanElement>(null);*/
 
   const fix = () => {
     setItem(`Lesson`);
@@ -51,17 +52,17 @@ function PaletteInteractive(props): JSX.Element {
     newItemOption();
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (span != null && span.current != null) {
       setWidth(span.current.offsetWidth + span.current.offsetWidth * 1.2);
-      setHeight(span.current.offsetHeight + span.current.offsetHeight * 1.6);
+      setHeight(span.current.offsetHeight + span.current.offsetHeight * 0.5);
       console.log(`Joel ${span.current.offsetWidth}`);
     }
   }, [content]);
 
   const changeHandler = (evt) => {
     setContent(evt.target.value);
-  };
+  };*/
 
   const itemIndex = () => {};
   //{`${item.item}`}
@@ -160,7 +161,7 @@ function PaletteInteractive(props): JSX.Element {
                 }}
               >
                 <div className="texto">
-                  <>
+                  {/*<>
                     <span id="hide" ref={span}>
                       {content}
                     </span>
@@ -171,7 +172,8 @@ function PaletteInteractive(props): JSX.Element {
                       placeholder="Title lesson..."
                       onChange={changeHandler}
                     />
-                  </>
+                  </>*/}
+                  <AutoTextArea />
                   <button
                     id="delete-title"
                     onClick={(e) => deleteNoteTitle(itemTitle.id)}

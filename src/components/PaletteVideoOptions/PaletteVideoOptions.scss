@@ -168,6 +168,10 @@
   user-select: none;
 }
 
+.texto-video {
+  position: absolute;
+}
+
 @media only screen and (max-width: 600px) {
   .box-option {
     max-width: 400px;
